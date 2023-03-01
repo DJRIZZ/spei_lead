@@ -1,17 +1,25 @@
-name: "spei_lead"
+name: spei_lead
 output_dir: ../docs
 navbar:
-  title: "spei_lead"
+  title: spei_lead
   left:
+  - text: Map
+    href: map_eider_lead_fws.html
   - text: Home
     href: index.html
   - text: About
     href: about.html
   - text: License
     href: license.html
+  right:
+  - icon: fab fa-github
+    text: Source code
+    href: https://github.com/DJRIZZ/spei_lead
 output:
   workflowr::wflow_html:
     toc: yes
-    toc_float: yes
-    theme: cosmo
+    toc_float:
+      collapsed: no
+    theme: flatly
+    code_folding: hide
     highlight: textmate
