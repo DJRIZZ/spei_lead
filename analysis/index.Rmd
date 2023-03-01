@@ -8,4 +8,4 @@ editor_options:
   chunk_output_type: console
 ---
 
-* [Map of recent lead values](map_eider_lead_fws.html)
+* [Map of lead values](map_eider_lead_fws.html)
