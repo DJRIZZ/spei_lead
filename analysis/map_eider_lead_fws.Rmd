@@ -1,0 +1,76 @@
+---
+title: "Blood lead levels in eiders captured for FWS projects, 2018-2022"
+author: 
+date: "`r Sys.Date()`"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+library(workflowr)
+library(leaflet)
+library(tidyverse)
+library(kableExtra) #formatting tables
+
+```
+
+## Plotted data
+Capture locations of eiders (mostly Spectacled Eiders, but also 2 King Eiders on the ACP and 1 Common Eider at Kigigak) tested for blood lead levels. Blue symbols are individuals < 0.2 ppm lead. Red symbols are >= 0.20 ppm and scaled to concentration. Hover your cursor over points to get associated info. 
+
+```{r plot, warning = FALSE}
+eider_lead_fws <- read.csv("data/eider_lead_fws.csv", header = TRUE)
+
+# jitter lat for captures at same capture site
+lat_jit <- ifelse(diff(eider_lead_fws$lat) == 0, eider_lead_fws$lat + 0.001, eider_lead_fws$lat)
+lat_jit[206] <-eider_lead_fws[206, 8]
+eider_lead_fws$lat_jit <- lat_jit
+
+lon_jit <- ifelse(diff(eider_lead_fws$lon) == 0, eider_lead_fws$lon + 0.001, eider_lead_fws$lon)
+lon_jit[206] <-eider_lead_fws[206, 9]
+eider_lead_fws$lon_jit <- lon_jit
+
+# map to check locations
+m <- leaflet() %>%
+  #setView(lng = -170, lat = 63.5, zoom = 6) %>%
+  addProviderTiles("Esri.WorldImagery", group = "Satellite") %>%
+  addCircles(data = eider_lead_fws,
+             ~ lon_jit,
+             ~ lat_jit,
+             color = ifelse(eider_lead_fws$pb_wet_ppm < 0.20, "blue","red"),
+             radius = ~ pb_wet_ppm * 100,
+             #group ="FourWeeks",
+             label = paste("ID:", eider_lead_fws$band_metal, "<br>",
+                           "Sample Date:", eider_lead_fws$date_capture, "<br>",
+                           "Species:", eider_lead_fws$species, "<br>",
+                           "Sex:", eider_lead_fws$sex, "<br>",
+                           "Age:", eider_lead_fws$age, "<br>",
+                           "Pb:", eider_lead_fws$pb_wet_ppm)  %>%
+               lapply(htmltools::HTML)
+  )
+m
+```
+
+```{r summary}
+# subset SPEI
+lead_spei <- subset(eider_lead_fws, species == "SPEI")
+# create indicator variable for lead levels <= 0.20
+lead_spei$exposed <- ifelse(lead_spei$pb_wet_ppm >= 0.20, 1,0)
+lead_spei$notexp <- ifelse(lead_spei$pb_wet_ppm <= 0.20, 1,0)
+# aggregate by site and period
+lead_spei_exp <- aggregate(lead_spei$exposed ~ lead_spei$site_study*lead_spei$capture_period, FUN = "sum")
+lead_spei_notexp <- aggregate(lead_spei$notexp ~ lead_spei$site_study*lead_spei$capture_period, FUN = "sum")
+# cbind 
+lead_table <- cbind.data.frame(lead_spei_exp[1:3], lead_spei_notexp[3])
+colnames(lead_table) <- c("Study site", "Status", "No. exposed", "No. unexposed")
+# calc prop exp
+lead_table$`Proportion exposed` <- as.numeric(lead_table$`No. exposed`/(lead_table$`No. exposed`+lead_table$`No. unexposed`))
+lead_table[ , 5] = round(lead_table[ ,5], 2)
+# sort
+lead_table <- lead_table[order(lead_table$`Study site`, lead_table$Status, decreasing = FALSE), ]
+
+# Table formatting in Kable package
+t1<-kbl(lead_table[ ,1:5], caption="Spectacled Eider blood lead levels above 0.20 ppm (exposed) and below 0.20 ppm (not exposed) from samples collected on the Yukon-Kuskokwim Delta and Arctic Coastal Plain, Alaska, 2018-2022.")
+kable_styling(t1,bootstrap_options="striped", full_width=FALSE, position="center")
+```
+
