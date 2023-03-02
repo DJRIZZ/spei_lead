@@ -26,11 +26,11 @@ eider_lead_fws <- eider_lead_fws[order(eider_lead_fws$lat, eider_lead_fws$lon), 
 
 # jitter lat for captures at same capture site
 lat_jit <- ifelse(diff(eider_lead_fws$lat) < 0.001, eider_lead_fws$lat + 0.0015, eider_lead_fws$lat)
-lat_jit[206] <-eider_lead_fws[206, 7]
+lat_jit[206] <-eider_lead_fws[206, 8]
 eider_lead_fws$lat_jit <- lat_jit
 
 lon_jit <- ifelse(diff(eider_lead_fws$lon) < 0.001, eider_lead_fws$lon + 0.0015, eider_lead_fws$lon)
-lon_jit[206] <-eider_lead_fws[206, 8]
+lon_jit[206] <-eider_lead_fws[206, 9]
 eider_lead_fws$lon_jit <- lon_jit
 
 # map to check locations
@@ -40,15 +40,15 @@ m <- leaflet() %>%
   addCircles(data = eider_lead_fws,
              ~ lon_jit,
              ~ lat_jit,
-             color = ifelse(eider_lead_fws$pb_wet_ppm < 0.20, "blue","red"),
-             radius = ~ pb_wet_ppm * 100,
+             color = ifelse(eider_lead_fws$pb_ppm < 0.20, "blue","red"),
+             radius = ~ pb_ppm * 100,
              #group ="FourWeeks",
              label = paste("ID:", eider_lead_fws$band_metal, "<br>",
                            "Sample Date:", eider_lead_fws$date_capture, "<br>",
                            "Species:", eider_lead_fws$species, "<br>",
                            "Sex:", eider_lead_fws$sex, "<br>",
                            "Age:", eider_lead_fws$age, "<br>",
-                           "Pb:", eider_lead_fws$pb_wet_ppm)  %>%
+                           "Pb:", eider_lead_fws$pb_ppm)  %>%
                lapply(htmltools::HTML)
   )
 m
@@ -60,8 +60,8 @@ m
 # subset SPEI
 lead_spei <- subset(eider_lead_fws, species == "SPEI")
 # create indicator variable for lead levels <= 0.20
-lead_spei$exposed <- ifelse(lead_spei$pb_wet_ppm >= 0.20, 1,0)
-lead_spei$notexp <- ifelse(lead_spei$pb_wet_ppm <= 0.20, 1,0)
+lead_spei$exposed <- ifelse(lead_spei$pb_ppm >= 0.20, 1,0)
+lead_spei$notexp <- ifelse(lead_spei$pb_ppm <= 0.20, 1,0)
 # aggregate by site and period
 lead_spei_exp <- aggregate(lead_spei$exposed ~ lead_spei$site_study*lead_spei$capture_period, FUN = "sum")
 lead_spei_notexp <- aggregate(lead_spei$notexp ~ lead_spei$site_study*lead_spei$capture_period, FUN = "sum")
@@ -87,7 +87,7 @@ lead_spei$site_stage <- paste(lead_spei$site_study, lead_spei$capture_period, se
 
 # create histograms
 for(var in unique(lead_spei$site_stage)){
-  print(ggplot(lead_spei[lead_spei$site_stage==var,], aes(pb_wet_ppm)) +
+  print(ggplot(lead_spei[lead_spei$site_stage==var,], aes(pb_ppm)) +
           geom_histogram(binwidth = 0.1, 
                          color = "white", 
                          fill = "blue") +
