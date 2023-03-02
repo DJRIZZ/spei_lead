@@ -76,7 +76,8 @@ t1<-kbl(lead_table[ ,1:5], caption="Spectacled Eider blood lead levels above 0.2
 kable_styling(t1,bootstrap_options="striped", full_width=FALSE, position="center")
 ```
 
-## Histograms of Spectacled Eider blood lead concentration by site and capture period
+## Histograms 
+# Spectacled Eider blood lead concentration by site and capture period
 
 ```{r histograms}
 # create site-capture period variable for partitioning data for histograms
@@ -88,8 +89,8 @@ for(var in unique(lead_spei$site_stage)){
           geom_histogram(binwidth = 0.1, 
                          color = "white", 
                          fill = "blue") +
-          # put x-axis lables where there are values
-          scale_x_continuous(name = "Blood lead (ppm)", breaks = c(0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.8, 0.9, 1.1, 1.4, 1.5, 2.0, 3.3, 8.9)) +
+          # put x-axis labels where there are values
+          scale_x_continuous(name = "Blood lead (ppm)", breaks = c(0.0, 0.15, 0.1, 0.2, 0.3, 0.4, 0.5, 0.8, 0.9, 1.1, 1.4, 1.5, 2.0, 3.3, 8.9)) +
           scale_y_continuous(name = "Count") +
           geom_vline(xintercept = 0.20, color = "red")  + # line at level interpreted as indicating exposure
           ggtitle(label = var)
