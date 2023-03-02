@@ -79,8 +79,7 @@ t1<-kbl(lead_table[ ,1:5], caption="Spectacled Eider blood lead levels above 0.2
 kable_styling(t1,bootstrap_options="striped", full_width=FALSE, position="center")
 ```
 
-## Histograms 
-# Spectacled Eider blood lead concentration by site and capture period
+## Histograms by site and capture period
 
 ```{r histograms}
 # create site-capture period variable for partitioning data for histograms
