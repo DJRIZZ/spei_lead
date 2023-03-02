@@ -21,12 +21,15 @@ Capture locations of eiders (mostly Spectacled Eiders, but also 2 King Eiders on
 ```{r plot, warning = FALSE}
 eider_lead_fws <- read.csv("data/eider_lead_fws.csv", header = TRUE)
 
+# sort by lat and lon to jitter overlapping points
+eider_lead_fws <- eider_lead_fws[order(eider_lead_fws$lat, eider_lead_fws$lon), ]
+
 # jitter lat for captures at same capture site
-lat_jit <- ifelse(diff(eider_lead_fws$lat) == 0, eider_lead_fws$lat + 0.001, eider_lead_fws$lat)
+lat_jit <- ifelse(diff(eider_lead_fws$lat) < 0.001, eider_lead_fws$lat + 0.0015, eider_lead_fws$lat)
 lat_jit[206] <-eider_lead_fws[206, 7]
 eider_lead_fws$lat_jit <- lat_jit
 
-lon_jit <- ifelse(diff(eider_lead_fws$lon) == 0, eider_lead_fws$lon + 0.001, eider_lead_fws$lon)
+lon_jit <- ifelse(diff(eider_lead_fws$lon) < 0.001, eider_lead_fws$lon + 0.0015, eider_lead_fws$lon)
 lon_jit[206] <-eider_lead_fws[206, 8]
 eider_lead_fws$lon_jit <- lon_jit
 
