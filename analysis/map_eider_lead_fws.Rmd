@@ -16,18 +16,18 @@ library(kableExtra) #formatting tables
 ```
 
 ## Plotted data
-Capture locations of eiders (mostly Spectacled Eiders, but also 2 King Eiders on the ACP and 1 Common Eider at Kigigak) tested for blood lead levels. Blue symbols are individuals < 0.2 ppm lead. Red symbols are >= 0.20 ppm and scaled to concentration. Hover your cursor over points to get associated info. 
+Capture locations of eiders (mostly Spectacled Eiders, but also 2 King Eiders on the ACP and 1 Common Eider at Kigigak) tested for blood lead levels. Blue symbols are individuals < 0.2 ppm lead. Red symbols are >= 0.20 ppm. Circle size is scaled to lead concentration. Hover your cursor over points to get associated info. 
 
 ```{r plot, warning = FALSE}
 eider_lead_fws <- read.csv("data/eider_lead_fws.csv", header = TRUE)
 
 # jitter lat for captures at same capture site
 lat_jit <- ifelse(diff(eider_lead_fws$lat) == 0, eider_lead_fws$lat + 0.001, eider_lead_fws$lat)
-lat_jit[206] <-eider_lead_fws[206, 8]
+lat_jit[206] <-eider_lead_fws[206, 7]
 eider_lead_fws$lat_jit <- lat_jit
 
 lon_jit <- ifelse(diff(eider_lead_fws$lon) == 0, eider_lead_fws$lon + 0.001, eider_lead_fws$lon)
-lon_jit[206] <-eider_lead_fws[206, 9]
+lon_jit[206] <-eider_lead_fws[206, 8]
 eider_lead_fws$lon_jit <- lon_jit
 
 # map to check locations
@@ -51,6 +51,8 @@ m <- leaflet() %>%
 m
 ```
 
+## Lead Exposure Rates
+
 ```{r summary}
 # subset SPEI
 lead_spei <- subset(eider_lead_fws, species == "SPEI")
@@ -70,7 +72,27 @@ lead_table[ , 5] = round(lead_table[ ,5], 2)
 lead_table <- lead_table[order(lead_table$`Study site`, lead_table$Status, decreasing = FALSE), ]
 
 # Table formatting in Kable package
-t1<-kbl(lead_table[ ,1:5], caption="Spectacled Eider blood lead levels above 0.20 ppm (exposed) and below 0.20 ppm (not exposed) from samples collected on the Yukon-Kuskokwim Delta and Arctic Coastal Plain, Alaska, 2018-2022.")
+t1<-kbl(lead_table[ ,1:5], caption="Spectacled Eider blood lead levels above 0.20 ppm (exposed) and below 0.20 ppm (unexposed) from samples collected on the Yukon-Kuskokwim Delta and Arctic Coastal Plain, Alaska, 2018-2022.")
 kable_styling(t1,bootstrap_options="striped", full_width=FALSE, position="center")
 ```
 
+## Histograms of Spectacled Eider blood lead concentration by site and capture period
+
+```{r histograms}
+# create site-capture period variable for partitioning data for histograms
+lead_spei$site_stage <- paste(lead_spei$site_study, lead_spei$capture_period, sep = "_")
+
+# create histograms
+for(var in unique(lead_spei$site_stage)){
+  print(ggplot(lead_spei[lead_spei$site_stage==var,], aes(pb_wet_ppm)) +
+          geom_histogram(binwidth = 0.1, 
+                         color = "white", 
+                         fill = "blue") +
+          # put x-axis lables where there are values
+          scale_x_continuous(name = "Blood lead (ppm)", breaks = c(0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.8, 0.9, 1.1, 1.4, 1.5, 2.0, 3.3, 8.9)) +
+          scale_y_continuous(name = "Count") +
+          geom_vline(xintercept = 0.20, color = "red")  + # line at level interpreted as indicating exposure
+          ggtitle(label = var)
+  )
+}
+```
