@@ -555,15 +555,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDJRIZZspeileadtree0210201b511b679bbcf1b800a0ae3a9d7ab4b6c3targetblank0210201a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDJRIZZspeileadtree8945a52dbf35def5997ea32acc77433811b16152targetblank8945a52a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/DJRIZZ/spei_lead/tree/0210201b511b679bbcf1b800a0ae3a9d7ab4b6c3" target="_blank">0210201</a>
+<a href="https://github.com/DJRIZZ/spei_lead/tree/8945a52dbf35def5997ea32acc77433811b16152" target="_blank">8945a52</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomDJRIZZspeileadtree0210201b511b679bbcf1b800a0ae3a9d7ab4b6c3targetblank0210201a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomDJRIZZspeileadtree8945a52dbf35def5997ea32acc77433811b16152targetblank8945a52a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -573,7 +573,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/DJRIZZ/spei_lead/tree/0210201b511b679bbcf1b800a0ae3a9d7ab4b6c3" target="_blank">0210201</a>.
+<a href="https://github.com/DJRIZZ/spei_lead/tree/8945a52dbf35def5997ea32acc77433811b16152" target="_blank">8945a52</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -590,6 +590,7 @@ were generated:
 Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
+    Ignored:    analysis/site_libs/
     Ignored:    data/7030169 data.csv
     Ignored:    data/README_spei_blood_lead_data.txt
     Ignored:    data/Rizzolo Lead VSEP22-045 E-report.xlsx
@@ -654,6 +655,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/DJRIZZ/spei_lead/blob/8945a52dbf35def5997ea32acc77433811b16152/analysis/map_eider_lead_fws.Rmd" target="_blank">8945a52</a>
+</td>
+<td>
+DJRIZZ
+</td>
+<td>
+2023-03-02
+</td>
+<td>
+added histograms with 0.15 bin and increased jitter
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/DJRIZZ/spei_lead/55b0de0c54bbc4ac950b9111da7c3af687b19462/docs/map_eider_lead_fws.html" target="_blank">55b0de0</a>
+</td>
+<td>
+DJRIZZ
+</td>
+<td>
+2023-03-02
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1016,14 +1051,8 @@ prebreeding
 </tbody>
 </table>
 </div>
-<div id="histograms" class="section level2">
-<h2>Histograms</h2>
-</div>
-<div
-id="spectacled-eider-blood-lead-concentration-by-site-and-capture-period"
-class="section level1">
-<h1>Spectacled Eider blood lead concentration by site and capture
-period</h1>
+<div id="histograms-by-site-and-capture-period" class="section level2">
+<h2>Histograms by site and capture period</h2>
 <pre class="r"><code># create site-capture period variable for partitioning data for histograms
 lead_spei$site_stage &lt;- paste(lead_spei$site_study, lead_spei$capture_period, sep = &quot;_&quot;)
 
