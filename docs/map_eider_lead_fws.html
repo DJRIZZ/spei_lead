@@ -11,7 +11,7 @@
 
 <meta name="author" content="" />
 
-<meta name="date" content="2023-03-01" />
+<meta name="date" content="2023-03-02" />
 
 <title>Blood lead levels in eiders captured for FWS projects, 2018-2022</title>
 
@@ -395,7 +395,7 @@ div.tocify {
 <h1 class="title toc-ignore">Blood lead levels in eiders captured for
 FWS projects, 2018-2022</h1>
 <h4 class="author"></h4>
-<h4 class="date">2023-03-01</h4>
+<h4 class="date">2023-03-02</h4>
 
 </div>
 
@@ -424,7 +424,7 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2023-03-01
+<strong>Last updated:</strong> 2023-03-02
 </p>
 <p>
 <strong>Checks:</strong> <span
@@ -555,15 +555,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDJRIZZspeileadtreee477ff791f4106b2516e74963955f1a381e7e573targetblanke477ff7a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDJRIZZspeileadtree90104d46e00b70d5bba77111ab4b7ef8175cfc70targetblank90104d4a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/DJRIZZ/spei_lead/tree/e477ff791f4106b2516e74963955f1a381e7e573" target="_blank">e477ff7</a>
+<a href="https://github.com/DJRIZZ/spei_lead/tree/90104d46e00b70d5bba77111ab4b7ef8175cfc70" target="_blank">90104d4</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomDJRIZZspeileadtreee477ff791f4106b2516e74963955f1a381e7e573targetblanke477ff7a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomDJRIZZspeileadtree90104d46e00b70d5bba77111ab4b7ef8175cfc70targetblank90104d4a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -573,7 +573,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/DJRIZZ/spei_lead/tree/e477ff791f4106b2516e74963955f1a381e7e573" target="_blank">e477ff7</a>.
+<a href="https://github.com/DJRIZZ/spei_lead/tree/90104d46e00b70d5bba77111ab4b7ef8175cfc70" target="_blank">90104d4</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -590,7 +590,6 @@ were generated:
 Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
-    Ignored:    analysis/site_libs/
     Ignored:    data/7030169 data.csv
     Ignored:    data/README_spei_blood_lead_data.txt
     Ignored:    data/Rizzolo Lead VSEP22-045 E-report.xlsx
@@ -655,6 +654,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/DJRIZZ/spei_lead/blob/90104d46e00b70d5bba77111ab4b7ef8175cfc70/analysis/map_eider_lead_fws.Rmd" target="_blank">90104d4</a>
+</td>
+<td>
+DJRIZZ
+</td>
+<td>
+2023-03-02
+</td>
+<td>
+added histograms
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/DJRIZZ/spei_lead/9945a5bec664adb7db83f754482f8bbb59440e0b/docs/map_eider_lead_fws.html" target="_blank">9945a5b</a>
+</td>
+<td>
+DJRIZZ
+</td>
+<td>
+2023-03-01
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -946,11 +979,14 @@ prebreeding
 </tbody>
 </table>
 </div>
+<div id="histograms" class="section level2">
+<h2>Histograms</h2>
+</div>
 <div
-id="histograms-of-spectacled-eider-blood-lead-concentration-by-site-and-capture-period"
-class="section level2">
-<h2>Histograms of Spectacled Eider blood lead concentration by site and
-capture period</h2>
+id="spectacled-eider-blood-lead-concentration-by-site-and-capture-period"
+class="section level1">
+<h1>Spectacled Eider blood lead concentration by site and capture
+period</h1>
 <pre class="r"><code># create site-capture period variable for partitioning data for histograms
 lead_spei$site_stage &lt;- paste(lead_spei$site_study, lead_spei$capture_period, sep = &quot;_&quot;)
 
@@ -960,8 +996,8 @@ for(var in unique(lead_spei$site_stage)){
           geom_histogram(binwidth = 0.1, 
                          color = &quot;white&quot;, 
                          fill = &quot;blue&quot;) +
-          # put x-axis lables where there are values
-          scale_x_continuous(name = &quot;Blood lead (ppm)&quot;, breaks = c(0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.8, 0.9, 1.1, 1.4, 1.5, 2.0, 3.3, 8.9)) +
+          # put x-axis labels where there are values
+          scale_x_continuous(name = &quot;Blood lead (ppm)&quot;, breaks = c(0.0, 0.15, 0.1, 0.2, 0.3, 0.4, 0.5, 0.8, 0.9, 1.1, 1.4, 1.5, 2.0, 3.3, 8.9)) +
           scale_y_continuous(name = &quot;Count&quot;) +
           geom_vline(xintercept = 0.20, color = &quot;red&quot;)  + # line at level interpreted as indicating exposure
           ggtitle(label = var)
