@@ -1,0 +1,120 @@
+---
+title: "Blood lead values: LeadCare II measurements compared to mass spec measurements"
+author: 
+date: "`r Sys.Date()`"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+library(ggplot2)
+```
+
+Comparison of blood lead levels measured by mass spectrometry and voltammetry (Lead Care II analyzer).
+
+Here's the data, with pb_lc_ppm the values from the LeadCare analyzer and pb_ms_ppm the values from mass spec.
+
+```{r load data}
+# load mass spec lead data (from Texas A&M Univ, and Washington State)
+std <- read.csv("data/eider_lead_fws_2018-2022.csv")
+# keep necessary columns
+std <- cbind.data.frame(std$band_metal, std$date_capture, std$lead_ppm)
+colnames(std) <- c("id_metalband", "dt_sampled", "pb_ms_ppm")
+
+# load Lead Care II data
+# load Lead Care II results
+lc <- read.csv("data/spei_blood_lead_validation_results_20240306.csv")
+# keep necessary columns
+lc <- cbind.data.frame(lc$id_metalband, lc$dt_sampled, lc$pb_blood_ppm)
+colnames(lc) <- c("id_metalband", "dt_sampled", "pb_lc_ppm")
+# add analysis type column
+#lc$cat_analysis <- "leadcare2"
+
+# merge std into lc, keep only complete lc records
+pb <- merge(lc, std, all.x = TRUE)
+
+pb
+```
+
+Some summary stats and historgrams for each type of measurement.
+```{r summary stats}
+# data summaries
+mass_spec_sum <- summary(pb$pb_ms_ppm)
+mass_spec_sum 
+hist(mass_spec_sum)
+
+lead_care_sum <- summary(pb$pb_lc_ppm)
+lead_care_sum
+hist(lead_care_sum)
+
+```
+
+Roughly similar data from both mass spec and the Lead Care II analyzer, except at the high end of the range of values. This is in part because Lead Care II has a upper detection limit of 0.65 ppm, so the higher values measured by mass spec are all truncated to 0.65 ppm in the mass spec data. 
+
+Remove the mass spec values > 0.65 for a better comparison.
+```{r cal diff}
+# calculate difference
+# remove values at upper detection limit of lead care II, 0.65 ppm
+pb_limit <- subset(pb, pb_ms_ppm < 0.65)
+
+# summarize truncated data for mass spec...
+limit_mass_spec_sum <- summary(pb_limit$pb_ms_ppm)
+limit_mass_spec_sum
+hist(pb_limit$pb_ms_ppm)  
+
+# and Leadcare II
+limit_leadcare_sum <- summary(pb_limit$pb_lc_ppm)
+limit_leadcare_sum
+hist(pb_limit$pb_lc_ppm) 
+
+# look at the differences between values
+pb_limit$diff <- pb_limit$pb_ms_ppm - pb_limit$pb_lc_ppm
+differences_sum <- summary(pb_limit$diff)
+differences_sum
+hist(pb_limit$diff)
+
+# look at differences as percentage differences from the mass spec values
+pb_limit$pdiff <- (pb_limit$diff/pb_limit$pb_ms_ppm)*100
+pdiff_sum <- summary(pb_limit$pdiff)
+pdiff_sum
+
+```
+With the upper detection limit truncated data, the results look similar from mass spec and Leadcare. The mean difference in values is 0.053 ppm.
+
+Look at the difference as percent change from the mass spec value.
+```{r cal pdiff}
+# look at differences as percentage differences from the mass spec values
+pb_limit$pdiff <- (pb_limit$diff/pb_limit$pb_ms_ppm)*100
+pb_limit
+pdiff_sum <- summary(pb_limit$pdiff)
+pdiff_sum
+```
+
+Some results from LeadCare aren't great. Specifically, samples that were identified as having lead levels indicating lead exposure (>0.2 ppm) by mass spec that were below 0.2 ppm when tested on LeadCare II.
+
+Band 2007-41803 had a mass spec value of 0.47 ppm, but a LeadCare value of 0.18 ppm, just below the threshold.
+
+Band 2007-62833 had a mass spec value of 0.22 ppm and Leadcare value of 0.099, well below the 0.2 ppm limit. We should retest this sample if there is enough left.
+
+LeadCare values were mostly lower than mass spec, which also is not great (under estimating lead exposure).
+
+The biggest percent differences were in samples with very low lead values, which is not a concern.
+
+Plot mass spec values vs. LeadCare values, perfect agreement would be a line with slope = 1.
+
+```{r plot}
+# calculate difference
+# remove values at upper detection limit of lead care II, 0.65 ppm
+# plot pb values as scattergram
+p.pb <- ggplot(pb)+
+  geom_point(data = pb, aes(x = pb_ms_ppm, y = pb_lc_ppm)) +
+  theme_bw()+
+  ggtitle("Blood Lead via Mass Spec vs. Voltammetry") +
+  labs(y= "Mass Spec Lead ppm", x = "Voltemmetry Lead ppm")
+p.pb
+```
+The scattergram of lead values shows decent agreement.
+
+I think this needs a bit more data. Need to pull some more reference samples and run them on leadcare II.
+Each test kit includes 48 tests, so we have plenty to use for that purpose. 
