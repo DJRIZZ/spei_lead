@@ -11,11 +11,11 @@
 
 <meta name="author" content="" />
 
-<meta name="date" content="2024-03-07" />
+<meta name="date" content="2025-12-02" />
 
 <title>Blood lead values: LeadCare II measurements compared to mass spec measurements</title>
 
-<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -31,15 +31,23 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.11.0/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <link rel="icon" href="https://github.com/workflowr/workflowr-assets/raw/main/img/reproducible.png">
 <!-- Add a small amount of space between sections. -->
@@ -383,7 +391,7 @@ div.tocify {
 <h1 class="title toc-ignore">Blood lead values: LeadCare II measurements
 compared to mass spec measurements</h1>
 <h4 class="author"></h4>
-<h4 class="date">2024-03-07</h4>
+<h4 class="date">2025-12-02</h4>
 
 </div>
 
@@ -391,7 +399,7 @@ compared to mass spec measurements</h1>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-ok text-success"
+workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -402,8 +410,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
-</a>
+class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -412,13 +420,13 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2024-03-07
+<strong>Last updated:</strong> 2025-12-02
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 0
+aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>spei_lead/</code> <span
@@ -430,7 +438,7 @@ title="This is the local directory in which the code in this file was executed."
 This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a>
 analysis was created with <a
   href="https://github.com/workflowr/workflowr">workflowr</a> (version
-1.7.0). The <em>Checks</em> tab describes the reproducibility checks
+1.7.1). The <em>Checks</em> tab describes the reproducibility checks
 that were applied when the results were created. The <em>Past
 versions</em> tab lists the development history.
 </p>
@@ -441,18 +449,21 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
-<span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
-</a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
+changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate"
+<div id="strongRMarkdownfilestronguncommittedchanges"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git
-repository, you know the exact version of the code that produced these
-results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of
+the R Markdown file created these results, you’ll want to first commit
+it to the Git repo. If you’re still working on the analysis, you can
+ignore this warning. When you’re finished, you can run
+<code>wflow_publish</code> to commit the R Markdown file and build the
+HTML.</p>
 </div>
 </div>
 </div>
@@ -476,16 +487,16 @@ empty environment.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed20230217code">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed20230228code">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Seed:</strong>
-<code>set.seed(20230217)</code> </a>
+<code>set.seed(20230228)</code> </a>
 </p>
 </div>
-<div id="strongSeedstrongcodesetseed20230217code"
+<div id="strongSeedstrongcodesetseed20230228code"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>The command <code>set.seed(20230217)</code> was run prior to running
+<p>The command <code>set.seed(20230228)</code> was run prior to running
 the code in the R Markdown file. Setting a seed ensures that any results
 that rely on randomness, e.g. subsampling or permutations, are
 reproducible.</p>
@@ -543,15 +554,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDJRIZZspeileadtree487664cafb0e1b0ff790e57c04d75ea25936ff4ctargetblank487664ca">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDJRIZZspeileadtreea41a727c7c9898c16aeaedd47d105379bc614c63targetblanka41a727a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/DJRIZZ/spei_lead/tree/487664cafb0e1b0ff790e57c04d75ea25936ff4c" target="_blank">487664c</a>
+<a href="https://github.com/DJRIZZ/spei_lead/tree/a41a727c7c9898c16aeaedd47d105379bc614c63" target="_blank">a41a727</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomDJRIZZspeileadtree487664cafb0e1b0ff790e57c04d75ea25936ff4ctargetblank487664ca"
+id="strongRepositoryversionstrongahrefhttpsgithubcomDJRIZZspeileadtreea41a727c7c9898c16aeaedd47d105379bc614c63targetblanka41a727a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -561,7 +572,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/DJRIZZ/spei_lead/tree/487664cafb0e1b0ff790e57c04d75ea25936ff4c" target="_blank">487664c</a>.
+<a href="https://github.com/DJRIZZ/spei_lead/tree/a41a727c7c9898c16aeaedd47d105379bc614c63" target="_blank">a41a727</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -578,46 +589,41 @@ were generated:
 Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
-    Ignored:    data/7030169 data.csv
-    Ignored:    data/README_spei_blood_lead_data.txt
-    Ignored:    data/Rizzolo Lead VSEP22-045 E-report.xlsx
-    Ignored:    data/eider_blood_samples_bands_utq_2022.csv
-    Ignored:    data/eider_lead_fws.csv
-    Ignored:    data/eider_lead_fws_2018-2022.csv
-    Ignored:    data/eider_lead_fws_mdJSONdictio.xlsx
-    Ignored:    data/sample_id_spei_blood_lead_2018.csv
-    Ignored:    data/spei_blood_lead_validation_results_20240306.csv
+    Ignored:    admin/
+    Ignored:    analysis/figure/
+    Ignored:    documents/
+    Ignored:    protocols/
 
 Untracked files:
-    Untracked:  analysis/summary_eider_lead_fws.Rmd
-    Untracked:  code/commands_workflowr_spei_lead.R
-    Untracked:  code/create_dataset_spei_lead.R
-    Untracked:  code/est_exp_prob_create_plots_spei_lead_20231211.R
-    Untracked:  code/getting_started.R
-    Untracked:  code/spei_lead_timeline.R
-    Untracked:  code/workflowr_commands_spei_lead.R
-    Untracked:  data/eider_lead_fws.json
+    Untracked:  analysis/map_eider_lead_fws_20251121.Rmd
+    Untracked:  data/7030169 data.csv
+    Untracked:  data/README_spei_blood_lead_data.txt
+    Untracked:  data/Rizzolo Lead VSEP22-045 E-report.xlsx
+    Untracked:  data/TEMP_eider_lead_fws_2018-2025.csv
+    Untracked:  data/eider_blood_samples_bands_utq_2022.csv
+    Untracked:  data/eider_lead_fws.csv
+    Untracked:  data/eider_lead_fws_2018-2022.csv
+    Untracked:  data/eider_lead_fws_2018-2025.csv
+    Untracked:  data/eider_lead_fws_2023-2025.csv
+    Untracked:  data/eider_lead_fws_FOR_REP_SELECTION.csv
+    Untracked:  data/leadcare2_validation/
+    Untracked:  data/pb_merged_all_msResults_lc2Results_20251124.csv
+    Untracked:  data/qtbl_pb_2023-2025.xlsx
+    Untracked:  data/sample_id_spei_blood_lead_2018.csv
+    Untracked:  data/samples_analyzed_2018/
+    Untracked:  data/samples_analyzed_2022/
+    Untracked:  data/samples_analyzed_2025/
+    Untracked:  data/samples_leadCare2_results/
     Untracked:  data/sourced/
-    Untracked:  eider_lead_fws.json
-    Untracked:  output/fig_all_exp_kash.jpg
-    Untracked:  output/fig_all_exp_kig.jpg
-    Untracked:  output/fig_all_exp_tut.jpg
-    Untracked:  output/fig_hist_exp_kash.jpg
-    Untracked:  output/fig_hist_exp_kig.jpg
-    Untracked:  output/fig_hist_exp_tut.jpg
-    Untracked:  output/fig_lead_timeline.jpg
-    Untracked:  output/fig_settle_timeline.jpg
-    Untracked:  output/fig_settle_timeline2.jpg
-    Untracked:  output/fig_settle_timeline3.jpg
-    Untracked:  output/fig_settle_timeline4.jpg
-    Untracked:  spei_pb_validation_calc_diff_plot_scatter_20240307.R
-    Untracked:  temp_test.Rmd
-    Untracked:  temp_test.html
+    Untracked:  data/spei_pb_ms_lc_20251124
+    Untracked:  data/spei_pb_ms_lc_20251124.csv
+    Untracked:  data/temp_spei_pb_lc2.csv
+    Untracked:  data/temp_tbl_pb_2.xlsx
+    Untracked:  metadata/
 
 Unstaged changes:
     Modified:   .gitignore
-    Modified:   _workflowr.yml
-    Modified:   analysis/map_eider_lead_fws.Rmd
+    Modified:   analysis/spei_pb_plot_validation_mass_spec_voltem.Rmd
 
 </code></pre>
 <p>
@@ -632,7 +638,6 @@ have uncommitted changes.
 <hr>
 </div>
 <div id="versions" class="tab-pane fade">
-
 <p>
 These are the previous versions of the repository in which changes were
 made to the R Markdown
@@ -666,6 +671,23 @@ Message
 <tbody>
 <tr>
 <td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/DJRIZZ/spei_lead/cc65bb4656d8a21575e354821f83e29368b73c1b/docs/spei_pb_plot_validation_mass_spec_voltem.html" target="_blank">cc65bb4</a>
+</td>
+<td>
+DJRIZZ
+</td>
+<td>
+2024-03-07
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
 Rmd
 </td>
 <td>
@@ -693,130 +715,520 @@ voltammetry (Lead Care II analyzer).</p>
 <p>Here’s the data, with pb_lc_ppm the values from the LeadCare analyzer
 and pb_ms_ppm the values from mass spec.</p>
 <pre class="r"><code># load mass spec lead data (from Texas A&amp;M Univ, and Washington State)
-std &lt;- read.csv(&quot;data/eider_lead_fws_2018-2022.csv&quot;)
+std &lt;- read.csv(&quot;data/eider_lead_fws_2018-2025.csv&quot;)
 # keep necessary columns
 std &lt;- cbind.data.frame(std$band_metal, std$date_capture, std$lead_ppm)
 colnames(std) &lt;- c(&quot;id_metalband&quot;, &quot;dt_sampled&quot;, &quot;pb_ms_ppm&quot;)
-
-# load Lead Care II data
+# format data
+std$dt_sampled &lt;- as.Date(std$dt_sampled, format = &quot;%Y-%m-%d&quot;)
+# check data
+sum_std &lt;- summary(std)
+sum_std</code></pre>
+<pre><code>  id_metalband         dt_sampled           pb_ms_ppm      
+ Min.   :        0   Min.   :2018-05-08   Min.   :0.00362  
+ 1st Qu.:200741816   1st Qu.:2019-06-09   1st Qu.:0.02000  
+ Median :200762278   Median :2022-05-12   Median :0.02000  
+ Mean   :206031169   Mean   :2021-03-30   Mean   :0.19501  
+ 3rd Qu.:200762842   3rd Qu.:2023-06-18   3rd Qu.:0.03500  
+ Max.   :360701086   Max.   :2025-06-12   Max.   :8.90000  </code></pre>
+<pre class="r"><code># load Lead Care II data
 # load Lead Care II results
-lc &lt;- read.csv(&quot;data/spei_blood_lead_validation_results_20240306.csv&quot;)
+#lc &lt;- read.csv(&quot;data/spei_blood_lead_validation_results_20240306.csv&quot;)
+#lc &lt;- read.csv(&quot;data/samples_leadCare2_results/data_leadCare2_results_20251125.csv&quot;)
+lc &lt;- read.csv(&quot;data/samples_leadCare2_results/data_leadCare2_results_20251201.csv&quot;)
+lc$pb_blood_ppm &lt;- lc$val_blood_lead_ug.dL*0.01
+# remove replicates - samples measured more than once
+lc &lt;- subset(lc, is_replicate != 1)
 # keep necessary columns
-lc &lt;- cbind.data.frame(lc$id_metalband, lc$dt_sampled, lc$pb_blood_ppm)
+lc &lt;- cbind.data.frame(lc$id_metalBand, lc$dt_sample_date, lc$pb_blood_ppm)
 colnames(lc) &lt;- c(&quot;id_metalband&quot;, &quot;dt_sampled&quot;, &quot;pb_lc_ppm&quot;)
 # add analysis type column
 #lc$cat_analysis &lt;- &quot;leadcare2&quot;
-
-# merge std into lc, keep only complete lc records
+# format data
+lc$dt_sampled &lt;- as.Date(lc$dt_sampled, format = &quot;%Y-%m-%d&quot;)
+# check data
+# check data
+sum_lc &lt;-summary(lc)
+sum_lc</code></pre>
+<pre><code>  id_metalband         dt_sampled           pb_lc_ppm     
+ Min.   :200704137   Min.   :2019-06-09   Min.   :0.0330  
+ 1st Qu.:200762258   1st Qu.:2021-06-21   1st Qu.:0.0330  
+ Median :200762315   Median :2023-06-27   Median :0.0330  
+ Mean   :211425588   Mean   :2022-09-08   Mean   :0.1121  
+ 3rd Qu.:200762856   3rd Qu.:2023-08-03   3rd Qu.:0.0830  
+ Max.   :360701086   Max.   :2025-06-23   Max.   :0.6500  </code></pre>
+<pre class="r"><code># merge std into lc, keep only complete lc records
 pb &lt;- merge(lc, std, all.x = TRUE)
+# check data
+sum_pb &lt;- summary(pb)
+
+# remove records with NAs - from individuals with low-volume blood samples that were only analyzed with LC2 and not mass spec
+pb &lt;- pb[!is.na(pb$pb_ms_ppm), ]
 
 pb</code></pre>
-<pre><code>   id_metalband dt_sampled pb_lc_ppm pb_ms_ppm
-1     134752211 2019-06-13    0.0700    0.0200
-2     200706599 2019-06-13    0.0330    0.0350
-3     200730012 2019-06-13    0.0590    0.0200
-4     200741803 2019-06-10    0.1810    0.4700
-5     200741813 2019-06-11    0.6500    2.0000
-6     200741815 2019-06-12    0.0330    0.0270
-7     200741831 2019-06-12    0.3360    0.9200
-8     200741864 2022-05-16    0.3570    0.4300
-9     200741866 2022-05-17    0.0360    0.0200
-10    200762263 2022-07-31    0.0370    0.0400
-11    200762265 2022-08-01    0.4040    0.4500
-12    200762281 2021-06-20    0.6170    1.1000
-13    200762282 2021-06-21    0.6500    1.5000
-14    200762283 2021-06-21    0.2620    0.5100
-15    200762284 2021-06-21    0.4070    1.4000
-16    200762285 2021-06-22    0.0165    0.0310
-17    200762805 2018-05-13    0.0039    0.0039
-18    200762833 2019-06-13    0.0990    0.2200
-19    200762835 2019-06-13    0.6500    3.3000
-20    200762894 2022-07-28    0.2120    0.2600
-21    200762899 2022-07-31    0.2820    0.3000
-22    226703001 2022-07-28    0.2700    0.3900
-23    360701058 2019-06-15    0.0165    0.0400</code></pre>
-<p>Some summary stats and historgrams for each type of measurement.</p>
+<pre><code>    id_metalband dt_sampled pb_lc_ppm pb_ms_ppm
+1      200704137 2023-06-28     0.035     0.021
+2      200704154 2023-07-31     0.033     0.031
+3      200706524 2023-08-02     0.033     0.020
+4      200706545 2019-06-09     0.033     0.026
+5      200706599 2019-06-13     0.033     0.035
+6      200706599 2024-06-01     0.111     0.150
+8      200741803 2019-06-10     0.378     0.470
+9      200741806 2019-06-11     0.095     0.120
+10     200741809 2019-06-12     0.152     0.210
+12     200741813 2019-06-11     0.650     2.000
+13     200741815 2019-06-12     0.033     0.027
+14     200741816 2019-06-12     0.033     0.048
+15     200741817 2019-06-14     0.149     0.190
+16     200741818 2019-06-16     0.077     0.110
+17     200741821 2019-06-14     0.214     0.330
+18     200741831 2019-06-12     0.462     0.920
+19     200741832 2019-06-12     0.045     0.040
+20     200741836 2023-07-31     0.033     0.020
+21     200741842 2023-08-03     0.033     0.020
+22     200741852 2022-06-11     0.033     0.051
+23     200741864 2022-05-16     0.385     0.430
+24     200741880 2022-05-15     0.176     0.200
+26     200741886 2023-06-20     0.033     0.053
+29     200741889 2023-06-20     0.033     0.020
+30     200741890 2023-06-18     0.033     0.020
+32     200762257 2022-06-18     0.085     0.083
+33     200762257 2023-07-30     0.156     0.260
+34     200762260 2022-06-20     0.650     8.900
+36     200762265 2022-08-01     0.468     0.450
+37     200762266 2022-08-01     0.034     0.020
+38     200762267 2022-08-01     0.096     0.120
+39     200762273 2023-06-17     0.033     0.020
+41     200762274 2023-08-01     0.034     0.024
+43     200762276 2023-06-19     0.033     0.020
+44     200762276 2023-08-03     0.033     0.020
+46     200762278 2023-07-31     0.033     0.020
+47     200762279 2023-07-31     0.033     0.020
+48     200762282 2023-06-18     0.650     2.500
+49     200762283 2021-06-21     0.324     0.510
+50     200762285 2021-06-22     0.033     0.031
+52     200762286 2023-06-17     0.650     8.900
+54     200762291 2023-08-06     0.033     0.020
+55     200762292 2023-08-07     0.033     0.020
+56     200762295 2023-08-06     0.033     0.020
+57     200762296 2023-08-06     0.033     0.020
+58     200762297 2023-07-31     0.033     0.020
+60     200762298 2023-07-31     0.033     0.020
+61     200762299 2023-06-19     0.033     0.022
+62     200762300 2023-06-19     0.044     0.028
+64     200762304 2023-07-30     0.033     0.020
+65     200762309 2023-07-31     0.093     0.085
+67     200762334 2023-08-06     0.033     0.020
+69     200762340 2023-08-06     0.033     0.024
+72     200762344 2024-06-19     0.033     0.020
+77     200762823 2019-06-09     0.126     0.130
+78     200762824 2019-06-10     0.042     0.040
+79     200762824 2021-06-16     0.033     0.026
+80     200762827 2019-06-11     0.050     0.074
+81     200762828 2019-06-11     0.035     0.048
+82     200762833 2019-06-13     0.135     0.220
+83     200762835 2019-06-13     0.650     3.300
+84     200762836 2019-06-14     0.063     0.042
+85     200762838 2019-06-17     0.033     0.041
+86     200762839 2021-06-16     0.033     0.034
+87     200762841 2021-06-16     0.060     0.091
+89     200762847 2021-06-18     0.033     0.027
+90     200762849 2021-06-20     0.052     0.081
+91     200762849 2023-07-31     0.033     0.020
+92     200762850 2021-06-20     0.058     0.056
+93     200762851 2023-08-01     0.033     0.020
+94     200762852 2023-08-01     0.033     0.020
+95     200762853 2023-08-03     0.033     0.020
+96     200762854 2023-08-04     0.033     0.020
+97     200762855 2023-08-06     0.033     0.020
+98     200762856 2023-08-04     0.033     0.020
+99     200762857 2023-08-03     0.033     0.020
+100    200762858 2023-08-03     0.033     0.020
+101    200762859 2023-08-03     0.033     0.020
+102    200762860 2023-08-01     0.033     0.020
+103    200762881 2023-06-24     0.033     0.028
+104    200762882 2023-08-02     0.033     0.020
+105    200762883 2023-08-02     0.066     0.072
+107    200762886 2023-08-01     0.033     0.020
+108    200762887 2023-08-01     0.033     0.020
+109    200762888 2023-07-31     0.033     0.020
+110    200762889 2023-07-30     0.033     0.020
+112    200762894 2022-07-28     0.224     0.260
+113    200762897 2022-07-29     0.033     0.033
+114    200762899 2022-07-31     0.272     0.300
+115    226703001 2022-07-28     0.275     0.390
+116    226703019 2022-07-30     0.063     0.068
+117    226703029 2022-07-28     0.107     0.110
+120    250707636 2025-06-11     0.650     8.800
+121    250707637 2025-06-12     0.033     0.034
+124    250707681 2024-06-22     0.043     0.065
+125    360700426 2023-08-07     0.033     0.020
+126    360700473 2019-06-13     0.147     0.170
+127    360701057 2021-06-15     0.033     0.046
+128    360701058 2019-06-15     0.033     0.040
+129    360701059 2023-06-21     0.033     0.023
+130    360701086 2023-08-07     0.650     1.000</code></pre>
+<p>Some summary stats and histograms for each type of measurement.</p>
 <pre class="r"><code># data summaries
 mass_spec_sum &lt;- summary(pb$pb_ms_ppm)
 mass_spec_sum </code></pre>
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
- 0.0039  0.0330  0.3000  0.5864  0.7150  3.3000 </code></pre>
+ 0.0200  0.0200  0.0330  0.4335  0.1200  8.9000 </code></pre>
 <pre class="r"><code>hist(mass_spec_sum)</code></pre>
 <p><img src="figure/spei_pb_plot_validation_mass_spec_voltem.Rmd/summary%20stats-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-summary-stats-1">
+Past versions of "summary stats-1.png"
+</button>
+</p>
+<div id="fig-no-spaces-summary-stats-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DJRIZZ/spei_lead/blob/cc65bb4656d8a21575e354821f83e29368b73c1b/docs/figure/spei_pb_plot_validation_mass_spec_voltem.Rmd/summary stats-1.png" target="_blank">cc65bb4</a>
+</td>
+<td>
+DJRIZZ
+</td>
+<td>
+2024-03-07
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code>lead_care_sum &lt;- summary(pb$pb_lc_ppm)
 lead_care_sum</code></pre>
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
- 0.0039  0.0365  0.2120  0.2470  0.3805  0.6500 </code></pre>
+ 0.0330  0.0330  0.0330  0.1171  0.0960  0.6500 </code></pre>
 <pre class="r"><code>hist(lead_care_sum)</code></pre>
 <p><img src="figure/spei_pb_plot_validation_mass_spec_voltem.Rmd/summary%20stats-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-summary-stats-2">
+Past versions of "summary stats-2.png"
+</button>
+</p>
+<div id="fig-no-spaces-summary-stats-2" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DJRIZZ/spei_lead/blob/cc65bb4656d8a21575e354821f83e29368b73c1b/docs/figure/spei_pb_plot_validation_mass_spec_voltem.Rmd/summary stats-2.png" target="_blank">cc65bb4</a>
+</td>
+<td>
+DJRIZZ
+</td>
+<td>
+2024-03-07
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p>Roughly similar data from both mass spec and the Lead Care II
 analyzer, except at the high end of the range of values. This is in part
 because Lead Care II has a upper detection limit of 0.65 ppm, so the
 higher values measured by mass spec are all truncated to 0.65 ppm in the
 mass spec data.</p>
-<p>Remove the mass spec values &gt; 0.65 for a better comparison.</p>
+<p>To make the data more comparable, change the mass spec values &gt;
+0.65 to 0.65, and the values &lt; 0.033 to 0.033 (detection limits for
+LeadCareII are 0.033 and 0.65 ppm).</p>
 <pre class="r"><code># calculate difference
 # remove values at upper detection limit of lead care II, 0.65 ppm
-pb_limit &lt;- subset(pb, pb_ms_ppm &lt; 0.65)
+pb_limit &lt;- pb
+pb_limit$pb_ms_ppm[pb_limit$pb_ms_ppm &gt; 0.65] &lt;- 0.65
+pb_limit$pb_ms_ppm[pb_limit$pb_ms_ppm &lt; 0.033] &lt;- 0.033
 
 # summarize truncated data for mass spec...
 limit_mass_spec_sum &lt;- summary(pb_limit$pb_ms_ppm)
 limit_mass_spec_sum</code></pre>
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
- 0.0039  0.0270  0.0400  0.1922  0.3900  0.5100 </code></pre>
+ 0.0330  0.0330  0.0330  0.1311  0.1200  0.6500 </code></pre>
 <pre class="r"><code>hist(pb_limit$pb_ms_ppm)  </code></pre>
 <p><img src="figure/spei_pb_plot_validation_mass_spec_voltem.Rmd/cal%20diff-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-cal-diff-1">
+Past versions of "cal diff-1.png"
+</button>
+</p>
+<div id="fig-no-spaces-cal-diff-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DJRIZZ/spei_lead/blob/cc65bb4656d8a21575e354821f83e29368b73c1b/docs/figure/spei_pb_plot_validation_mass_spec_voltem.Rmd/cal diff-1.png" target="_blank">cc65bb4</a>
+</td>
+<td>
+DJRIZZ
+</td>
+<td>
+2024-03-07
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code># and Leadcare II
 limit_leadcare_sum &lt;- summary(pb_limit$pb_lc_ppm)
 limit_leadcare_sum</code></pre>
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
- 0.0039  0.0330  0.0700  0.1395  0.2620  0.4040 </code></pre>
+ 0.0330  0.0330  0.0330  0.1171  0.0960  0.6500 </code></pre>
 <pre class="r"><code>hist(pb_limit$pb_lc_ppm) </code></pre>
 <p><img src="figure/spei_pb_plot_validation_mass_spec_voltem.Rmd/cal%20diff-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-cal-diff-2">
+Past versions of "cal diff-2.png"
+</button>
+</p>
+<div id="fig-no-spaces-cal-diff-2" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DJRIZZ/spei_lead/blob/cc65bb4656d8a21575e354821f83e29368b73c1b/docs/figure/spei_pb_plot_validation_mass_spec_voltem.Rmd/cal diff-2.png" target="_blank">cc65bb4</a>
+</td>
+<td>
+DJRIZZ
+</td>
+<td>
+2024-03-07
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code># look at the differences between values
 pb_limit$diff &lt;- pb_limit$pb_ms_ppm - pb_limit$pb_lc_ppm
 differences_sum &lt;- summary(pb_limit$diff)
 differences_sum</code></pre>
 <pre><code>    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
--0.05000  0.00000  0.01800  0.05265  0.07300  0.28900 </code></pre>
+-0.02100  0.00000  0.00000  0.01397  0.01300  0.18800 </code></pre>
 <pre class="r"><code>hist(pb_limit$diff)</code></pre>
 <p><img src="figure/spei_pb_plot_validation_mass_spec_voltem.Rmd/cal%20diff-3.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-cal-diff-3">
+Past versions of "cal diff-3.png"
+</button>
+</p>
+<div id="fig-no-spaces-cal-diff-3" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DJRIZZ/spei_lead/blob/cc65bb4656d8a21575e354821f83e29368b73c1b/docs/figure/spei_pb_plot_validation_mass_spec_voltem.Rmd/cal diff-3.png" target="_blank">cc65bb4</a>
+</td>
+<td>
+DJRIZZ
+</td>
+<td>
+2024-03-07
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code># look at differences as percentage differences from the mass spec values
 pb_limit$pdiff &lt;- (pb_limit$diff/pb_limit$pb_ms_ppm)*100
 pdiff_sum &lt;- summary(pb_limit$pdiff)
 pdiff_sum</code></pre>
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
--250.00    0.00   10.22  -10.64   46.77   61.49 </code></pre>
-<p>With the upper detection limit truncated data, the results look
-similar from mass spec and Leadcare. The mean difference in values is
-0.053 ppm.</p>
+-50.000   0.000   0.000   6.604  13.529  40.000 </code></pre>
+<p>With the upper and lower detection limits truncated in the ms data,
+the results look similar from mass spec and Leadcare. The mean
+difference between to the two methods shows measurements from mass spec
+are an average of 0.00737 ppm greater than measurements from LeadCare
+II. The difference between measurements ranges from -0.07 to 0.116
+ppm.</p>
 <p>Look at the difference as percent change from the mass spec
 value.</p>
 <pre class="r"><code># look at differences as percentage differences from the mass spec values
 pb_limit$pdiff &lt;- (pb_limit$diff/pb_limit$pb_ms_ppm)*100
 pb_limit</code></pre>
-<pre><code>   id_metalband dt_sampled pb_lc_ppm pb_ms_ppm    diff       pdiff
-1     134752211 2019-06-13    0.0700    0.0200 -0.0500 -250.000000
-2     200706599 2019-06-13    0.0330    0.0350  0.0020    5.714286
-3     200730012 2019-06-13    0.0590    0.0200 -0.0390 -195.000000
-4     200741803 2019-06-10    0.1810    0.4700  0.2890   61.489362
-6     200741815 2019-06-12    0.0330    0.0270 -0.0060  -22.222222
-8     200741864 2022-05-16    0.3570    0.4300  0.0730   16.976744
-9     200741866 2022-05-17    0.0360    0.0200 -0.0160  -80.000000
-10    200762263 2022-07-31    0.0370    0.0400  0.0030    7.500000
-11    200762265 2022-08-01    0.4040    0.4500  0.0460   10.222222
-14    200762283 2021-06-21    0.2620    0.5100  0.2480   48.627451
-16    200762285 2021-06-22    0.0165    0.0310  0.0145   46.774194
-17    200762805 2018-05-13    0.0039    0.0039  0.0000    0.000000
-18    200762833 2019-06-13    0.0990    0.2200  0.1210   55.000000
-20    200762894 2022-07-28    0.2120    0.2600  0.0480   18.461538
-21    200762899 2022-07-31    0.2820    0.3000  0.0180    6.000000
-22    226703001 2022-07-28    0.2700    0.3900  0.1200   30.769231
-23    360701058 2019-06-15    0.0165    0.0400  0.0235   58.750000</code></pre>
+<pre><code>    id_metalband dt_sampled pb_lc_ppm pb_ms_ppm   diff      pdiff
+1      200704137 2023-06-28     0.035     0.033 -0.002  -6.060606
+2      200704154 2023-07-31     0.033     0.033  0.000   0.000000
+3      200706524 2023-08-02     0.033     0.033  0.000   0.000000
+4      200706545 2019-06-09     0.033     0.033  0.000   0.000000
+5      200706599 2019-06-13     0.033     0.035  0.002   5.714286
+6      200706599 2024-06-01     0.111     0.150  0.039  26.000000
+8      200741803 2019-06-10     0.378     0.470  0.092  19.574468
+9      200741806 2019-06-11     0.095     0.120  0.025  20.833333
+10     200741809 2019-06-12     0.152     0.210  0.058  27.619048
+12     200741813 2019-06-11     0.650     0.650  0.000   0.000000
+13     200741815 2019-06-12     0.033     0.033  0.000   0.000000
+14     200741816 2019-06-12     0.033     0.048  0.015  31.250000
+15     200741817 2019-06-14     0.149     0.190  0.041  21.578947
+16     200741818 2019-06-16     0.077     0.110  0.033  30.000000
+17     200741821 2019-06-14     0.214     0.330  0.116  35.151515
+18     200741831 2019-06-12     0.462     0.650  0.188  28.923077
+19     200741832 2019-06-12     0.045     0.040 -0.005 -12.500000
+20     200741836 2023-07-31     0.033     0.033  0.000   0.000000
+21     200741842 2023-08-03     0.033     0.033  0.000   0.000000
+22     200741852 2022-06-11     0.033     0.051  0.018  35.294118
+23     200741864 2022-05-16     0.385     0.430  0.045  10.465116
+24     200741880 2022-05-15     0.176     0.200  0.024  12.000000
+26     200741886 2023-06-20     0.033     0.053  0.020  37.735849
+29     200741889 2023-06-20     0.033     0.033  0.000   0.000000
+30     200741890 2023-06-18     0.033     0.033  0.000   0.000000
+32     200762257 2022-06-18     0.085     0.083 -0.002  -2.409639
+33     200762257 2023-07-30     0.156     0.260  0.104  40.000000
+34     200762260 2022-06-20     0.650     0.650  0.000   0.000000
+36     200762265 2022-08-01     0.468     0.450 -0.018  -4.000000
+37     200762266 2022-08-01     0.034     0.033 -0.001  -3.030303
+38     200762267 2022-08-01     0.096     0.120  0.024  20.000000
+39     200762273 2023-06-17     0.033     0.033  0.000   0.000000
+41     200762274 2023-08-01     0.034     0.033 -0.001  -3.030303
+43     200762276 2023-06-19     0.033     0.033  0.000   0.000000
+44     200762276 2023-08-03     0.033     0.033  0.000   0.000000
+46     200762278 2023-07-31     0.033     0.033  0.000   0.000000
+47     200762279 2023-07-31     0.033     0.033  0.000   0.000000
+48     200762282 2023-06-18     0.650     0.650  0.000   0.000000
+49     200762283 2021-06-21     0.324     0.510  0.186  36.470588
+50     200762285 2021-06-22     0.033     0.033  0.000   0.000000
+52     200762286 2023-06-17     0.650     0.650  0.000   0.000000
+54     200762291 2023-08-06     0.033     0.033  0.000   0.000000
+55     200762292 2023-08-07     0.033     0.033  0.000   0.000000
+56     200762295 2023-08-06     0.033     0.033  0.000   0.000000
+57     200762296 2023-08-06     0.033     0.033  0.000   0.000000
+58     200762297 2023-07-31     0.033     0.033  0.000   0.000000
+60     200762298 2023-07-31     0.033     0.033  0.000   0.000000
+61     200762299 2023-06-19     0.033     0.033  0.000   0.000000
+62     200762300 2023-06-19     0.044     0.033 -0.011 -33.333333
+64     200762304 2023-07-30     0.033     0.033  0.000   0.000000
+65     200762309 2023-07-31     0.093     0.085 -0.008  -9.411765
+67     200762334 2023-08-06     0.033     0.033  0.000   0.000000
+69     200762340 2023-08-06     0.033     0.033  0.000   0.000000
+72     200762344 2024-06-19     0.033     0.033  0.000   0.000000
+77     200762823 2019-06-09     0.126     0.130  0.004   3.076923
+78     200762824 2019-06-10     0.042     0.040 -0.002  -5.000000
+79     200762824 2021-06-16     0.033     0.033  0.000   0.000000
+80     200762827 2019-06-11     0.050     0.074  0.024  32.432432
+81     200762828 2019-06-11     0.035     0.048  0.013  27.083333
+82     200762833 2019-06-13     0.135     0.220  0.085  38.636364
+83     200762835 2019-06-13     0.650     0.650  0.000   0.000000
+84     200762836 2019-06-14     0.063     0.042 -0.021 -50.000000
+85     200762838 2019-06-17     0.033     0.041  0.008  19.512195
+86     200762839 2021-06-16     0.033     0.034  0.001   2.941176
+87     200762841 2021-06-16     0.060     0.091  0.031  34.065934
+89     200762847 2021-06-18     0.033     0.033  0.000   0.000000
+90     200762849 2021-06-20     0.052     0.081  0.029  35.802469
+91     200762849 2023-07-31     0.033     0.033  0.000   0.000000
+92     200762850 2021-06-20     0.058     0.056 -0.002  -3.571429
+93     200762851 2023-08-01     0.033     0.033  0.000   0.000000
+94     200762852 2023-08-01     0.033     0.033  0.000   0.000000
+95     200762853 2023-08-03     0.033     0.033  0.000   0.000000
+96     200762854 2023-08-04     0.033     0.033  0.000   0.000000
+97     200762855 2023-08-06     0.033     0.033  0.000   0.000000
+98     200762856 2023-08-04     0.033     0.033  0.000   0.000000
+99     200762857 2023-08-03     0.033     0.033  0.000   0.000000
+100    200762858 2023-08-03     0.033     0.033  0.000   0.000000
+101    200762859 2023-08-03     0.033     0.033  0.000   0.000000
+102    200762860 2023-08-01     0.033     0.033  0.000   0.000000
+103    200762881 2023-06-24     0.033     0.033  0.000   0.000000
+104    200762882 2023-08-02     0.033     0.033  0.000   0.000000
+105    200762883 2023-08-02     0.066     0.072  0.006   8.333333
+107    200762886 2023-08-01     0.033     0.033  0.000   0.000000
+108    200762887 2023-08-01     0.033     0.033  0.000   0.000000
+109    200762888 2023-07-31     0.033     0.033  0.000   0.000000
+110    200762889 2023-07-30     0.033     0.033  0.000   0.000000
+112    200762894 2022-07-28     0.224     0.260  0.036  13.846154
+113    200762897 2022-07-29     0.033     0.033  0.000   0.000000
+114    200762899 2022-07-31     0.272     0.300  0.028   9.333333
+115    226703001 2022-07-28     0.275     0.390  0.115  29.487179
+116    226703019 2022-07-30     0.063     0.068  0.005   7.352941
+117    226703029 2022-07-28     0.107     0.110  0.003   2.727273
+120    250707636 2025-06-11     0.650     0.650  0.000   0.000000
+121    250707637 2025-06-12     0.033     0.034  0.001   2.941176
+124    250707681 2024-06-22     0.043     0.065  0.022  33.846154
+125    360700426 2023-08-07     0.033     0.033  0.000   0.000000
+126    360700473 2019-06-13     0.147     0.170  0.023  13.529412
+127    360701057 2021-06-15     0.033     0.046  0.013  28.260870
+128    360701058 2019-06-15     0.033     0.040  0.007  17.500000
+129    360701059 2023-06-21     0.033     0.033  0.000   0.000000
+130    360701086 2023-08-07     0.650     0.650  0.000   0.000000</code></pre>
 <pre class="r"><code>pdiff_sum &lt;- summary(pb_limit$pdiff)
 pdiff_sum</code></pre>
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
--250.00    0.00   10.22  -10.64   46.77   61.49 </code></pre>
+-50.000   0.000   0.000   6.604  13.529  40.000 </code></pre>
+<p>Mass spec values are an average of 2.98 % greater than LeadCareII,
+ranging from 102% less than LeadCareII to 43.8% greater than
+LeadCareII.</p>
 <p>Some results from LeadCare aren’t great. Specifically, samples that
 were identified as having lead levels indicating lead exposure (&gt;0.2
 ppm) by mass spec that were below 0.2 ppm when tested on LeadCare
@@ -835,17 +1247,165 @@ a line with slope = 1.</p>
 <pre class="r"><code># calculate difference
 # remove values at upper detection limit of lead care II, 0.65 ppm
 # plot pb values as scattergram
-p.pb &lt;- ggplot(pb)+
-  geom_point(data = pb, aes(x = pb_ms_ppm, y = pb_lc_ppm)) +
+p.pb &lt;- ggplot(pb_limit)+
+  geom_point(data = pb_limit, aes(x = pb_ms_ppm, y = pb_lc_ppm)) +
   theme_bw()+
   ggtitle(&quot;Blood Lead via Mass Spec vs. Voltammetry&quot;) +
   labs(y= &quot;Mass Spec Lead ppm&quot;, x = &quot;Voltemmetry Lead ppm&quot;)
 p.pb</code></pre>
-<p><img src="figure/spei_pb_plot_validation_mass_spec_voltem.Rmd/plot-1.png" width="672" style="display: block; margin: auto;" />
-The scattergram of lead values shows decent agreement.</p>
+<p><img src="figure/spei_pb_plot_validation_mass_spec_voltem.Rmd/plot-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-plot-1">
+Past versions of plot-1.png
+</button>
+</p>
+<div id="fig-plot-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/DJRIZZ/spei_lead/blob/cc65bb4656d8a21575e354821f83e29368b73c1b/docs/figure/spei_pb_plot_validation_mass_spec_voltem.Rmd/plot-1.png" target="_blank">cc65bb4</a>
+</td>
+<td>
+DJRIZZ
+</td>
+<td>
+2024-03-07
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>The scattergram of lead values shows decent agreement.</p>
 <p>I think this needs a bit more data. Need to pull some more reference
 samples and run them on leadcare II. Each test kit includes 48 tests, so
 we have plenty to use for that purpose.</p>
+<pre class="r"><code># create interactive scattergram
+fig1 &lt;- plot_ly(data = pb_limit,
+               x = ~pb_lc_ppm,
+               y = ~pb_ms_ppm,
+               type = &#39;scatter&#39;,
+               mode = &#39;markers&#39;,
+               text = ~id_metalband,
+               hoverinfo = &#39;text&#39;
+               )
+fig1</code></pre>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-ed24df5b4846e30c77de" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-ed24df5b4846e30c77de">{"x":{"visdat":{"e007e677d37":["function () ","plotlyVisDat"]},"cur_data":"e007e677d37","attrs":{"e007e677d37":{"x":{},"y":{},"mode":"markers","text":{},"hoverinfo":"text","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"pb_lc_ppm"},"yaxis":{"domain":[0,1],"automargin":true,"title":"pb_ms_ppm"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[0.035000000000000003,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.111,0.378,0.095000000000000001,0.152,0.65000000000000002,0.033000000000000002,0.033000000000000002,0.14899999999999999,0.076999999999999999,0.214,0.46200000000000002,0.044999999999999998,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.38500000000000001,0.17600000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.085000000000000006,0.156,0.65000000000000002,0.46799999999999997,0.034000000000000002,0.096000000000000002,0.033000000000000002,0.034000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.65000000000000002,0.32400000000000001,0.033000000000000002,0.65000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.044000000000000004,0.033000000000000002,0.093000000000000013,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.126,0.042000000000000003,0.033000000000000002,0.050000000000000003,0.035000000000000003,0.13500000000000001,0.65000000000000002,0.063,0.033000000000000002,0.033000000000000002,0.059999999999999998,0.033000000000000002,0.052000000000000005,0.033000000000000002,0.057999999999999996,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.066000000000000003,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.22399999999999998,0.033000000000000002,0.27200000000000002,0.27500000000000002,0.063,0.107,0.65000000000000002,0.033000000000000002,0.042999999999999997,0.033000000000000002,0.14699999999999999,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.65000000000000002],"y":[0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.035000000000000003,0.14999999999999999,0.46999999999999997,0.12,0.20999999999999999,0.65000000000000002,0.033000000000000002,0.048000000000000001,0.19,0.11,0.33000000000000002,0.65000000000000002,0.040000000000000001,0.033000000000000002,0.033000000000000002,0.050999999999999997,0.42999999999999999,0.20000000000000001,0.052999999999999999,0.033000000000000002,0.033000000000000002,0.083000000000000004,0.26000000000000001,0.65000000000000002,0.45000000000000001,0.033000000000000002,0.12,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.65000000000000002,0.51000000000000001,0.033000000000000002,0.65000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.085000000000000006,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.13,0.040000000000000001,0.033000000000000002,0.073999999999999996,0.048000000000000001,0.22,0.65000000000000002,0.042000000000000003,0.041000000000000002,0.034000000000000002,0.090999999999999998,0.033000000000000002,0.081000000000000003,0.033000000000000002,0.056000000000000001,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.071999999999999995,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.26000000000000001,0.033000000000000002,0.29999999999999999,0.39000000000000001,0.068000000000000005,0.11,0.65000000000000002,0.034000000000000002,0.065000000000000002,0.033000000000000002,0.17000000000000001,0.045999999999999999,0.040000000000000001,0.033000000000000002,0.65000000000000002],"mode":"markers","text":[200704137,200704154,200706524,200706545,200706599,200706599,200741803,200741806,200741809,200741813,200741815,200741816,200741817,200741818,200741821,200741831,200741832,200741836,200741842,200741852,200741864,200741880,200741886,200741889,200741890,200762257,200762257,200762260,200762265,200762266,200762267,200762273,200762274,200762276,200762276,200762278,200762279,200762282,200762283,200762285,200762286,200762291,200762292,200762295,200762296,200762297,200762298,200762299,200762300,200762304,200762309,200762334,200762340,200762344,200762823,200762824,200762824,200762827,200762828,200762833,200762835,200762836,200762838,200762839,200762841,200762847,200762849,200762849,200762850,200762851,200762852,200762853,200762854,200762855,200762856,200762857,200762858,200762859,200762860,200762881,200762882,200762883,200762886,200762887,200762888,200762889,200762894,200762897,200762899,226703001,226703019,226703029,250707636,250707637,250707681,360700426,360700473,360701057,360701058,360701059,360701086],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"scatter","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>linear model of mass spec values explained by voltammetry values</p>
+<pre class="r"><code>m1 &lt;- lm(pb_ms_ppm ~ pb_lc_ppm, data = pb_limit)
+sum_m1 &lt;- summary(m1)
+sum_m1</code></pre>
+<pre><code>
+Call:
+lm(formula = pb_ms_ppm ~ pb_lc_ppm, data = pb_limit)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.051677 -0.009246 -0.009246  0.003754  0.160411 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 0.007393   0.004081   1.812   0.0731 .  
+pb_lc_ppm   1.056163   0.019665  53.709   &lt;2e-16 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 0.03386 on 99 degrees of freedom
+Multiple R-squared:  0.9668,    Adjusted R-squared:  0.9665 
+F-statistic:  2885 on 1 and 99 DF,  p-value: &lt; 2.2e-16</code></pre>
+<pre class="r"><code>ci &lt;- confint(m1)
+ci</code></pre>
+<pre><code>                    2.5 %     97.5 %
+(Intercept) -0.0007046589 0.01548982
+pb_lc_ppm    1.0171438599 1.09518168</code></pre>
+<pre class="r"><code>plot(m1)</code></pre>
+<p><img src="figure/spei_pb_plot_validation_mass_spec_voltem.Rmd/lm1-1.png" width="672" style="display: block; margin: auto;" /><img src="figure/spei_pb_plot_validation_mass_spec_voltem.Rmd/lm1-2.png" width="672" style="display: block; margin: auto;" /><img src="figure/spei_pb_plot_validation_mass_spec_voltem.Rmd/lm1-3.png" width="672" style="display: block; margin: auto;" /><img src="figure/spei_pb_plot_validation_mass_spec_voltem.Rmd/lm1-4.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Fit linear log-log model</p>
+<pre class="r"><code>m2 &lt;- lm(log(pb_ms_ppm) ~ log(pb_lc_ppm), data = pb_limit)
+sum_m2 &lt;- summary(m2)
+sum_m2</code></pre>
+<pre><code>
+Call:
+lm(formula = log(pb_ms_ppm) ~ log(pb_lc_ppm), data = pb_limit)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.48783 -0.05705 -0.05705  0.01702  0.41673 
+
+Coefficients:
+               Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)     0.19058    0.05045   3.777 0.000271 ***
+log(pb_lc_ppm)  1.03914    0.01718  60.487  &lt; 2e-16 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 0.1671 on 99 degrees of freedom
+Multiple R-squared:  0.9737,    Adjusted R-squared:  0.9734 
+F-statistic:  3659 on 1 and 99 DF,  p-value: &lt; 2.2e-16</code></pre>
+<pre class="r"><code>ci &lt;- confint(m2)
+ci</code></pre>
+<pre><code>                    2.5 %    97.5 %
+(Intercept)    0.09047222 0.2906904
+log(pb_lc_ppm) 1.00505561 1.0732322</code></pre>
+<pre class="r"><code>plot(m2)</code></pre>
+<p><img src="figure/spei_pb_plot_validation_mass_spec_voltem.Rmd/lm2-1.png" width="672" style="display: block; margin: auto;" /><img src="figure/spei_pb_plot_validation_mass_spec_voltem.Rmd/lm2-2.png" width="672" style="display: block; margin: auto;" /><img src="figure/spei_pb_plot_validation_mass_spec_voltem.Rmd/lm2-3.png" width="672" style="display: block; margin: auto;" /><img src="figure/spei_pb_plot_validation_mass_spec_voltem.Rmd/lm2-4.png" width="672" style="display: block; margin: auto;" />
+Plot difference (mass spec - leadcare2) vs. mass spec values.</p>
+<pre class="r"><code># create interactive scattergram
+fig2 &lt;- plot_ly(data = pb_limit,
+               x = ~pb_ms_ppm,
+               y = ~diff,
+               type = &#39;scatter&#39;,
+               mode = &#39;markers&#39;,
+               text = ~id_metalband,
+               hoverinfo = &#39;text&#39;
+               )
+fig2</code></pre>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-e3ebcc25fa9af5c1bc6c" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-e3ebcc25fa9af5c1bc6c">{"x":{"visdat":{"e00cde66c":["function () ","plotlyVisDat"]},"cur_data":"e00cde66c","attrs":{"e00cde66c":{"x":{},"y":{},"mode":"markers","text":{},"hoverinfo":"text","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"pb_ms_ppm"},"yaxis":{"domain":[0,1],"automargin":true,"title":"diff"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.035000000000000003,0.14999999999999999,0.46999999999999997,0.12,0.20999999999999999,0.65000000000000002,0.033000000000000002,0.048000000000000001,0.19,0.11,0.33000000000000002,0.65000000000000002,0.040000000000000001,0.033000000000000002,0.033000000000000002,0.050999999999999997,0.42999999999999999,0.20000000000000001,0.052999999999999999,0.033000000000000002,0.033000000000000002,0.083000000000000004,0.26000000000000001,0.65000000000000002,0.45000000000000001,0.033000000000000002,0.12,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.65000000000000002,0.51000000000000001,0.033000000000000002,0.65000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.085000000000000006,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.13,0.040000000000000001,0.033000000000000002,0.073999999999999996,0.048000000000000001,0.22,0.65000000000000002,0.042000000000000003,0.041000000000000002,0.034000000000000002,0.090999999999999998,0.033000000000000002,0.081000000000000003,0.033000000000000002,0.056000000000000001,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.071999999999999995,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.26000000000000001,0.033000000000000002,0.29999999999999999,0.39000000000000001,0.068000000000000005,0.11,0.65000000000000002,0.034000000000000002,0.065000000000000002,0.033000000000000002,0.17000000000000001,0.045999999999999999,0.040000000000000001,0.033000000000000002,0.65000000000000002],"y":[-0.0020000000000000018,0,0,0,0.0020000000000000018,0.038999999999999993,0.091999999999999971,0.024999999999999994,0.057999999999999996,0,0,0.014999999999999999,0.041000000000000009,0.033000000000000002,0.11600000000000002,0.188,-0.0049999999999999975,0,0,0.017999999999999995,0.044999999999999984,0.023999999999999994,0.019999999999999997,0,0,-0.0020000000000000018,0.10400000000000001,0,-0.01799999999999996,-0.0010000000000000009,0.023999999999999994,0,-0.0010000000000000009,0,0,0,0,0,0.186,0,0,0,0,0,0,0,0,0,-0.011000000000000003,0,-0.0080000000000000071,0,0,0,0.0040000000000000036,-0.0020000000000000018,0,0.023999999999999994,0.012999999999999998,0.084999999999999992,0,-0.020999999999999998,0.0080000000000000002,0.0010000000000000009,0.031,0,0.028999999999999998,0,-0.0019999999999999948,0,0,0,0,0,0,0,0,0,0,0,0,0.0059999999999999915,0,0,0,0,0.036000000000000032,0,0.027999999999999969,0.11499999999999999,0.0050000000000000044,0.0030000000000000027,0,0.0010000000000000009,0.022000000000000006,0,0.02300000000000002,0.012999999999999998,0.0069999999999999993,0,0],"mode":"markers","text":[200704137,200704154,200706524,200706545,200706599,200706599,200741803,200741806,200741809,200741813,200741815,200741816,200741817,200741818,200741821,200741831,200741832,200741836,200741842,200741852,200741864,200741880,200741886,200741889,200741890,200762257,200762257,200762260,200762265,200762266,200762267,200762273,200762274,200762276,200762276,200762278,200762279,200762282,200762283,200762285,200762286,200762291,200762292,200762295,200762296,200762297,200762298,200762299,200762300,200762304,200762309,200762334,200762340,200762344,200762823,200762824,200762824,200762827,200762828,200762833,200762835,200762836,200762838,200762839,200762841,200762847,200762849,200762849,200762850,200762851,200762852,200762853,200762854,200762855,200762856,200762857,200762858,200762859,200762860,200762881,200762882,200762883,200762886,200762887,200762888,200762889,200762894,200762897,200762899,226703001,226703019,226703029,250707636,250707637,250707681,360700426,360700473,360701057,360701058,360701059,360701086],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"scatter","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>Plot of differences between mass spec and LeadCare (where diff = mass
+spec - leadcare), show that mass spec values tend to be greater than
+LeadCare values.</p>
+<p>Plot percent different ((mass spec - lead care)/ mass spec) vs mass
+spec values.</p>
+<pre class="r"><code># create interactive scattergram
+fig3 &lt;- plot_ly(data = pb_limit,
+               x = ~pb_ms_ppm,
+               y = ~pdiff,
+               type = &#39;scatter&#39;,
+               mode = &#39;markers&#39;,
+               text = ~id_metalband,
+               hoverinfo = &#39;text&#39;)
+fig3</code></pre>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-3e02628f9ed4d23180f9" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-3e02628f9ed4d23180f9">{"x":{"visdat":{"e006d183fb9":["function () ","plotlyVisDat"]},"cur_data":"e006d183fb9","attrs":{"e006d183fb9":{"x":{},"y":{},"mode":"markers","text":{},"hoverinfo":"text","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"pb_ms_ppm"},"yaxis":{"domain":[0,1],"automargin":true,"title":"pdiff"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.035000000000000003,0.14999999999999999,0.46999999999999997,0.12,0.20999999999999999,0.65000000000000002,0.033000000000000002,0.048000000000000001,0.19,0.11,0.33000000000000002,0.65000000000000002,0.040000000000000001,0.033000000000000002,0.033000000000000002,0.050999999999999997,0.42999999999999999,0.20000000000000001,0.052999999999999999,0.033000000000000002,0.033000000000000002,0.083000000000000004,0.26000000000000001,0.65000000000000002,0.45000000000000001,0.033000000000000002,0.12,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.65000000000000002,0.51000000000000001,0.033000000000000002,0.65000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.085000000000000006,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.13,0.040000000000000001,0.033000000000000002,0.073999999999999996,0.048000000000000001,0.22,0.65000000000000002,0.042000000000000003,0.041000000000000002,0.034000000000000002,0.090999999999999998,0.033000000000000002,0.081000000000000003,0.033000000000000002,0.056000000000000001,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.071999999999999995,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.033000000000000002,0.26000000000000001,0.033000000000000002,0.29999999999999999,0.39000000000000001,0.068000000000000005,0.11,0.65000000000000002,0.034000000000000002,0.065000000000000002,0.033000000000000002,0.17000000000000001,0.045999999999999999,0.040000000000000001,0.033000000000000002,0.65000000000000002],"y":[-6.0606060606060659,0,0,0,5.7142857142857189,25.999999999999996,19.574468085106378,20.833333333333329,27.61904761904762,0,0,31.25,21.578947368421055,30,35.151515151515156,28.923076923076923,-12.499999999999993,0,0,35.294117647058812,10.465116279069765,11.999999999999996,37.735849056603769,0,0,-2.4096385542168695,40,0,-3.9999999999999911,-3.0303030303030329,19.999999999999996,0,-3.0303030303030329,0,0,0,0,0,36.470588235294116,0,0,0,0,0,0,0,0,0,-33.333333333333343,0,-9.4117647058823604,0,0,0,3.0769230769230793,-5.0000000000000044,0,32.432432432432421,27.083333333333325,38.636363636363633,0,-49.999999999999993,19.512195121951219,2.9411764705882377,34.065934065934066,0,35.802469135802468,0,-3.5714285714285623,0,0,0,0,0,0,0,0,0,0,0,0,8.3333333333333215,0,0,0,0,13.846153846153857,0,9.3333333333333233,29.487179487179482,7.3529411764705941,2.7272727272727297,0,2.9411764705882377,33.846153846153854,0,13.529411764705893,28.260869565217391,17.5,0,0],"mode":"markers","text":[200704137,200704154,200706524,200706545,200706599,200706599,200741803,200741806,200741809,200741813,200741815,200741816,200741817,200741818,200741821,200741831,200741832,200741836,200741842,200741852,200741864,200741880,200741886,200741889,200741890,200762257,200762257,200762260,200762265,200762266,200762267,200762273,200762274,200762276,200762276,200762278,200762279,200762282,200762283,200762285,200762286,200762291,200762292,200762295,200762296,200762297,200762298,200762299,200762300,200762304,200762309,200762334,200762340,200762344,200762823,200762824,200762824,200762827,200762828,200762833,200762835,200762836,200762838,200762839,200762841,200762847,200762849,200762849,200762850,200762851,200762852,200762853,200762854,200762855,200762856,200762857,200762858,200762859,200762860,200762881,200762882,200762883,200762886,200762887,200762888,200762889,200762894,200762897,200762899,226703001,226703019,226703029,250707636,250707637,250707681,360700426,360700473,360701057,360701058,360701059,360701086],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"scatter","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>When the differences are plotted as percentages, the magnitude of the
+difference relative to the mass spec value remain fairly constant
+between 15 to 40%, even at low and high mass spec values.</p>
+<p>Interestingly, at mass spec values &lt; 0.1 ppm, when leadcare2
+values were greater than mass spec values, the mass spec values were
+40-100% less than the leadcare2 values.</p>
+<p>Need to look into these specific samples: 226703019 200741889
+200762836</p>
+<pre class="r"><code>outs &lt;- c(226703019, 200741889, 200762836)
+outliers &lt;- subset(pb, id_metalband == outs) </code></pre>
+<pre><code>Warning in id_metalband == outs: longer object length is not a multiple of
+shorter object length</code></pre>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -855,11 +1415,12 @@ Session information
 </p>
 <div id="workflowr-sessioninfo" class="collapse">
 <pre class="r"><code>sessionInfo()</code></pre>
-<pre><code>R version 4.2.2 (2022-10-31 ucrt)
-Platform: x86_64-w64-mingw32/x64 (64-bit)
-Running under: Windows 10 x64 (build 22631)
+<pre><code>R version 4.5.1 (2025-06-13 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 22631)
 
 Matrix products: default
+  LAPACK version 3.12.1
 
 locale:
 [1] LC_COLLATE=English_United States.utf8 
@@ -868,27 +1429,35 @@ locale:
 [4] LC_NUMERIC=C                          
 [5] LC_TIME=English_United States.utf8    
 
+time zone: America/Anchorage
+tzcode source: internal
+
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] ggplot2_3.4.1   workflowr_1.7.0
+[1] plotly_4.11.0 ggplot2_3.5.2
 
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.10      compiler_4.2.2   pillar_1.8.1     bslib_0.4.2     
- [5] later_1.3.0      git2r_0.31.0     jquerylib_0.1.4  tools_4.2.2     
- [9] getPass_0.2-2    digest_0.6.31    gtable_0.3.1     jsonlite_1.8.4  
-[13] evaluate_0.20    lifecycle_1.0.3  tibble_3.1.8     pkgconfig_2.0.3 
-[17] rlang_1.0.6      cli_3.6.0        rstudioapi_0.14  yaml_2.3.7      
-[21] xfun_0.37        fastmap_1.1.0    withr_2.5.0      dplyr_1.1.0     
-[25] httr_1.4.7       stringr_1.5.0    knitr_1.42       generics_0.1.3  
-[29] fs_1.6.1         vctrs_0.5.2      sass_0.4.2       tidyselect_1.2.0
-[33] grid_4.2.2       rprojroot_2.0.3  glue_1.6.2       R6_2.5.1        
-[37] processx_3.8.0   fansi_1.0.4      rmarkdown_2.20   farver_2.1.1    
-[41] callr_3.7.3      magrittr_2.0.3   whisker_0.4      scales_1.2.1    
-[45] ps_1.7.2         promises_1.2.0.1 htmltools_0.5.4  colorspace_2.1-0
-[49] httpuv_1.6.9     labeling_0.4.2   utf8_1.2.3       stringi_1.7.12  
-[53] munsell_0.5.0    cachem_1.0.6    </code></pre>
+ [1] gtable_0.3.6       jsonlite_2.0.0     dplyr_1.1.4        compiler_4.5.1    
+ [5] promises_1.3.3     tidyselect_1.2.1   Rcpp_1.1.0         stringr_1.5.1     
+ [9] git2r_0.36.2       tidyr_1.3.1        later_1.4.2        jquerylib_0.1.4   
+[13] scales_1.4.0       yaml_2.3.10        fastmap_1.2.0      R6_2.6.1          
+[17] labeling_0.4.3     generics_0.1.4     workflowr_1.7.1    knitr_1.50        
+[21] htmlwidgets_1.6.4  tibble_3.3.0       rprojroot_2.1.0    bslib_0.9.0       
+[25] pillar_1.11.0      RColorBrewer_1.1-3 rlang_1.1.6        cachem_1.1.0      
+[29] stringi_1.8.7      httpuv_1.6.16      xfun_0.52          fs_1.6.6          
+[33] sass_0.4.10        lazyeval_0.2.2     viridisLite_0.4.2  cli_3.6.5         
+[37] withr_3.0.2        magrittr_2.0.3     crosstalk_1.2.1    digest_0.6.37     
+[41] grid_4.5.1         rstudioapi_0.17.1  lifecycle_1.0.4    vctrs_0.6.5       
+[45] data.table_1.17.8  evaluate_1.0.4     glue_1.8.0         farver_2.1.2      
+[49] whisker_0.4.1      purrr_1.1.0        httr_1.4.7         rmarkdown_2.29    
+[53] tools_4.5.1        pkgconfig_2.0.3    htmltools_0.5.8.1 </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
 

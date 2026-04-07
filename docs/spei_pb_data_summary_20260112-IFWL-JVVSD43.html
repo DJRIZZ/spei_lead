@@ -1,0 +1,2666 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Daniel Rizzolo, US Fish and Wildlife Service, Northern Alaska Fish and Wildlife Field Office" />
+
+<meta name="date" content="2026-02-27" />
+
+<title>Spectacled Eiders are still being exposed to lead on the Yukon-Kuskokwim Delta, Alaska</title>
+
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-binding-2.2.2/leaflet.js"></script>
+<script src="site_libs/leaflet-providers-2.0.0/leaflet-providers_2.0.0.js"></script>
+<script src="site_libs/leaflet-providers-plugin-2.2.2/leaflet-providers-plugin.js"></script>
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<link rel="icon" href="https://github.com/workflowr/workflowr-assets/raw/main/img/reproducible.png">
+<!-- Add a small amount of space between sections. -->
+<style type="text/css">
+div.section {
+  padding-top: 12px;
+}
+</style>
+
+
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">spei_lead</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="map_eider_lead_fws.html">Map</a>
+</li>
+<li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="license.html">License</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/DJRIZZ/spei_lead">
+    <span class="fab fa-github"></span>
+     
+    Source code
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Spectacled Eiders are still being exposed
+to lead on the Yukon-Kuskokwim Delta, Alaska</h1>
+<h4 class="author">Daniel Rizzolo, US Fish and Wildlife Service,
+Northern Alaska Fish and Wildlife Field Office</h4>
+<h4 class="date">2026-02-27</h4>
+
+</div>
+
+
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span>
+</button>
+</p>
+<div id="workflowr-report" class="collapse">
+<ul class="nav nav-tabs">
+<li class="active">
+<a data-toggle="tab" href="#summary">Summary</a>
+</li>
+<li>
+<a data-toggle="tab" href="#checks"> Checks <span
+class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> </a>
+</li>
+<li>
+<a data-toggle="tab" href="#versions">Past versions</a>
+</li>
+</ul>
+<div class="tab-content">
+<div id="summary" class="tab-pane fade in active">
+<p>
+<strong>Last updated:</strong> 2026-02-27
+</p>
+<p>
+<strong>Checks:</strong> <span
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> 1
+</p>
+<p>
+<strong>Knit directory:</strong> <code>spei_lead/</code> <span
+class="glyphicon glyphicon-question-sign" aria-hidden="true"
+title="This is the local directory in which the code in this file was executed.">
+</span>
+</p>
+<p>
+This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a>
+analysis was created with <a
+  href="https://github.com/workflowr/workflowr">workflowr</a> (version
+1.7.1). The <em>Checks</em> tab describes the reproducibility checks
+that were applied when the results were created. The <em>Past
+versions</em> tab lists the development history.
+</p>
+<hr>
+</div>
+<div id="checks" class="tab-pane fade">
+<div id="workflowr-checks" class="panel-group">
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
+changes </a>
+</p>
+</div>
+<div id="strongRMarkdownfilestronguncommittedchanges"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>The R Markdown is untracked by Git. To know which version of the R
+Markdown file created these results, you’ll want to first commit it to
+the Git repo. If you’re still working on the analysis, you can ignore
+this warning. When you’re finished, you can run
+<code>wflow_publish</code> to commit the R Markdown file and build the
+HTML.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
+</p>
+</div>
+<div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! The global environment was empty. Objects defined in the
+global environment can affect the analysis in your R Markdown file in
+unknown ways. For reproduciblity it’s best to always run the code in an
+empty environment.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed20230228code">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Seed:</strong>
+<code>set.seed(20230228)</code> </a>
+</p>
+</div>
+<div id="strongSeedstrongcodesetseed20230228code"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>The command <code>set.seed(20230228)</code> was run prior to running
+the code in the R Markdown file. Setting a seed ensures that any results
+that rely on randomness, e.g. subsampling or permutations, are
+reproducible.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Session information:</strong>
+recorded </a>
+</p>
+</div>
+<div id="strongSessioninformationstrongrecorded"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Recording the operating system, R version, and package
+versions is critical for reproducibility.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+</p>
+</div>
+<div id="strongCachestrongnone" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Nice! There were no cached chunks for this analysis, so you can be
+confident that you successfully produced the results during this
+run.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
+</p>
+</div>
+<div id="strongFilepathsstrongrelative" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Using relative paths to the files within your workflowr
+project makes it easier to run your code on other machines.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDJRIZZspeileadtreea41a727c7c9898c16aeaedd47d105379bc614c63targetblanka41a727a">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Repository version:</strong>
+<a href="https://github.com/DJRIZZ/spei_lead/tree/a41a727c7c9898c16aeaedd47d105379bc614c63" target="_blank">a41a727</a>
+</a>
+</p>
+</div>
+<div
+id="strongRepositoryversionstrongahrefhttpsgithubcomDJRIZZspeileadtreea41a727c7c9898c16aeaedd47d105379bc614c63targetblanka41a727a"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>
+Great! You are using Git for version control. Tracking code development
+and connecting the code version to the results is critical for
+reproducibility.
+</p>
+<p>
+The results in this page were generated with repository version
+<a href="https://github.com/DJRIZZ/spei_lead/tree/a41a727c7c9898c16aeaedd47d105379bc614c63" target="_blank">a41a727</a>.
+See the <em>Past versions</em> tab to see a history of the changes made
+to the R Markdown and HTML files.
+</p>
+<p>
+Note that you need to be careful to ensure that all relevant files for
+the analysis have been committed to Git prior to generating the results
+(you can use <code>wflow_publish</code> or
+<code>wflow_git_commit</code>). workflowr only checks the R Markdown
+file, but you know if there are other scripts or data files that it
+depends on. Below is the status of the Git repository when the results
+were generated:
+</p>
+<pre><code>
+Ignored files:
+    Ignored:    .Rhistory
+    Ignored:    .Rproj.user/
+    Ignored:    admin/
+    Ignored:    analysis/figure/
+    Ignored:    documents/
+    Ignored:    protocols/
+
+Untracked files:
+    Untracked:  analysis/map_eider_lead_fws_20251121.Rmd
+    Untracked:  analysis/spei_pb_data_summary_20251202.Rmd
+    Untracked:  analysis/spei_pb_data_summary_20251211.Rmd
+    Untracked:  analysis/spei_pb_data_summary_20260112.Rmd
+    Untracked:  code/est_exp_prob_create_plots_spei_lead_20231211.R
+    Untracked:  code/est_exp_prob_create_plots_spei_lead_updated_20260113.R
+    Untracked:  code/scrap_lead_summary.R
+    Untracked:  data/7030169 data.csv
+    Untracked:  data/README_spei_blood_lead_data.txt
+    Untracked:  data/Rizzolo Lead VSEP22-045 E-report.xlsx
+    Untracked:  data/eider_blood_samples_bands_utq_2022.csv
+    Untracked:  data/eider_lead_fws.csv
+    Untracked:  data/eider_lead_fws_2018-2022.csv
+    Untracked:  data/eider_lead_fws_2018-2025.csv
+    Untracked:  data/eider_lead_fws_2018-2025_20251203.csv
+    Untracked:  data/eider_lead_fws_2023-2025_v2.csv
+    Untracked:  data/eider_lead_fws_FOR_REP_SELECTION.csv
+    Untracked:  data/leadcare2_validation/
+    Untracked:  data/pb_blood_spei_fws_2018-2025.csv
+    Untracked:  data/pb_blood_spei_fws_2018-2025_massSpec_voltam.csv
+    Untracked:  data/pb_blood_spei_fws_validation_20260120.csv
+    Untracked:  data/pb_lc_reps.csv
+    Untracked:  data/pb_merged_all_msResults_lc2Results_20251124.csv
+    Untracked:  data/pb_validation_voltam_mass_spec_20260120.csv
+    Untracked:  data/qtbl_pb_2023-2025.xlsx
+    Untracked:  data/sample_id_spei_blood_lead_2018.csv
+    Untracked:  data/samples_analyzed_2018/
+    Untracked:  data/samples_analyzed_2022/
+    Untracked:  data/samples_analyzed_2025/
+    Untracked:  data/samples_leadCare2_results/
+    Untracked:  data/sourced/
+    Untracked:  data/spei_pb_all_2018-2025.csv
+    Untracked:  data/spei_pb_ms_lc_20251124
+    Untracked:  data/spei_pb_ms_lc_20251124.csv
+    Untracked:  data/temp_pb_all_wide.csv
+    Untracked:  data/temp_wtf_pb_limits_ling.csv
+    Untracked:  data/temp_wtf_pb_limits_wide_all.csv
+    Untracked:  metadata/
+
+Unstaged changes:
+    Modified:   .gitignore
+    Modified:   analysis/spei_pb_plot_validation_mass_spec_voltem.Rmd
+
+</code></pre>
+<p>
+Note that any generated files, e.g. HTML, png, CSS, etc., are not
+included in this status report because it is ok for generated content to
+have uncommitted changes.
+</p>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="versions" class="tab-pane fade">
+<p>
+There are no past versions. Publish this analysis with
+<code>wflow_publish()</code> to start tracking its development.
+</p>
+<hr>
+</div>
+</div>
+</div>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+</div>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>In the 1990s, Spectacled Eiders on their Yukon-Kuskokwim Delta
+breeding area in Alaska were ingesting spent lead shotgun pellets
+(Franson et al. 1995, Flint et al. 1997, Franson et al. 1998). Exposure
+to lead, as determined by levels of lead in blood, reduced adult
+survival of adult female Spectacled Eiders by 40-50% (Grand et al. 1998,
+Flint et al 2016). In the U.S., the use of lead ammunition to hunt
+waterfowl was prohibited nationwide in 1991 (USFWS 1991). In Alaska,
+small caliber lead shotgun ammunition was banned for all use (i.e.,
+waterfowl, upland game birds, and small game) in terrestrial habitats in
+the Yukon-Kuskokwim Region by the state in 2007 (State of Alaska 2007).
+Despite regulation of lead shot, lead exposure is a persistent problem
+because after the use of lead ammunition stops, previously deposited
+pellets remain in the environment. Experiments measuring the settlement
+rate of lead pellets in pond sediment estimated it would take 25 years
+for 100% of deposited lead pellets to settle below 10 cm in the sediment
+and become unavailable to Spectacled Eiders (Flint and Schamber
+2010).</p>
+<p>Since 2018, the US Fish and Wildlife Service Endangered Species
+Recovery Program has collected blood samples from Spectacled Eiders in
+Alaska to estimate lead exposure rates 27-34 years after the use of lead
+shotgun ammunition was prohibited. Given that the use of lead shotgun
+ammunition theoretically stopped by mid-1990s, most previously deposited
+lead pellets in ponds should no longer be available to Spectacled Eiders
+and levels of lead in blood of breeding Spectacled Eiders should no
+longer exceed background concentrations.</p>
+</div>
+<div id="methods" class="section level2">
+<h2>Methods</h2>
+<div id="sample-collection" class="section level3">
+<h3><em>Sample Collection</em></h3>
+<p>We collected blood samples opportunistically during projects that
+required capturing and handling Spectacled Eiders for other objectives.
+Those projects included satellite transmitter deployments and banding.
+Captures for satellite transmitter deployments occurred when eiders were
+arriving to breeding areas on the Yukon-Kuskokwim Delta (Kigigak Island
+in 2018, the Tutakoke River in 2018, 2022), and Arctic Coastal Plain
+(Utqiagvik and Teshekpuk Lake in 2022). Adults and ducklings were
+sampled during the brood rearing period at the Kashunuk River and
+Kigigak Island in 2022 and 2023, respectively. We also collected blood
+samples from eiders captured for banding during incubation (2019,
+2021-2025) at Kigigak Island.</p>
+<p>We captured eiders during arrival to breeding areas using mist nets
+setup vertically in lakes surrounded by decoys (censu Dau 1976). During
+incubation, we captured females on nests using bow nets (Salyer 1962),
+and during brood rearing we captured ducklings and associated adult
+females by herding broods into mist nets setup vertically above and
+below the water surface in lakes (censu Dau 1976).</p>
+<p>We collected blood samples from eiders using venipuncture of either
+the jugular or tibiotarsal veins. Jugular blood samples were 1-4 mL and
+collected using 21 gauge needles and 6 mL syringes; samples were
+transferred into 4 mL heparinized evacuated containers. Tibiotarsal
+blood samples were &lt; 0.5 mL and collected by puncturing the vein with
+a 25 g needle and collecting blood in 1-3 capillary tubes which we
+transferred into a 1 mL heparinized vial.</p>
+</div>
+<div id="laboratory-analysis" class="section level3">
+<h3><em>Laboratory Analysis</em></h3>
+<p>All samples were stored frozen in the field and laboratory until
+analysis. Samples with volumes &gt; 0.5 mL were analyzed using mass
+spectrometry. Samples with volumes &lt; 0.5 mL were analyzed using
+anodic stripping voltammetry (hereafter voltammetry).</p>
+<p>Samples collected in 2018, all &gt; 0.5 mL, were analyzed at the
+Texas A &amp; M Univeristy (TAMU)’s Agrilife Research Veterinary
+Integrative Biosciences Laboratory (n = 66). Samples were freeze-dried,
+homogenized, digested, and analyzed as dry samples. Results were
+converted to concentrations on the scale of wet mass using the mean
+moisture content for whole blood of (78.6%). Lead concentration was
+determined using inductively coupled plasma-mass spectrometry. Quality
+assurance-quality control (QAQC) procedures included procedural blanks
+(n = 4, mean blank equivalent concentration &lt; 0.00825 ppm), duplicate
+samples (n = 3, mean relative difference 3.46%, range 0.38% to 7.48%),
+and standard reference material percent spike recoveries (mean 103.99%,
+range 99.16% to 107.56%). Analytical methods, results, and QAQC
+procedures were described in the summary report provided by TAMU (TERL
+2018). The lower detection limit for methodology used in 2018 was &lt;
+0.00369 ppm and there was no upper limit.</p>
+<p>Blood samples &gt; 0.5 mL collected 2021-2025 were analyzed in two
+batches (samples collected 2021-2022 analyzed in 2022, n = 138; samples
+collected 2023-2025 analyzed in 2025, n = 74) at the Washington Animal
+Disease Diagnostic Laboratory using inductively coupled plasma mass
+spectrometry and nitric acid digestion. QAQC procedures included
+procedural blanks (n = 19, mean blank equivalent concentration 0.015
+ppm, range: 0.0 to 0.17 ppm), duplicate samples (n = 10, mean relative
+difference 5.12%, range: 1.01% to 10.30%), standard reference material
+percent spike recoveries (mean 98%, range 84% to 109%), and control
+reference samples (mean percent difference = 12%, range 0.0% to 30.4%, n
+= 41). QAQC results were provided by WADDL (WADDL 2022). The lower
+detection limit for methodology used in 2022 and 2025 was &lt; 0.02 ppm
+and there was no upper limit.</p>
+<p>Blood samples &lt; 0.5 mL collected 2023-2025 (n = 23) were analyzed
+using a LeadCare II blood point-of-care blood lead testing system
+(Magellan Diagnostics, Billerica, MA), which uses voltammetry to
+quantify lead concentration in whole blood. The LeadCare II analyzer was
+designed to test freshly collected human blood, but has been used to
+test previously frozen avian blood (Brown et al. 2006, Herring et
+al. 2018). Detection limits for LeadCare II are &gt; 0.033 ppm and &lt;
+0.65 ppm. Samples outside of this range are reported by the instrument
+as either <em>high</em> (&gt; 0.65 ppm) or <em>low</em> (&lt; 0.033).
+LeadCare II testing was done at the USFWS Northern Fish and Wildlife
+Field Office Laboratory following the protocol described in the LeadCare
+II User’s Guide (Magellan Diagnostics 2022). QAQC duplicate samples were
+consistent when above the detection limit (i.e., all registered as
+<em>high</em>; n = 4 paired samples). For paired samples with at least 1
+sample below the detection limit (n = 23 paired samples), 87% of sample
+pairs were also under the lower detection limit. Of the three paired
+samples with one sample below the detection limit and the other above
+that limit, the mean lead concentration of the sample above the limit
+was 4.47 ppm (range: 3.5 to 6.2 ppm), with a mean percent absolute
+difference of 21%. Further paired sample analysis is required within the
+detection limits of LeadCare II.</p>
+<p>We also used the LeadCare II system to test a subset of samples (n =
+93) that were analyzed using mass spectrometry to assess the agreement
+of results from the two methods using mass spectrometry results as the
+standard for comparison.</p>
+</div>
+<div id="voltammetry-validation" class="section level3">
+<h3><em>Voltammetry Validation</em></h3>
+<p>The LeadCare II blood analyzer has a narrower range of detection than
+mass spectrometry. We first compared results from LeadCare II that were
+below (&lt; 0.033 ppm) or above (&gt; 0.65 ppm) the instrument’s
+detection limits to their corresponding mass spectrometry values to
+confirm that LeadCare II lower detection limit samples were all &lt;
+0.033 ppm and all upper detection limit values values were &gt; 0.65
+ppm, according to mass spectrometry results.</p>
+<p>We used results from samples analyzed by both methods with values
+within the detection limits of LeadCare II to examine the correlation
+between LeadCare II results and mass spectrometry results. We fit a
+linear model using log-transformed mass spectrometry as the response
+variable and log-transformed LeadCare II values as the explanatory
+variables. We used model parameter estimates to assess the association
+between mass specrometery values and LeadCare II values through the
+estimated slope value, with a slope = 1 indicating perfect
+correspondence between methods. Further, if results indicated bias in
+LeadCare II results, we used parameter estimates from the model to
+correct for the bias in LeadCare II values prior to estimating lead
+exposure rates.</p>
+</div>
+<div id="lead-exposure-estimates" class="section level3">
+<h3><em>Lead Exposure Estimates</em></h3>
+<p>Elevated blood lead concentrations indicate recent, point-source
+exposure to lead in the environment (Franson and Pain 2011). We
+categorized lead exposure, from mass spectrometry and adjusted
+voltammetry results, based on accepted thresholds: blood lead values
+&gt;= 0.20 ppm indicate exposure above background levels with
+subclinical effects; values &gt;= 0.50 ppm indicate potential lead
+toxicosis; values &gt; 1.0 ppm indicate potentially severe lead
+toxicosis (Franson and Pain 2011, Table 16.1). We used
+logistic-regression models (i.e., models that assume a binomial
+distribution and use a logit link to the data) fit in Program R (R Core
+Team 2025) to estimate the probability of lead exposure (i.e., blood
+lead concentrations &gt;= 0.20 ppm) and associated 95% confidence
+intervals for each study site (Kashunuk River, Kigigak Island, Tutakoke
+River on the Yukok-Kuskokwim Delta and Utqiagvik and Teshekpuk Lake on
+the Arctic Coastal Plain) and during each capture period (arrival,
+incubation, brood rearing).</p>
+</div>
+<div id="historical-comparison" class="section level3">
+<h3><em>Historical Comparison</em></h3>
+<p>In the 1990s, the proportion of Spectacled Eiders exposed to lead,
+based on blood lead concentrations, was estimated for sites throughout
+the Yukon-Kuskokwim Delta (Flint et al. 1997, Franson et al. 1998, Flint
+et al. 2016). We compared exposure rates between samples collected in
+the 1990s from the Kashunuk River (1993-1999), Kigigak Island
+(1994-1999), and the Tutakoke River (1997-1998; Flint and Petersen 2023)
+and samples from the 2018-2025 period at those sites. We also included
+samples collected during incubation from Spectacled Eiders at the
+Kashunuk River in 2022 (Flint et al. 2023, Flint and Petersen 2023) as
+an additional measure of recent exposure. We compare exposure between
+the 1990s and the 2018-2025 period by site and sampling period based on
+95% confidence interval coverage relative to point estimates (Cumming et
+al. 2007).</p>
+<pre class="r"><code># load and wrangle blood lead concentration data 2018-2025 from mass spec analysis and voltammetry (LeadCare II) analysis
+
+# These data frames are created in this code junk:
+#  -pb_ms: blood lead concentration data from mass spectrometry 2018-2025 loaded from file eider_lead_fws_2018-2025_20251203.csv
+#  -pb_lc: blood lead concentration data from voltammetry as output from the LeadCare II analyzer loaded file from data_leadCare2_results_20251203.csv
+#  -pb_lc_unique: subset of pb_lc that excludes internal replicates (same sample analyzed twice with LC2 for QAQC)
+#  -pb_all: merged pb_ms and pb_lc_unique, subsequently subset to just samples from SPEI
+#  -pb_unique: blood lead concentration from both mass spec and voltammetery that includes only unique samples (no internal or cross-method replicates)
+
+# load mass spec lead data (from Texas A&amp;M Univ, and Washington State): includes COEI, KIEI, SPEI - most are SPEI (all but 3 samples)
+# NB samples are uniquely identified by combination of id_metalBand AND dt_sampled (id_metalBand have been sampled on &gt;1 dt_sampled); no internal replicates included
+pb_ms &lt;- read.csv(&quot;data/eider_lead_fws_2018-2025_20251203.csv&quot;) # NB [pb] in units of ppm
+# format date
+pb_ms$dt_sampled &lt;- as.Date(pb_ms$dt_sampled, format = &quot;%Y-%m-%d&quot;)
+# create year variable
+pb_ms$year &lt;- format(pb_ms$dt_sampled, &quot;%Y&quot;)
+#table(pb_ms$year, pb_ms$id_species)
+
+# check data
+#sum_ms &lt;- summary(pb_ms)
+#sum_ms 
+
+# load Lead Care II (by voltammetry) results (NB includes both internal replicates (same sample analyzed twice in LC2) and cross method replicates (same sample analyzed by both LC2 and mass spec))
+pb_lc &lt;- read.csv(&quot;data/samples_leadCare2_results/data_leadCare2_results_20251203.csv&quot;) # 20251203 version includes x-vars
+pb_lc$pb_blood_ppm &lt;- pb_lc$val_blood_lead_ug.dL*0.01 # convert lead from units of ug/dL to ppm to match units of mass spec data
+# format date
+pb_lc$dt_sampled &lt;- as.Date(pb_lc$dt_sampled, format = &quot;%Y-%m-%d&quot;)
+# create year variable
+pb_lc$year &lt;- format(pb_lc$dt_sampled, &quot;%Y&quot;)
+#table(pb_lc$year)
+# REMOVE INTERNAL REPLICATES - samples measured more than once in the LeadCare II instrument, here is_replicate = 1 for the second sample result for a given sample. Replicates across methods (LC2 and mass spec) remain in pb_lc_unique
+pb_lc_unique &lt;- subset(pb_lc, is_replicate != 1)
+#table(pb_lc_unique$year)
+
+# specify relevant columns
+keep &lt;- c(&quot;id_metalBand&quot;, &quot;pb_blood_ppm&quot;, &quot;cat_analysis&quot;, &quot;cat_detectLimit&quot;, &quot;id_species&quot;, &quot;dt_sampled&quot;, &quot;cat_periodCapt&quot;,                    &quot;id_studySite&quot;, &quot;val_lat&quot;, &quot;val_lon&quot;, &quot;is_recap&quot;, &quot;cat_sex&quot;, &quot;cat_age&quot;, &quot;val_bodyMass_g&quot;, &quot;year&quot;)
+# subset to relevant columns to match ms data frame
+pb_lc_unique &lt;- pb_lc_unique[ , keep]
+# check data
+#sum_lc &lt;-summary(pb_lc_unique)
+#sum_lc
+
+# merge ms into lc data into one dataframe, keep only SPEI data; NB includes samples analyzed by both mass spec and LC2
+pb_all &lt;- rbind.data.frame(pb_ms, pb_lc_unique)
+# check data
+sum_pb &lt;- summary(pb_all)
+#table(pb_all$id_species) # all spei except 1 COEI and 2 KIEI; reduce to only SPEI
+pb_all &lt;- subset(pb_all, id_species == &quot;SPEI&quot;)
+
+# sort
+pb_all &lt;- pb_all[order(pb_all$id_metalBand, pb_all$dt_sampled), ]
+
+# total number of blood samples from mass spec and voltammetry, including samples analyzed by both mass spec and voltammetery to calibrate LC2
+n_samples_all &lt;- nrow(pb_all) 
+
+# total number of UNIQUE blood samples given band ID and date sampled (excludes replicate results from samples analyzed by both LC2 and mass spec)
+n_samples_uniq &lt;- nrow(unique(pb_all[c(&quot;id_metalBand&quot;, &quot;dt_sampled&quot;)])) # samples unique IDs are the metalBand AND sample date combined; some individs sampled over multiple years (treated as independent samples)
+
+# which samples have replicate results (same sample analyzed by LC2 and mass spec)
+dup_ids &lt;- duplicated(pb_all[, c(&quot;id_metalBand&quot;, &quot;dt_sampled&quot;)])
+
+# number of samples (unique by band and date) analyzed &gt; 1 time
+pb_lc_reps &lt;- pb_all[dup_ids, ] # pb_lc_reps data frame is subset of full pb data. It includes only LC2 results from samples that were also run in mass spec
+n_samples_reps &lt;- nrow(pb_lc_reps) # how many duplicate samples
+#table(pb_lc_reps$year) # samples run in LC as duplicated by year, NB some of these samples were originally analyzed by mass spec
+
+# for QAQC results, save pb_lc_reps
+#write.csv(pb_lc_reps, &quot;data/pb_lc_reps.csv&quot;)
+
+# create data frame of LeadCare II internal reps, i.e., samples analyzed in LC2 with the same combo metal band - sample date
+pb_lc_int_dups &lt;- pb_lc[duplicated(paste(pb_lc$id_metalBand, pb_lc$dt_sampled, sep = &quot;_&quot;)) | duplicated(paste(pb_lc$id_metalBand, pb_lc$dt_sampled, sep = &quot;_&quot;), fromLast = TRUE), ]
+
+# replicated samples within LC detection limits (these are available to use to calibrate LC2 results against mass spec results)
+lc_rep_detected &lt;- subset(pb_lc_reps, cat_detectLimit == &quot;detected&quot;)
+n_lc_rep_detected &lt;- nrow(lc_rep_detected)
+
+# other sample size counts
+n_mass_spec &lt;- nrow(subset(pb_all, cat_analysis == &quot;mass_spec&quot;)) # number of samples analyzed by mass spec
+n_volt &lt;- nrow(subset(pb_all, cat_analysis == &quot;voltammetry&quot;)) # number of samples analyzed by voltammetry, including internal and cross-method replicates
+n_volt_unique &lt;- n_samples_uniq - n_mass_spec
+
+# change all ASY (males only) to AHY to simplify age categories to AHY and Local
+pb_all$cat_age[pb_all$cat_age == &quot;ASY&quot;] &lt;- &quot;AHY&quot;
+
+# sample sizesby year and analysis type
+#table(pb$year, pb$cat_analysis)
+
+# pb remove results from LC2 for samples with replicate results from mass spec 
+# create colum &quot;is_replicate_all&quot; in indicate samples analyzed by both mass spec and LC2 with = TRUE for both samples in the pair of duplicates and FALE otherwise
+pb_all$is_replicate_all &lt;- duplicated(pb_all[c(&quot;id_metalBand&quot;, &quot;dt_sampled&quot;)]) | duplicated(pb_all[c(&quot;id_metalBand&quot;, &quot;dt_sampled&quot;)], fromLast = TRUE)
+# remove duplicate records (i.e., is_replicate_all = TRUE) with cat_method = voltammetry; i.e., the voltammetry sample of duplicate pairs, keep mass spec sample
+pb_all$rep_remove &lt;- pb_all$is_replicate_all == TRUE &amp; pb_all$cat_analysis != &quot;mass_spec&quot; # set to 1 for records that are replicates and analyzed by LC
+pb_unique &lt;- subset(pb_all, rep_remove == FALSE)
+#pb_no_dps &lt;- subset(pb_all, is_replicate_all != TRUE &amp; cat_analysis == &quot;mass_spec&quot;
+# create data frame of voltam samples that were also analyzed by mass spec
+pb_lc_mass_spec_reps &lt;- subset(pb_all, rep_remove == TRUE)
+
+# format table of blood lead concentrations sample sizes by lab type (not currently presented in report, but it&#39;s here)
+tbl_pb_sample_n_method_year &lt;- as.data.frame(table(pb_unique$year, pb_unique$cat_analysis))
+tbl_names &lt;- c(&quot;Year&quot;, &quot;Analysis Type&quot;, &quot;n&quot;)
+colnames(tbl_pb_sample_n_method_year) &lt;- tbl_names
+#tbl_pb_sample_n_method_year
+tbl_n_by_analysis &lt;- kable(tbl_pb_sample_n_method_year, 
+      caption = &quot;Table X. Blood lead concentration sizes by laboratory analysis type.&quot;,
+      align = c(&quot;l&quot;, &quot;l&quot;, &quot;l&quot;),
+      digits = 0,
+      row.names = FALSE)
+
+
+
+#write.csv(pb, &quot;data/spei_pb_all_2018-2025.csv&quot;)
+
+# sample sizes
+# Years-sampled  n tot     n SPEI
+# 2018            64        63 # NB, one COEI blood sample and 1 kidney and 1 liver sample, each, all filtered from the data set for this analysis
+# 2019-2022       140       138 # this n is matches pb
+# 2023-2025       74        74 # I get n = 97 for this period in pb, why the difference?
+# Total           281       278</code></pre>
+</div>
+</div>
+<div id="results" class="section level2">
+<h2>Results</h2>
+<p>We analyzed 298 whole blood samples for lead concentration (Table 1).
+We obtained results using mass spectrometry from 275 samples, and using
+voltammetry from 23 samples. Additionally, 94 samples were analyzed
+using both methods. Most (95%) of samples were from sites on the
+Yukon-Kuskokwim Delta.</p>
+<p>Samples collected during the arrival period were from males and
+females. All incubation samples were from females and samples from the
+brood rearing period were female adults and both male and female
+ducklings. Sample sizes by study site, sampling period, and age class
+ranged from two samples from after hatch year females at Teshekpuk Lake
+to 118 samples from incubating females at Kigigak Island (Table 1).</p>
+<pre class="r"><code># create table showing sample sizes by site, capture period, and age (unique samples by ID and year)
+tbl_pb &lt;- as.data.frame(table(pb_unique$id_studySite, pb_unique$cat_periodCapt, pb_unique$cat_age))
+# table friendly column names
+colnames(tbl_pb) &lt;- c(&quot;Site&quot;, &quot;Period&quot;, &quot;Age&quot;, &quot;n&quot;) # rename columns
+# sort
+order_period &lt;- c(&quot;arrival&quot;, &quot;incubation&quot;, &quot;brood&quot;)
+tbl_pb$Period &lt;- factor(tbl_pb$Period, levels = order_period)
+tbl_pb &lt;- tbl_pb[order(tbl_pb$Site, tbl_pb$Period, tbl_pb$Age), ]
+# remove rows with zeros (where each row is a unique site-period-age combination)
+tbl_pb &lt;- as.data.frame(tbl_pb[tbl_pb$n != 0, ])
+# format some category names for the table
+# change some category names
+levels(tbl_pb$Age)[levels(tbl_pb$Age) == &quot;local&quot;] &lt;- &quot;Duckling&quot;
+levels(tbl_pb$Age)[levels(tbl_pb$Age) == &quot;AHY&quot;] &lt;- &quot;Adult&quot;
+levels(tbl_pb$Period)[levels(tbl_pb$Period) == &quot;incubation&quot;] &lt;- &quot;Incubation&quot;
+levels(tbl_pb$Period)[levels(tbl_pb$Period) == &quot;arrival&quot;] &lt;- &quot;Arrival&quot;
+levels(tbl_pb$Period)[levels(tbl_pb$Period) == &quot;brood&quot;] &lt;- &quot;Brood&quot;
+# format table with kable function of package knitr
+kable(tbl_pb, 
+      caption = &quot;Table 1. Sample sizes for whole blood samples collected from Spectacled Eiders 2018-2025 by capture site, sampling period, and age class.&quot;,
+      align = c(&quot;l&quot;, &quot;l&quot;, &quot;l&quot;),
+      digits = 0,
+      row.names = FALSE)</code></pre>
+<table>
+<caption>Table 1. Sample sizes for whole blood samples collected from
+Spectacled Eiders 2018-2025 by capture site, sampling period, and age
+class.</caption>
+<thead>
+<tr class="header">
+<th align="left">Site</th>
+<th align="left">Period</th>
+<th align="left">Age</th>
+<th align="left">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Kashunuk</td>
+<td align="left">Brood</td>
+<td align="left">Adult</td>
+<td align="left">10</td>
+</tr>
+<tr class="even">
+<td align="left">Kashunuk</td>
+<td align="left">Brood</td>
+<td align="left">Duckling</td>
+<td align="left">13</td>
+</tr>
+<tr class="odd">
+<td align="left">Kigigak</td>
+<td align="left">Arrival</td>
+<td align="left">Adult</td>
+<td align="left">41</td>
+</tr>
+<tr class="even">
+<td align="left">Kigigak</td>
+<td align="left">Incubation</td>
+<td align="left">Adult</td>
+<td align="left">118</td>
+</tr>
+<tr class="odd">
+<td align="left">Kigigak</td>
+<td align="left">Brood</td>
+<td align="left">Adult</td>
+<td align="left">23</td>
+</tr>
+<tr class="even">
+<td align="left">Kigigak</td>
+<td align="left">Brood</td>
+<td align="left">Duckling</td>
+<td align="left">33</td>
+</tr>
+<tr class="odd">
+<td align="left">Teshekpuk</td>
+<td align="left">Arrival</td>
+<td align="left">Adult</td>
+<td align="left">2</td>
+</tr>
+<tr class="even">
+<td align="left">Tutakoke</td>
+<td align="left">Arrival</td>
+<td align="left">Adult</td>
+<td align="left">46</td>
+</tr>
+<tr class="odd">
+<td align="left">Utqiagvik</td>
+<td align="left">Arrival</td>
+<td align="left">Adult</td>
+<td align="left">9</td>
+</tr>
+<tr class="even">
+<td align="left">Utqiagvik</td>
+<td align="left">Incubation</td>
+<td align="left">Adult</td>
+<td align="left">3</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code># Validate LeadCare II (voltammetry) results to mass spectrometry (the standard for the comparison) results
+# including fitting a linear model to get parameter estimates to adjust LeadCare II results to bias relative to mass spec results
+
+# Create some data frames:
+# pb_all_long: all lead results from both methods in one column with method used to get the results (mass spec, voltammetery) in another column
+# pb_all_wide: all lead results from both methods with results from different methods in different columns 
+# pb_limits_long: only results from samples analyzed by both methods and within LeadCare II detection limits (0.033, 0.65) with all results in one column
+# pb_limits_wide: only results from samples analyzed by both methods and within LeadCare II detection limits (0.033, 0.65) with all results in two columns
+# pb_limits_both_wide
+# ldl: samples analyzed by both methods with voltammetry values = 0.033 (indicates below lower limit for LeadCare II) in wide format
+# udl: samples analyzed by both methods with voltammetry values = 0.65 (indicated above the upper limit for LeadCare II) in wide format
+
+# Create pb_all_long ####
+# all results in long format (same as data frame pb)
+pb_all_long &lt;- pb_all
+# covert to wide format with separate columns for mass spec and voltammetry results, NAs for samples analyzed by only one method
+pb_all_wide &lt;- reshape(pb_all_long, 
+                    direction = &quot;wide&quot;,
+                    idvar = c(&quot;id_metalBand&quot;, &quot;dt_sampled&quot;),
+                    timevar = &quot;cat_analysis&quot;,
+                    v.names = &quot;pb_blood_ppm&quot;
+                    )
+# Create pb_limits_long ####
+# results within LeadCare II limits in long format
+pb_limits_long &lt;- subset(pb_all_long, pb_blood_ppm &lt; 0.65 &amp; pb_blood_ppm &gt; 0.033) # remove records from both analysis methods based on LeadCare II limits
+
+# Create pb_limits_wide ####
+# results within LeadCare II limits for only samples analyzed by BOTH methods
+pb_limits_wide &lt;- reshape(pb_limits_long, 
+                    direction = &quot;wide&quot;,
+                    idvar = c(&quot;id_metalBand&quot;, &quot;dt_sampled&quot;),
+                    timevar = &quot;cat_analysis&quot;,
+                    v.names = &quot;pb_blood_ppm&quot;
+                    )
+
+# finalize pb_limits_wide by removing records with NAs in either analysis result column
+pb_limits_wide &lt;- pb_limits_wide[complete.cases(pb_limits_wide[, c(&quot;pb_blood_ppm.mass_spec&quot;, &quot;pb_blood_ppm.voltammetry&quot;)]), ]
+# temp: is the above working like it is supposed to be?
+
+# create pb_limits_both_wide ####
+# all data but only for samples analyzed by both methods, in wide format
+pb_both_wide &lt;- pb_all_wide[complete.cases(pb_all_wide[, c(&quot;pb_blood_ppm.mass_spec&quot;, &quot;pb_blood_ppm.voltammetry&quot;)]), ]
+
+# when data set pivoted, cat_detectLimit changed due to replicate sample IDs, redefine levels here
+pb_both_wide$cat_detectLimit[pb_both_wide$pb_blood_ppm.voltammetry &lt;= 0.033] &lt;- &#39;below_limit&#39;
+pb_both_wide$cat_detectLimit[pb_both_wide$pb_blood_ppm.voltammetry &gt;= 0.065] &lt;- &#39;above_limit&#39;
+pb_both_wide$cat_detectLimit[pb_both_wide$pb_blood_ppm.voltammetry &gt; 0.033 &amp; pb_both_wide$pb_blood_ppm.voltammetry &lt; 0.65] &lt;- &#39;detected&#39;
+
+# Create ldl ####
+# ldl: records with voltammetry results returned as below detection limit, entered as 0.033 ppm
+ldl &lt;- subset(pb_both_wide, pb_blood_ppm.voltammetry == 0.033)
+
+# Create udl ####
+# udl: records with voltammetry results returned as above detection limit, entered as 0.65 ppm
+udl &lt;- subset(pb_both_wide, pb_blood_ppm.voltammetry == 0.65)
+
+# Compare results between methods at LeadCare II detection limits (0.033, 0.65 ppm) ####
+
+# do all results from voltammetry that were tested as below lower detection limit have values from mass spec &lt; 0.033? ####
+n_volt_ldl &lt;- nrow(ldl)
+n_ms_match_volt_ldl &lt;- nrow(subset(ldl, pb_blood_ppm.mass_spec &lt; 0.034))
+pct_match_ldl &lt;- (n_ms_match_volt_ldl/n_volt_ldl)*100
+pct_match_ldl &lt;- sprintf(&quot;%.1f&quot;, pct_match_ldl)
+
+# do all results from voltammetry that were tested as above the upper detection limit have values from mass spec &lt; 0.65? ####
+n_volt_udl &lt;- nrow(udl)
+n_ms_match_volt_udl &lt;- nrow(subset(udl, pb_blood_ppm.mass_spec &gt; 0.65))
+pct_match_udl &lt;- (n_ms_match_volt_udl/n_volt_udl)*100
+pct_match_udl &lt;- sprintf(&quot;%.1f&quot;, pct_match_udl)
+
+# Data within the LeadCare II detection limits
+# Two approaches here:
+# 1. linear model (m0) with lead results within LeadCare II detection limits as response and method type (mass spec, voltammetry) as the explanatory variable to test the hypothesis that methods differ based on parameter estimate for the method not used as the reference level
+# Approach 1 (m0) is commented out because I don&#39;t use the results
+# 2. linear model (m67) with only results from samples analyzed by both methods in wide format and with values within LeadCare II detection limits. This model treats mass spec results as the response variable and voltammetry results as the explanatory variable and tests the hypothesis that the methods agree with intercept = 0 and slope = 1. (approach in Herring et al. 2018)
+
+# Linear model m1 ####
+# fit model m0 with log-transformed ppm to better approximate normal residuals and analysis type (mass spec or voltammetry) as x-var
+# use only data within detection limits of LeadCare II that were analyzed by both methods
+#m0 &lt;- lm(log(pb_blood_ppm) ~ cat_analysis, data = pb_limits_wide)
+#summary(m0) 
+#confint(m0) # no diff between methods, but most of the 95% CI around the voltammetry parameter lies below zero
+#plot(m0) # data meets model assumptions
+
+#backtrasform from log scale to median (not mean) ppm scale
+#m0_massSpec_median &lt;- exp(coef(m0)[1]) # backtransformed intercept = mass spec median value in ppm
+#m0_voltam_median &lt;- exp(coef(m0)[1]+coef(m0)[2]) # backtransformed int + voltamm coeff = voltammetry median in ppm
+#m0_diff_in_medians &lt;- exp(coef(m0)[2]) # difference between mass spec and voltamm medians in ppm
+#m0_log_fitted_medians &lt;-emmeans(m0, &quot;cat_analysis&quot;) # get mean by method on log scale with emmeans package
+#m0_log_fitted_medians
+# backtransform fitted medians on ppm scale
+#m0_ppm_grid &lt;- ref_grid(m0) # set reference grid (https://cran.r-project.org/web/packages/emmeans/vignettes/transformations.html)
+#m0_ppm_fitted_medians &lt;- emmeans(regrid(m0_ppm_grid), &quot;cat_analysis&quot;) # get medians on ppm scale
+#summary(m0_ppm_fitted_medians)
+#plot(m0_ppm_fitted_medians)
+
+# summary: using all validation data, median values from LeadCare II and mass spec are not convincingly different
+# medians differed by 0.02 ppm with LC2 values &lt; mass spec, but broadly overlapping 95% CI (that include each other&#39;s median point estimates)
+
+# Linear model m67 ####
+# treat mass spec results as the response and voltammery results as x-var, both log transformed and using data within the LC2 detection limits
+m67 &lt;- lm(log(pb_blood_ppm.mass_spec) ~ log(pb_blood_ppm.voltammetry) , data = pb_limits_wide)
+#summary(m67)
+#confint(m67)
+#plot(m67)
+
+# save data set used in the analysis for meta data and archive
+#write.csv(pb_limits_wide, &quot;data/pb_blood_spei_fws_validation_20260120.csv&quot;)</code></pre>
+<div id="voltammetry-validation-1" class="section level3">
+<h3><em>Voltammetry Validation</em></h3>
+<p>Of the voltammetry results less than the lower detection limit of the
+method (0.033 ppm), 83.6 % (46 of 55 samples) had consistent mass
+spectrometry results &lt; 0.033 ppm. The mass spectrometry results &gt;
+0.033 ppm that when analyzed by LeadCare II were below the instrument’s
+0.033 ppm detection limit ranged from 0.034 to 0.064 ppm (mean 0.045
+ppm, 0.012 ppm mean deviation from the voltammetry lower detection
+limit).</p>
+<p>Of the voltammetry results greater than the upper detection limit of
+the method (0.65 ppm), 100.0 % (5 of 5 samples) had mass spectrometry
+results &gt; 0.65 ppm.</p>
+<p>The slope parameter estimated with the log-log linear model fit to 23
+samples with results analyzed by both mass spectrometry and voltammetry
+and within the detection limits of LeadCare II (log scale estimate =
+1.05, 95% CI: 0.86, 1.24) suggests a possible negative bias with
+voltammetry values tending to be lower than mass spectrometry values
+(Fig. 1). Given a 10% increase in lead concentration determined by
+voltammetry, lead concentration assessed by mass spectrometry increased
+by 10.5%. The slope estimate was not convincingly different from 1.0
+given 1.0 was included in the interval; however, given the small sample
+size and results from previous studies that have consistently shown a
+negative bias in LeadCare II results from previously frozen avian blood
+(Herring et al. 2018), we adjusted LeadCare II results prior to lead
+exposure classification. We used the linear model parameters and
+LeadCare II results to calculate model fitted values corrected for the
+negative bias in LeadCare II results and back transformed those values
+from the log scale to ppm.</p>
+<pre class="r"><code># plot mass spec vs. voltammetery values with hypothesized slope = 1 line and actual slope of the association from the m67 linear model
+p.m67 &lt;- ggplot(data = pb_limits_wide, aes(y = log(pb_blood_ppm.mass_spec), x = log(pb_blood_ppm.voltammetry)))+
+  geom_point()+
+  geom_abline(slope = 1, intercept = 0, linetype = &quot;dashed&quot;)+
+  geom_abline(intercept = coef(m67)[1], slope = coef(m67)[2], color = &quot;red&quot;)+
+  theme_bw()
+p.m67</code></pre>
+<div class="figure" style="text-align: center">
+<img src="figure/spei_pb_data_summary_20260112.Rmd/fig_validation-1.png" alt="&lt;div style = 'text-align:left'&gt;Fig. 1 Lead concentration in Spectacled Eider blood samples anylazed using both mass spectrometry and voltammetery (n = 23). The black dashed line indicates hypothesized perfect correspondance between the two methods (slope = 1.0). The red line is actual mean association between the two methods estimated with a linear model (log-scale estimates: y-intercept = 0.273, slope = 1.046). Given that the fitted line is above the hypothesized line, voltammetry likely underestimated lead concentration relative to mass spectrometry.&lt;/div&gt;" width="576" />
+<p class="caption">
+<div style="text-align:left">
+Fig. 1 Lead concentration in Spectacled Eider blood samples anylazed
+using both mass spectrometry and voltammetery (n = 23). The black dashed
+line indicates hypothesized perfect correspondance between the two
+methods (slope = 1.0). The red line is actual mean association between
+the two methods estimated with a linear model (log-scale estimates:
+y-intercept = 0.273, slope = 1.046). Given that the fitted line is above
+the hypothesized line, voltammetry likely underestimated lead
+concentration relative to mass spectrometry.
+</div>
+</p>
+</div>
+<pre class="r"><code># covert voltam values to mass spec values given linear model parameter estimates, NB calculation happens on the log scale
+# save linear model parameter estimates as objects
+int_m67 &lt;- coef(m67)[1]
+slope_m67 &lt;-  coef(m67)[2]
+
+pb_limits_wide$ln_fitted &lt;- int_m67 + slope_m67 * log(pb_limits_wide$pb_blood_ppm.voltammetry)
+
+# plot model-adjusted LeadCare II values 
+p.m67_fit &lt;- ggplot(data = pb_limits_wide, aes(y = log(pb_blood_ppm.mass_spec), x = ln_fitted))+
+  geom_abline(intercept = coef(m67)[1], slope = coef(m67)[2], color = &quot;red&quot;)+
+  geom_point()+
+  geom_abline(slope = 1, intercept = 0, linetype = &quot;dashed&quot;)+
+  theme_bw()
+#p.m67_fit # don&#39;t really need to include this plot
+
+# NB the data points shift when adjusted using the linear model parameters, not the plotted lines.
+
+diff_ms_volt &lt;- round(mean(pb_limits_wide$pb_blood_ppm.mass_spec-pb_limits_wide$pb_blood_ppm.voltammetry), 3) # difference b/t mass spec and unadjusted LC2 values
+diff_ms_fit &lt;- round(mean(pb_limits_wide$pb_blood_ppm.mass_spec- exp(pb_limits_wide$ln_fitted)), 3) # difference b/t mass spec and adjusted LC2 values
+
+# backtransform from log-scale to ppm
+pb_limits_wide$fitted_ppm &lt;- exp(pb_limits_wide$ln_fitted)
+# difference between original LC2 results and adjusted LC2 results in this subset of the data used to estimate the linear model
+diff_lcOrig_lcFit &lt;- round(mean(pb_limits_wide$pb_blood_ppm.voltammetry - pb_limits_wide$fitted_ppm), 3)
+
+# in data frame pb_unique(one result for each sample, no replicates within or between methods; where reps exist, mass spec included over LC2), adjust LC2 results based on linear model parameters from the matched-results linear model (m67) to account for LC2 negative bias
+# first save all original values as &quot;pb_blood_ppm_original&quot;
+pb_unique$pb_blood_ppm_original &lt;- pb_unique$pb_blood_ppm
+
+# apply intercept and slope estimates from m67 to adjust lead values from LC2 ####
+# if a lead value is from LC2-voltammetry and within LC2 detection limits, then adjust it, otherwise (mass spec values), keep the lead value
+#pb_unique$pb_blood_ppm_adjusted &lt;- ifelse(pb_unique$cat_analysis == &quot;voltammetry&quot; &amp; pb_unique$cat_detectLimit == &quot;detected&quot;, 
+#                                          exp(int_m67 + (slope_m67*log(pb_unique$pb_blood_ppm))),  # adjustment on log scale and back transformed to ppm
+#                                          pb_unique$pb_blood_ppm)
+pb_unique$pb_blood_ppm_adjusted &lt;- ifelse(pb_unique$cat_analysis == &quot;voltammetry&quot; &amp; pb_unique$cat_detectLimit == &quot;detected&quot;, 
+                                          exp(int_m67 + (slope_m67*log(pb_unique$pb_blood_ppm))),  # adjustment on log scale and back transformed to ppm
+                                          pb_unique$pb_blood_ppm)
+
+
+# replace the original lead ppm values with the adjusted values
+pb_unique$pb_blood_ppm &lt;- pb_unique$pb_blood_ppm_adjusted
+
+# save this data set because this will be used to estimate percent exposed by site and capture period
+# first remove unneeded columns
+temp_pb_unique &lt;- subset(pb_unique, select = -c(is_replicate_all, rep_remove, pb_blood_ppm_adjusted))
+pb_unique &lt;- temp_pb_unique
+#write.csv(pb_unique, &quot;data/pb_blood_spei_fws_2018-2025.csv&quot;, row.names = FALSE)
+
+# Note: only 7 samples were analyzed only by LC2 voltammetry. Of those 7, only 1 was just below the 0.2 ppm exposure threshold and was adjusted to above that threshold (metal band 200741887 2023-06-26: original LC value 0.178 ppm, adjusted LC value = 0.216); all other 6 samples remained below the 0.2 ppm exposure threshold (mean of original LC values was 0.048 ppm, mean of adjusted values was 0.055 ppm).</code></pre>
+<p>The mean difference between mass spectrometry results and voltammetry
+results was 0.033 ppm. After voltammetry results were adjusted for their
+likely negative bias relative to mass spectrometery results, the mean
+difference between methods was 0.006 ppm.</p>
+<p>Model parameters were used to adjust voltammetry values within the
+LeadCare II detection limits in the full data set. That data set
+included 7 samples (of 27 samples) that were analyzed using only
+LeadCare II that were within the detection limits of the instrument. Of
+those 7 samples, only one had a blood lead value below the 0.20 ppm
+exposure threshold value (metal band 200741887 sampled 2023-06-26, blood
+lead = 0.178 ppm) that was above the threshold after it was
+model-adjusted (model adjusted value = 0.216 ppm). The remaining 6
+values were well below the exposure threshold (mean of original values
+0.048 ppm, mean after model adjustment 0.055 ppm). Of the remaining 27
+samples, 3 were above the LeadCare II upper detection limit and 20 were
+below the instrument’s lower detection limit.</p>
+<pre class="r"><code># Estimate prop exposed by capture period ####
+# Create lead exposure indicator variables and use exposure indicator variable to estimate prop exposed with a logistic regression
+# Done by subsetting df_recent and fitting models to period-specific data sets
+# output: data frame &quot;est_pb_exp_fws_recent&quot; that has prop exp estimates and 95% CIs by site and capture period
+
+# cbind relevant columns into data frame to use for site-period estimates
+df_recent &lt;- cbind.data.frame(
+                pb_unique$id_metalBand,
+                pb_unique$id_species,
+                pb_unique$dt_sampled,
+                pb_unique$id_studySite,
+                pb_unique$cat_periodCapt,
+                pb_unique$cat_age,
+                pb_unique$cat_sex,
+                pb_unique$pb_blood_ppm)
+# rename columns
+colnames(df_recent) &lt;- c(&quot;band_metal&quot;, &quot;species&quot;, &quot;date_capture&quot;, &quot;site&quot;, &quot;period&quot;, &quot;age&quot;, &quot;sex&quot;, &quot;pb&quot;)
+
+# set lead exposure threshold ####
+# create Pb exposure column with 2.0 ppm threshold; using &gt;= to as per spei lit before Flint et al 2016: Franson et al. 1998; Grand et al. 1998)
+df_recent$exposed &lt;- ifelse(df_recent$pb &gt;= 0.20,1,0)
+# create Pb clinical toxicity column with 1.0 threshold
+df_recent$clinical &lt;- ifelse(df_recent$pb &gt;= 0.50,1,0)
+# create Pb severe column with &gt;= 1.00 threshold
+df_recent$severe &lt;- ifelse(df_recent$pb &gt;= 1.0,1,0)
+
+# fit logistic regression models to estimate proportion of exposed samples with 95% CIs ####
+# I fit models by period (arrival, incubation, brood rearing [adult and juvenile]) to get results by site (and age for brood rearing samples)
+
+# 1. Adults at arrival ####
+# subset data for just arrival
+df_rcnt_arrv &lt;- subset(df_recent, period == &quot;arrival&quot;)
+# fit log reg model
+glm_rcnt_arrv_exp &lt;- glm(formula = exposed ~ site , family = binomial(link = &quot;logit&quot;), data = df_rcnt_arrv) #
+#summary(glm_rcnt_arrv_exp)
+# get sample sizes
+n_recent_arrv_exp &lt;- aggregate(df_rcnt_arrv$exposed ~ df_rcnt_arrv$site, FUN = length)
+#n_recent_arrv_exp
+# get marginal means with emmeans package
+means_rcnt_arrv_exp &lt;- emmeans(glm_rcnt_arrv_exp, ~ site, trans = &quot;response&quot;)
+sum_means_rcnt_arrv_exp &lt;- as.data.frame(summary(means_rcnt_arrv_exp))
+
+# add info to table of estimates
+sum_means_rcnt_arrv_exp$data &lt;- &quot;FWS&quot;
+sum_means_rcnt_arrv_exp$study_period &lt;- &quot;2018-2025&quot;
+sum_means_rcnt_arrv_exp$capt_period &lt;- &quot;Arrival&quot;
+sum_means_rcnt_arrv_exp$sex &lt;- &quot;F,M&quot;
+sum_means_rcnt_arrv_exp$age &lt;- &quot;Adult&quot;
+sum_means_rcnt_arrv_exp$type_exposure &lt;- &quot;\u2265 0.20 pmm&quot;
+sum_means_rcnt_arrv_exp$n &lt;- n_recent_arrv_exp[ ,2]
+
+# 2.  adults at incubation ####
+df_rcnt_inc &lt;- subset(df_recent, period == &quot;incubation&quot;)
+# fit model
+glm_rcnt_incub_exp &lt;- glm(formula = exposed ~ site , family = binomial(link = &quot;logit&quot;), data = df_rcnt_inc)
+#summary(glm_rcnt_incub_exp)
+# get sample sizes
+n_recent_inc_exp &lt;- aggregate(df_rcnt_inc$exposed ~ df_rcnt_inc$site, FUN = length)
+#n_recent_inc_exp
+# get marginal means
+means_rcnt_inc_exp &lt;- emmeans(glm_rcnt_incub_exp, ~ site, trans = &quot;response&quot;)
+sum_means_rcnt_inc_exp &lt;- summary(means_rcnt_inc_exp)
+
+# add info to table of estimates
+sum_means_rcnt_inc_exp$data &lt;- &quot;FWS&quot;
+sum_means_rcnt_inc_exp$study_period &lt;- &quot;2018-2025&quot;
+sum_means_rcnt_inc_exp$capt_period &lt;- &quot;Incubation&quot;
+sum_means_rcnt_inc_exp$sex &lt;- &quot;F&quot;
+sum_means_rcnt_inc_exp$age &lt;- &quot;Adult&quot;
+sum_means_rcnt_inc_exp$type_exposure &lt;- &quot;\u2265 0.20 pmm&quot;
+sum_means_rcnt_inc_exp$n &lt;- n_recent_inc_exp[ ,2]
+
+# 3. adults at brood rearing ####
+df_rcnt_brood_ad &lt;- subset(df_recent, period == &quot;brood&quot; &amp; age != &quot;local&quot;)
+# fit model
+glm_rcnt_brood_ad_exp &lt;- glm(formula = exposed ~ site , family = binomial(link = &quot;logit&quot;), data = df_rcnt_brood_ad)
+#summary(glm_rcnt_brood_ad_exp)
+# get sample sizes
+n_recent_brood_ad_exp &lt;- aggregate(df_rcnt_brood_ad$exposed ~ df_rcnt_brood_ad$site, FUN = length)
+#n_recent_brood_ad_exp
+# get marginal means
+means_rcnt_brood_ad_exp &lt;- emmeans(glm_rcnt_brood_ad_exp, ~ site, trans = &quot;response&quot;)
+sum_means_rcnt_brood_ad_exp &lt;- summary(means_rcnt_brood_ad_exp)
+# add info to table of estimates
+sum_means_rcnt_brood_ad_exp$data &lt;- &quot;FWS&quot;
+sum_means_rcnt_brood_ad_exp$study_period &lt;- &quot;2018-2025&quot;
+sum_means_rcnt_brood_ad_exp$capt_period &lt;- &quot;Brood-Adult&quot;
+sum_means_rcnt_brood_ad_exp$sex &lt;- &quot;F&quot;
+sum_means_rcnt_brood_ad_exp$age &lt;- &quot;Adult&quot;
+sum_means_rcnt_brood_ad_exp$type_exposure &lt;- &quot;\u2265 0.20 pmm&quot;
+sum_means_rcnt_brood_ad_exp$n &lt;- n_recent_brood_ad_exp[ ,2]
+
+# 4. ducklings at brood rearing ####
+df_rcnt_brood_loc &lt;- subset(df_recent, period == &quot;brood&quot; &amp; age == &quot;local&quot;)
+# fit model
+glm_rcnt_brood_loc_exp &lt;- glm(formula = exposed ~ site , family = binomial(link = &quot;logit&quot;), data = df_rcnt_brood_loc)
+#summary(glm_rcnt_brood_loc_exp)
+# get sample sizes
+n_recent_brood_loc_exp &lt;- aggregate(df_rcnt_brood_loc$exposed ~ df_rcnt_brood_loc$site, FUN = length)
+#n_recent_brood_loc_exp
+# get marginal means
+means_rcnt_brood_loc_exp &lt;- emmeans(glm_rcnt_brood_loc_exp, ~ site, trans = &quot;response&quot;)
+sum_means_rcnt_brood_loc_exp &lt;- summary(means_rcnt_brood_loc_exp)
+# add info to table of estimates
+sum_means_rcnt_brood_loc_exp$data &lt;- &quot;FWS&quot;
+sum_means_rcnt_brood_loc_exp$study_period &lt;- &quot;2018-2025&quot;
+sum_means_rcnt_brood_loc_exp$capt_period &lt;- &quot;Brood-Juv&quot;
+sum_means_rcnt_brood_loc_exp$sex &lt;- &quot;F,M&quot;
+sum_means_rcnt_brood_loc_exp$age &lt;- &quot;Duckling&quot;
+sum_means_rcnt_brood_loc_exp$type_exposure &lt;- &quot;\u2265 0.20 pmm&quot;
+sum_means_rcnt_brood_loc_exp$n &lt;- n_recent_brood_loc_exp[ ,2]
+
+# rowbind tables to compile all results 
+est_pb_exp_fws_recent &lt;- rbind(
+sum_means_rcnt_arrv_exp,
+sum_means_rcnt_inc_exp,
+sum_means_rcnt_brood_ad_exp,
+sum_means_rcnt_brood_loc_exp
+)
+
+# format table
+est_pb_exp_fws_recent$prob &lt;- round(est_pb_exp_fws_recent$prob, 3)
+est_pb_exp_fws_recent$asymp.LCL &lt;- round(est_pb_exp_fws_recent$asymp.LCL, 3)
+est_pb_exp_fws_recent$asymp.UCL &lt;- round(est_pb_exp_fws_recent$asymp.UCL, 3)
+# constrain confidence limits to between 0 and 1
+est_pb_exp_fws_recent$asymp.LCL  &lt;- ifelse(est_pb_exp_fws_recent$asymp.LCL &lt; 0, 0, est_pb_exp_fws_recent$asymp.LCL )
+est_pb_exp_fws_recent$asymp.UCL  &lt;- ifelse(est_pb_exp_fws_recent$asymp.UCL &gt; 1.00, 100, est_pb_exp_fws_recent$asymp.UCL )
+# remove unnecessary columns
+est_pb_exp_fws_recent &lt;- subset(est_pb_exp_fws_recent, select = -c(SE, df))
+# reorder columns
+neworder &lt;- c(&quot;data&quot;, &quot;site&quot;, &quot;study_period&quot;, &quot;capt_period&quot;, &quot;sex&quot;, &quot;age&quot;, &quot;type_exposure&quot;, &quot;n&quot;, &quot;prob&quot;, &quot;asymp.LCL&quot;, &quot;asymp.UCL&quot;)
+est_pb_exp_fws_recent &lt;- est_pb_exp_fws_recent[ ,neworder]
+
+new_names &lt;- c(&quot;Data&quot;, &quot;Site&quot;, &quot;Study Period&quot;, &quot;Capture Period&quot;, &quot;Sex&quot;, &quot;Age&quot;, &quot;Lead Exposure&quot;, &quot;n&quot;, &quot;Prop Exposed&quot;, &quot;LCL&quot;, &quot;UCL&quot;)
+colnames(est_pb_exp_fws_recent) &lt;- new_names
+
+# summary stats for the other exposure thresholds
+# exposure &gt;= 0.20 ppm
+sum_n_recent &lt;- aggregate(df_recent$exposed ~ df_recent$site*df_recent$period*df_recent$age, FUN = &quot;length&quot;) # summary of sample size by site-period
+n1 &lt;- c(&quot;Site&quot;, &quot;Period&quot;, &quot;Age&quot;, &quot;n&quot;)
+colnames(sum_n_recent) &lt;- n1
+# exposed 0.20 ppm
+sum_exp_recent &lt;- aggregate(df_recent$exposed ~ df_recent$site*df_recent$period*df_recent$age, FUN = &quot;sum&quot;) # counts of # samples &gt;= 0.20 ppm
+ct_exp &lt;- sum_exp_recent$`df_recent$exposed`
+sum_n_recent$ct_exposed &lt;- ct_exp
+# clinical 0.50 ppm
+sum_clinical_exp_recent &lt;- aggregate(df_recent$clinical ~ df_recent$site*df_recent$period*df_recent$age, FUN = &quot;sum&quot;) # counts of samples &gt;= 0.50 ppm
+ct_clinical &lt;- sum_clinical_exp_recent$`df_recent$clinical`
+sum_n_recent$ct_clinical&lt;- ct_clinical
+# severe &gt;= 1.0 ppm
+sum_severe_exp_recent &lt;- aggregate(df_recent$severe ~ df_recent$site*df_recent$period*df_recent$age, FUN = &quot;sum&quot;) # counts of samples &gt;= 1.0 ppm
+ct_severe &lt;- sum_severe_exp_recent$`df_recent$severe`
+sum_n_recent$ct_severe &lt;- ct_severe
+# add data for Kash incubation from 2022 - USGS data that is not loaded yet, but is below
+#kash22_exp &lt;- c(&quot;Kashunuk&quot;, &quot;Incubation&quot;, &quot;Adult&quot;, 37, 9, 7, 3)
+# reorder
+sum_n_recent &lt;- sum_n_recent[order(sum_n_recent$Site, sum_n_recent$Period, sum_n_recent$Age), ]
+n2 &lt;- c(&quot;Site&quot;, &quot;Period&quot;, &quot;Age&quot;, &quot;n&quot;, &quot;Count \u2265 0.20 ppm&quot;, &quot;Count \u2265 0.50 ppm&quot;, &quot;Count \u2265 1.0 ppm&quot;)
+colnames(sum_n_recent) &lt;- n2
+# change some category names
+sum_n_recent$Age[sum_n_recent$Age == &quot;local&quot;] &lt;- &#39;Duckling&#39;
+sum_n_recent$Age[sum_n_recent$Age == &quot;AHY&quot;] &lt;- &#39;Adult&#39;
+sum_n_recent$Period[sum_n_recent$Period == &quot;brood&quot;] &lt;- &#39;Brood&#39;
+sum_n_recent$Period[sum_n_recent$Period == &quot;arrival&quot;] &lt;- &#39;Arrival&#39;
+sum_n_recent$Period[sum_n_recent$Period ==  &quot;incubation&quot;] &lt;- &#39;Incubation&#39;
+# add data for Kash incubation from 2022 - USGS data that is not loaded yet, but is below
+kash22_exp &lt;- c(&quot;Kashunuk&quot;, &quot;Incubation&quot;, &quot;Adult&quot;, 37, 9, 7, 3)
+
+tbl2 &lt;- 
+  kable(sum_n_recent, 
+      caption = &quot;Table 2. Counts of blood samples from Spectacled Eiders in each lead exposure category by site and capture period&quot;,
+      align = c(&quot;l&quot;, &quot;l&quot;, &quot;l&quot;, &quot;l&quot;, &quot;c&quot;, &quot;c&quot;, &quot;c&quot;),
+      digits = 1,
+      row.names = FALSE)
+
+# specify values for reporting results
+#exp_min &lt;- min(est_pb_exp_fws_recent$prob, na.rm = TRUE)
+#exp_max &lt;- max(est_pb_exp_fws_recent$prob, na.rm = TRUE)</code></pre>
+</div>
+<div id="lead-exposure-thresholds" class="section level3">
+<h3><em>Lead Exposure Thresholds</em></h3>
+<p>During the 2018-2025 period, lead exposure in Spectacled Eiders was
+detected at all three Yukon-Kuskokwim Delta sites (Kashunuk River,
+Kigigak Island, Tutakoke River; Table 2), the probability of lead
+exposure estimates &gt; 0.0 ranged from 0.02 (95% CI: 0.0, 0.07) during
+the arrival period at Kigigak Island to 0.20 (95% CI: 0.0. 0.45; n = 10)
+in adult females during brood rearing at the Kashunuk River. Lead
+exposure probability was 0.0 for ducllings during brood rearing at
+Kigigak Island. No exposure was detected at the two sites on the Arctic
+Coastal Plain, although sample sizes at these sites were small
+(Utqiagvik, n = 12; Teshekpuk Lake, n = 2; Table 2).</p>
+<pre class="r"><code># display table 2 of raw counts for each exposure level 
+tbl2</code></pre>
+<table>
+<caption>Table 2. Counts of blood samples from Spectacled Eiders in each
+lead exposure category by site and capture period</caption>
+<colgroup>
+<col width="11%" />
+<col width="12%" />
+<col width="10%" />
+<col width="4%" />
+<col width="20%" />
+<col width="20%" />
+<col width="19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Site</th>
+<th align="left">Period</th>
+<th align="left">Age</th>
+<th align="left">n</th>
+<th align="center">Count ≥ 0.20 ppm</th>
+<th align="center">Count ≥ 0.50 ppm</th>
+<th align="center">Count ≥ 1.0 ppm</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Kashunuk</td>
+<td align="left">Brood</td>
+<td align="left">Adult</td>
+<td align="left">10</td>
+<td align="center">2</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">Kashunuk</td>
+<td align="left">Brood</td>
+<td align="left">Duckling</td>
+<td align="left">13</td>
+<td align="center">2</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Kigigak</td>
+<td align="left">Arrival</td>
+<td align="left">Adult</td>
+<td align="left">41</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="left">Kigigak</td>
+<td align="left">Brood</td>
+<td align="left">Adult</td>
+<td align="left">23</td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="left">Kigigak</td>
+<td align="left">Brood</td>
+<td align="left">Duckling</td>
+<td align="left">33</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">Kigigak</td>
+<td align="left">Incubation</td>
+<td align="left">Adult</td>
+<td align="left">118</td>
+<td align="center">19</td>
+<td align="center">14</td>
+<td align="center">9</td>
+</tr>
+<tr class="odd">
+<td align="left">Teshekpuk</td>
+<td align="left">Arrival</td>
+<td align="left">Adult</td>
+<td align="left">2</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">Tutakoke</td>
+<td align="left">Arrival</td>
+<td align="left">Adult</td>
+<td align="left">46</td>
+<td align="center">2</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Utqiagvik</td>
+<td align="left">Arrival</td>
+<td align="left">Adult</td>
+<td align="left">9</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">Utqiagvik</td>
+<td align="left">Incubation</td>
+<td align="left">Adult</td>
+<td align="left">3</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code># create table as df &quot;est_pb_exp_fws_recent&quot; with est prob of exposure by site and capture period for recent data
+# sort
+order_period &lt;- c(&quot;Arrival&quot;, &quot;Incubation&quot;, &quot;Brood-Adult&quot;, &quot;Brood-Juv&quot;)
+est_pb_exp_fws_recent$`Capture Period` &lt;- factor(est_pb_exp_fws_recent$`Capture Period`, levels = order_period)
+est_pb_exp_fws_recent &lt;- est_pb_exp_fws_recent[order(est_pb_exp_fws_recent$Site, est_pb_exp_fws_recent$`Capture Period`, est_pb_exp_fws_recent$`Age`), ]
+tbl_est_pb_exp_fws_recent &lt;- est_pb_exp_fws_recent
+new_names &lt;- c(&quot;Data&quot;, &quot;Site&quot;, &quot;Study Period&quot;, &quot;Capture Period&quot;, &quot;Sex&quot;, &quot;Age&quot;, &quot;Lead Exposure&quot;, &quot;n&quot;, &quot;Probability&quot;, &quot;LCL&quot;, &quot;UCL&quot;)
+colnames(tbl_est_pb_exp_fws_recent) &lt;- new_names
+# drop some columns
+tbl_est_pb_exp_fws_recent &lt;- subset(tbl_est_pb_exp_fws_recent, select = -`Lead Exposure`)
+tbl_est_pb_exp_fws_recent &lt;- subset(tbl_est_pb_exp_fws_recent, select = - Data)
+
+kable(tbl_est_pb_exp_fws_recent, 
+      caption = &quot;Table 3. Estimates of the probability of lead exposure in Spectacled Eiders based on blood lead levels \u2265 0.20 ppm.&quot;,
+      align = c( &quot;l&quot;, &quot;l&quot;, &quot;l&quot;, &quot;l&quot;, &quot;l&quot;, &quot;l&quot;, &quot;c&quot;, &quot;l&quot;, &quot;l&quot;),
+      digits = 3,
+      row.names = FALSE)</code></pre>
+<table>
+<caption>Table 3. Estimates of the probability of lead exposure in
+Spectacled Eiders based on blood lead levels ≥ 0.20 ppm.</caption>
+<colgroup>
+<col width="12%" />
+<col width="16%" />
+<col width="18%" />
+<col width="5%" />
+<col width="11%" />
+<col width="5%" />
+<col width="16%" />
+<col width="7%" />
+<col width="7%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Site</th>
+<th align="left">Study Period</th>
+<th align="left">Capture Period</th>
+<th align="left">Sex</th>
+<th align="left">Age</th>
+<th align="left">n</th>
+<th align="center">Probability</th>
+<th align="left">LCL</th>
+<th align="left">UCL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Kigigak</td>
+<td align="left">2018-2025</td>
+<td align="left">Arrival</td>
+<td align="left">F,M</td>
+<td align="left">Adult</td>
+<td align="left">41</td>
+<td align="center">0.024</td>
+<td align="left">0.000</td>
+<td align="left">0.072</td>
+</tr>
+<tr class="even">
+<td align="left">Kigigak</td>
+<td align="left">2018-2025</td>
+<td align="left">Incubation</td>
+<td align="left">F</td>
+<td align="left">Adult</td>
+<td align="left">118</td>
+<td align="center">0.161</td>
+<td align="left">0.095</td>
+<td align="left">0.227</td>
+</tr>
+<tr class="odd">
+<td align="left">Kigigak</td>
+<td align="left">2018-2025</td>
+<td align="left">Brood-Adult</td>
+<td align="left">F</td>
+<td align="left">Adult</td>
+<td align="left">23</td>
+<td align="center">0.087</td>
+<td align="left">0.000</td>
+<td align="left">0.202</td>
+</tr>
+<tr class="even">
+<td align="left">Kigigak</td>
+<td align="left">2018-2025</td>
+<td align="left">Brood-Juv</td>
+<td align="left">F,M</td>
+<td align="left">Duckling</td>
+<td align="left">33</td>
+<td align="center">0.000</td>
+<td align="left">0.000</td>
+<td align="left">0.000</td>
+</tr>
+<tr class="odd">
+<td align="left">Teshekpuk</td>
+<td align="left">2018-2025</td>
+<td align="left">Arrival</td>
+<td align="left">F,M</td>
+<td align="left">Adult</td>
+<td align="left">2</td>
+<td align="center">0.000</td>
+<td align="left">0.000</td>
+<td align="left">0.000</td>
+</tr>
+<tr class="even">
+<td align="left">Tutakoke</td>
+<td align="left">2018-2025</td>
+<td align="left">Arrival</td>
+<td align="left">F,M</td>
+<td align="left">Adult</td>
+<td align="left">46</td>
+<td align="center">0.043</td>
+<td align="left">0.000</td>
+<td align="left">0.102</td>
+</tr>
+<tr class="odd">
+<td align="left">Utqiagvik</td>
+<td align="left">2018-2025</td>
+<td align="left">Arrival</td>
+<td align="left">F,M</td>
+<td align="left">Adult</td>
+<td align="left">9</td>
+<td align="center">0.000</td>
+<td align="left">0.000</td>
+<td align="left">0.000</td>
+</tr>
+<tr class="even">
+<td align="left">Utqiagvik</td>
+<td align="left">2018-2025</td>
+<td align="left">Incubation</td>
+<td align="left">F</td>
+<td align="left">Adult</td>
+<td align="left">3</td>
+<td align="center">0.000</td>
+<td align="left">0.000</td>
+<td align="left">0.000</td>
+</tr>
+<tr class="odd">
+<td align="left">Kashunuk</td>
+<td align="left">2018-2025</td>
+<td align="left">Brood-Adult</td>
+<td align="left">F</td>
+<td align="left">Adult</td>
+<td align="left">10</td>
+<td align="center">0.200</td>
+<td align="left">0.000</td>
+<td align="left">0.448</td>
+</tr>
+<tr class="even">
+<td align="left">Kashunuk</td>
+<td align="left">2018-2025</td>
+<td align="left">Brood-Juv</td>
+<td align="left">F,M</td>
+<td align="left">Duckling</td>
+<td align="left">13</td>
+<td align="center">0.154</td>
+<td align="left">0.000</td>
+<td align="left">0.350</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>#est_pb_exp_fws_recent</code></pre>
+</div>
+<div id="historical-comparison-1" class="section level3">
+<h3><em>Historical Comparison</em></h3>
+<p>Where sample sample sizes for the 2018-2025 period were largest and
+estimates of exposure probability had the highest resolution,
+specifically at the Kashunuk River during incubation, and Kigigak Island
+during incubation and brood rearing), lead exposure probabilities were
+similar to the 1990s. At the Tutakoke River, where the probability of
+lead exposure during the 1990s was low, it remained low during the
+2018-2025 period (Fig. 2). Point estimates of exposure rates at the
+Kashunuk River during brood rearing for adults and ducklings suggest a
+decline from the 1990s, but broad 95% confidence intervals around those
+estimates do not support inference of a decline.</p>
+<pre class="r"><code># load and wrangle USGS historical blood lead data
+# limit data frame to sites with recent data for comparison
+# create indicator variables for threshold lead exposure
+# output is data frame &quot;df_hist&quot; with 11 columns that match df_recent with data from 2018-2025
+
+# load USGS data from 1990s ###
+nineties &lt;- read.csv(&quot;data/sourced/usgs/waterfowl_leadExposure_alaskaRussia_petersen_1993-1999.csv&quot;, header = T)
+
+# wrangle data ####
+# location codes for usgs data from metadata file
+code &lt;- seq(1,13,1) # coded site values range 1-13 for each of 13 sites
+# site names in sequence of code numbers, 1-13
+loc &lt;- c(&quot;Aknerkochik&quot;, &quot;Aphrewn&quot;, &quot;Kashunuk&quot;, &quot;Kigigak&quot;, &quot;Manokinak&quot;, &quot;Naskonat&quot;, &quot;Opyagyarak&quot;, &quot;BigSlough&quot;, &quot;Tutakoke&quot;, &quot;YKD&quot;, &quot;Indigirka&quot;, &quot;Colville&quot;, &quot;Prudhoe&quot;)
+# combine codes with site names for a reference table
+sites &lt;-cbind(code, loc)
+
+# format data
+nineties$date &lt;- as.POSIXct(nineties$date, format = &quot;%Y-%m-%d&quot;)
+# create julian day
+nineties$julian &lt;- format(nineties$date, &quot;%j&quot;)
+# create month
+nineties$month &lt;- format(nineties$date, format = &quot;%m&quot;)
+# format lead values as numeric
+nineties$pb &lt;- as.numeric(nineties$pb)
+# recode sites
+nineties$site[nineties$location == 1] &lt;- &quot;Aknerkochik&quot;
+nineties$site[nineties$location == 2] &lt;- &quot;Aphrewn&quot;
+nineties$site[nineties$location == 3] &lt;- &quot;Kashunuk&quot;
+nineties$site[nineties$location == 4] &lt;- &quot;Kigigak&quot;
+nineties$site[nineties$location == 5] &lt;- &quot;Manokinak&quot;
+nineties$site[nineties$location == 6] &lt;- &quot;Naskonat&quot;
+nineties$site[nineties$location == 7] &lt;- &quot;Opyagyarak&quot;
+nineties$site[nineties$location == 8] &lt;- &quot;BigSlough&quot;
+nineties$site[nineties$location == 9] &lt;- &quot;Tutakoke&quot;
+nineties$site[nineties$location == 10] &lt;- &quot;YKD&quot;
+nineties$site[nineties$location == 11] &lt;- &quot;Indigirka&quot;
+nineties$site[nineties$location == 12] &lt;- &quot;Colville&quot;
+nineties$site[nineties$location == 13] &lt;- &quot;Prudhoe&quot;
+
+# subset to only Kash, Kig, and Tut which have samples from 1990s and 2018-2022
+keep &lt;- c(3,4,9) # 3 = Kash, 4 = Kig, 9 = Tut
+ykd90s &lt;- nineties[nineties$location %in% keep, ]
+
+# create sampling period based on status codes already in the data, use fewer categories (group failed, hatch, and nest as incubation, and brood and duckling as brood)
+ykd90s$period[ykd90s$status == &quot;spring&quot;] &lt;- &quot;arrival&quot;
+ykd90s$period[ykd90s$status == &quot;failed&quot;] &lt;- &quot;incubation&quot;
+ykd90s$period[ykd90s$status == &quot;hatch&quot;] &lt;- &quot;incubation&quot;
+ykd90s$period[ykd90s$status == &quot;nest&quot;] &lt;- &quot;incubation&quot;
+ykd90s$period[ykd90s$status == &quot;brood&quot;] &lt;- &quot;brood&quot;
+ykd90s$period[ykd90s$status == &quot;duckling&quot;] &lt;- &quot;brood&quot;
+
+# remove records without Pb values data (NAs)
+ykd90s &lt;- ykd90s[complete.cases(ykd90s$pb), ]
+
+# create variables for Pb levels indicating exposure, and clinical toxicity (See Paine and Green 2015 and refs therein;and Franson and Pain (2011) Table 16.1 a); NB Flinet et al. 1997, Grand et al. 1998 both use &gt;= 0.20 ppm as the threshold for lead exposure; in contrast Flint et al. 2016 used &gt; 0.20 ppm
+ykd90s$exposed &lt;- ifelse(ykd90s$pb &gt;= 0.2,1,0)
+ykd90s$clinical &lt;- ifelse(ykd90s$pb &gt;= 0.50,1,0)
+ykd90s$severe &lt;- ifelse(ykd90s$pb &gt;= 1.0,1,0)
+
+# subset to SPEI data (remove other species in USGS 1990s data)
+ykd90s &lt;- subset(ykd90s, species == &quot;Spectacled eider&quot;)
+
+# keep relevant columns
+keep &lt;- c(&quot;band_id&quot;, &quot;species&quot;, &quot;date&quot;, &quot;site&quot;, &quot;period&quot;, &quot;age&quot;, &quot;sex&quot;, &quot;pb&quot;, &quot;exposed&quot;, &quot;clinical&quot;, &quot;severe&quot;)
+ykd90s &lt;- ykd90s[ , names(ykd90s) %in% keep]
+hist_names &lt;- c(&quot;band_metal&quot;, &quot;species&quot;, &quot;sex&quot;, &quot;age&quot;, &quot;date_capture&quot;, &quot;pb&quot;, &quot;site&quot;, &quot;period&quot;, &quot;exposed&quot;, &quot;clinical&quot;, &quot;severe&quot;)
+
+#hist_names &lt;- c(&quot;id_metalBand&quot;, &quot;id_species&quot;, &quot;dt_sampled&quot;, &quot;id_studySite&quot;, &quot;cat_periodCapt&quot;, &quot;cat_age&quot;, &quot;cat_sex&quot;, &quot;pb_blood_ppm&quot;)
+colnames(ykd90s) &lt;- hist_names
+
+# format date
+ykd90s$date_capture &lt;- as.Date(ykd90s$date_capture)
+
+# rename
+df_hist &lt;- ykd90s</code></pre>
+<pre class="r"><code># load data USFS from the Kashunuk River from incubating birds in 2022 
+# output data frame is &quot;df_kash&quot; with 11 columns to match df_recent and df_hist
+
+df_kash &lt;- read.csv(&quot;data/sourced/usgs/waterfowl_leadExposure_alaska_flint_2022.csv&quot;, header = T)
+
+# wrangle data
+# create site variable, all samples from Kashunuk
+df_kash$site &lt;- &quot;Kashunuk&quot;
+# create sampling period variable, all samples during late incubation
+df_kash$capture_period &lt;- &quot;incubation&quot;
+# format date
+df_kash$Date_found &lt;- as.Date(df_kash$Date_found, format = &quot;%Y-%m-%d&quot;)
+
+# subset to relevant columns
+df_kash &lt;- cbind.data.frame(df_kash$Band_ID,
+              df_kash$Species,
+              df_kash$Date_found,
+              df_kash$site,
+              df_kash$capture_period,
+              df_kash$Age,
+              df_kash$Sex,
+              df_kash$Lead_con)
+# rename columns
+colnames(df_kash) &lt;- c(&quot;band_metal&quot;, &quot;species&quot;, &quot;date_capture&quot;, &quot;site&quot;, &quot;period&quot;, &quot;age&quot;, &quot;sex&quot;, &quot;pb&quot;)
+
+# reduce pb_unique to relevant columns
+keep &lt;- c(&quot;band_metal&quot;, &quot;species&quot;, &quot;date_capture&quot;, &quot;site&quot;, &quot;period&quot;, &quot;age&quot;, &quot;sex&quot;, &quot;pb&quot;)
+df_kash &lt;- df_kash[ , names(df_kash) %in% keep]
+
+# set lead exposure threshold ####
+# create Pb exposure column with 2.0 ppm threshold; using &gt;= to as per spei lit before Flint et al 2016: Franson et al. 1998; Grand et al. 1998)
+df_kash$exposed &lt;- ifelse(df_kash$pb &gt;= 0.20,1,0)
+# create Pb clinical toxicity column with 1.0 threshold
+df_kash$clinical &lt;- ifelse(df_kash$pb &gt;= 0.50,1,0)
+# create Pb severe column with &gt;= 1.00 threshold
+df_kash$severe &lt;- ifelse(df_kash$pb &gt;= 1.0,1,0)</code></pre>
+<pre class="r"><code># estimate lead exposure by period at Kashunuk 2022 incubation ####
+# output is data frame &quot;est_pb_kass22_inc&quot; with prop exp estimates for Kashunuk in 2022 with 13 columns that match the recent sum_means data frame &quot;est_pb_exp_fws_recent&quot;
+# fit model
+glm_kash22_incub_exp &lt;- glm(formula = exposed ~ 1 , family = binomial(link = &quot;logit&quot;), data = df_kash)
+#summary(glm_kash22_incub_exp)
+# get sample sizes
+n_kash22_inc_exp &lt;- aggregate(df_kash$exposed ~ 1, FUN = length)
+#n_recent_inc_exp
+# get marginal means
+means_kash22_inc_exp &lt;- emmeans(glm_kash22_incub_exp, ~ 1, trans = &quot;response&quot;)
+sum_means_kash22_inc_exp &lt;- summary(means_kash22_inc_exp)
+
+# add info to table of estimates
+sum_means_kash22_inc_exp$data &lt;- &quot;USGS&quot;
+sum_means_kash22_inc_exp$study_period &lt;- &quot;2018-2025&quot;
+sum_means_kash22_inc_exp$capt_period &lt;- &quot;Incubation&quot;
+sum_means_kash22_inc_exp$sex &lt;- &quot;F&quot;
+sum_means_kash22_inc_exp$age &lt;- &quot;Adult&quot;
+sum_means_kash22_inc_exp$type_exposure &lt;- &quot;\u2265 0.20 pmm&quot;
+sum_means_kash22_inc_exp$n &lt;- n_kash22_inc_exp[ ,1]
+# because there was only 1 site, add site variable manually here
+colnames(sum_means_kash22_inc_exp)[colnames(sum_means_kash22_inc_exp) == &quot;1&quot;] &lt;- &quot;site&quot;
+sum_means_kash22_inc_exp$site &lt;- &quot;Kashunuk&quot;
+# round to 3 decimal places
+sum_means_kash22_inc_exp$prob &lt;- round(sum_means_kash22_inc_exp$prob, 3)
+sum_means_kash22_inc_exp$asymp.LCL &lt;- round(sum_means_kash22_inc_exp$asymp.LCL, 3)
+sum_means_kash22_inc_exp$asymp.UCL &lt;- round(sum_means_kash22_inc_exp$asymp.UCL, 3)
+
+# reorder columns
+neworder &lt;- c(&quot;data&quot;, &quot;site&quot;, &quot;study_period&quot;, &quot;capt_period&quot;, &quot;sex&quot;, &quot;age&quot;, &quot;type_exposure&quot;, &quot;n&quot;, &quot;prob&quot;, &quot;asymp.LCL&quot;, &quot;asymp.UCL&quot;)
+sum_means_kash22_inc_exp &lt;- sum_means_kash22_inc_exp[ ,neworder]
+
+new_names &lt;- c(&quot;Data&quot;, &quot;Site&quot;, &quot;Study Period&quot;, &quot;Capture Period&quot;, &quot;Sex&quot;, &quot;Age&quot;, &quot;Lead Exposure&quot;, &quot;n&quot;, &quot;Prop Exposed&quot;, &quot;LCL&quot;, &quot;UCL&quot;)
+colnames(sum_means_kash22_inc_exp) &lt;- new_names
+
+# rename data frame
+est_pb_exp_kash22_inc &lt;- sum_means_kash22_inc_exp
+
+#str(sum_means_kash22_inc_exp)</code></pre>
+<pre class="r"><code># calculate historical prop exp rates by site-period
+# input is data frame df_hist, which is subset by period
+# output is data frame &quot;est_pb_exp_usgs_hist&quot; with extimates of pb exposure by site-period for historical data from the 1990s
+
+# adults at arrival ####
+df_hist_arrv &lt;- subset(df_hist, period == &quot;arrival&quot;)
+# get sample sizes
+n_hist_arrv &lt;- aggregate(df_hist_arrv$exposed ~ df_hist_arrv$site, FUN = length)
+#n_recent_brood_ad_exp
+# fit model
+glm_hist_arrv_exp &lt;- glm(formula = exposed ~ 1 , family = binomial(link = &quot;logit&quot;), data = df_hist_arrv)
+# get marginal means
+means_hist_arrv_exp &lt;- emmeans(glm_hist_arrv_exp, ~ 1, trans = &quot;response&quot;)
+sum_means_hist_arrv_exp &lt;- as.data.frame(summary(means_hist_arrv_exp))
+# add info to table of estimates
+sum_means_hist_arrv_exp$data &lt;- &quot;USGS&quot;
+sum_means_hist_arrv_exp$study_period &lt;- &quot;1990s&quot;
+sum_means_hist_arrv_exp$capt_period &lt;- &quot;Arrival&quot;
+sum_means_hist_arrv_exp$sex &lt;- &quot;F,M&quot;
+sum_means_hist_arrv_exp$age &lt;- &quot;Adult&quot;
+sum_means_hist_arrv_exp$type_exposure &lt;- &quot;\u2265 0.20 pmm&quot;
+sum_means_hist_arrv_exp$n &lt;- n_hist_arrv[ ,2]
+# because there was only 1 site, add site variable manually here
+colnames(sum_means_hist_arrv_exp)[colnames(sum_means_hist_arrv_exp) == &quot;1&quot;] &lt;- &quot;site&quot;
+sum_means_hist_arrv_exp$site &lt;- &quot;Kashunuk&quot;
+
+# adults at incubation ####
+df_hist_inc &lt;- subset(df_hist, period == &quot;incubation&quot;)
+# get sample sizes
+n_hist_inc_exp &lt;- aggregate(df_hist_inc$exposed ~ df_hist_inc$site, FUN = length)
+#n_recent_brood_ad_exp
+# fit model
+glm_hist_incub_exp &lt;- glm(formula = exposed ~ site , family = binomial(link = &quot;logit&quot;), data = df_hist_inc)
+# get marginal means
+means_hist_inc_exp &lt;- emmeans(glm_hist_incub_exp, ~ site, trans = &quot;response&quot;)
+sum_means_hist_inc_exp &lt;- as.data.frame(summary(means_hist_inc_exp))
+# add info to table of estimates
+sum_means_hist_inc_exp$data &lt;- &quot;USGS&quot;
+sum_means_hist_inc_exp$study_period &lt;- &quot;1990s&quot;
+sum_means_hist_inc_exp$capt_period &lt;- &quot;Incubation&quot;
+sum_means_hist_inc_exp$sex &lt;- &quot;F&quot;
+sum_means_hist_inc_exp$age &lt;- &quot;Adult&quot;
+sum_means_hist_inc_exp$type_exposure &lt;- &quot;\u2265 0.20 pmm&quot;
+sum_means_hist_inc_exp$n &lt;- n_hist_inc_exp[ ,2]
+
+# adults at brood rearing ####
+df_hist_brood_ad &lt;- subset(df_hist, period == &quot;brood&quot; &amp; age != &quot;loc&quot;)
+# get sample sizes
+n_hist_brood_ad_exp &lt;- aggregate(df_hist_brood_ad$exposed ~ df_hist_brood_ad$site, FUN = length)
+#n_recent_brood_ad_exp
+# fit model
+glm_hist_brood_ad_exp &lt;- glm(formula = exposed ~ site , family = binomial(link = &quot;logit&quot;), data = df_hist_brood_ad)
+# get marginal means
+means_hist_brood_ad_exp &lt;- emmeans(glm_hist_brood_ad_exp, ~ site, trans = &quot;response&quot;)
+sum_means_hist_brood_ad_exp &lt;- as.data.frame(summary(means_hist_brood_ad_exp))
+# add info to table of estimates
+sum_means_hist_brood_ad_exp$data &lt;- &quot;USGS&quot;
+sum_means_hist_brood_ad_exp$study_period &lt;- &quot;1990s&quot;
+sum_means_hist_brood_ad_exp$capt_period &lt;- &quot;Brood-Adult&quot;
+sum_means_hist_brood_ad_exp$sex &lt;- &quot;F&quot;
+sum_means_hist_brood_ad_exp$age &lt;- &quot;Adult&quot;
+sum_means_hist_brood_ad_exp$type_exposure &lt;- &quot;\u2265 0.20 pmm&quot;
+sum_means_hist_brood_ad_exp$n &lt;- n_hist_brood_ad_exp[ ,2]
+
+# ducklings at brood rearing ####
+df_hist_brood_loc &lt;- subset(df_hist, period == &quot;brood&quot; &amp; age == &quot;loc&quot;)
+# get sample sizes
+n_hist_brood_loc_exp &lt;- aggregate(df_hist_brood_loc$exposed ~ df_hist_brood_loc$site, FUN = length)
+#n_recent_brood_ad_exp
+# fit model
+glm_hist_brood_loc_exp &lt;- glm(formula = exposed ~ 1 , family = binomial(link = &quot;logit&quot;), data = df_hist_brood_loc)
+# get marginal means
+means_hist_brood_loc_exp &lt;- emmeans(glm_hist_brood_loc_exp, ~ 1, trans = &quot;response&quot;)
+sum_means_hist_brood_loc_exp &lt;- as.data.frame(summary(means_hist_brood_loc_exp))
+# add info to table of estimates
+sum_means_hist_brood_loc_exp$data &lt;- &quot;USGS&quot;
+sum_means_hist_brood_loc_exp$study_period &lt;- &quot;1990s&quot;
+sum_means_hist_brood_loc_exp$capt_period &lt;- &quot;Brood-Juv&quot;
+sum_means_hist_brood_loc_exp$sex &lt;- &quot;F,M&quot;
+sum_means_hist_brood_loc_exp$age &lt;- &quot;Juv&quot;
+sum_means_hist_brood_loc_exp$type_exposure &lt;- &quot;\u2265 0.20 pmm&quot;
+sum_means_hist_brood_loc_exp$n &lt;- n_hist_brood_loc_exp[ ,2]
+# because there was only 1 site, add site variable manually here
+colnames(sum_means_hist_brood_loc_exp)[colnames(sum_means_hist_brood_loc_exp) == &quot;1&quot;] &lt;- &quot;site&quot;
+sum_means_hist_brood_loc_exp$site &lt;- &quot;Kashunuk&quot;
+
+# rowbind tables to compile all results 
+est_pb_exp_usgs_hist &lt;- rbind(
+sum_means_hist_arrv_exp,
+sum_means_hist_inc_exp,
+sum_means_hist_brood_ad_exp,
+sum_means_hist_brood_loc_exp
+) 
+
+# drop first column that is leftover from the glm estimates for periods with just 1 site (where exposed ~ 1)
+est_pb_exp_usgs_hist &lt;- est_pb_exp_usgs_hist[, -1]
+
+# format table
+est_pb_exp_usgs_hist$prob &lt;- round(est_pb_exp_usgs_hist$prob, 3)
+est_pb_exp_usgs_hist$asymp.LCL &lt;- round(est_pb_exp_usgs_hist$asymp.LCL, 3)
+est_pb_exp_usgs_hist$asymp.UCL &lt;- round(est_pb_exp_usgs_hist$asymp.UCL, 3)
+# constrain confidence limits to between 0 and 1
+est_pb_exp_usgs_hist$asymp.LCL  &lt;- ifelse(est_pb_exp_usgs_hist$asymp.LCL &lt; 0, 0, est_pb_exp_usgs_hist$asymp.LCL )
+est_pb_exp_usgs_hist$asymp.UCL  &lt;- ifelse(est_pb_exp_usgs_hist$asymp.UCL &gt; 1.00, 100, est_pb_exp_usgs_hist$asymp.UCL )
+# remove unnecessary columns
+est_pb_exp_usgs_hist &lt;- subset(est_pb_exp_usgs_hist, select = -c(SE, df))
+# reorder columns
+neworder &lt;- c(&quot;data&quot;, &quot;site&quot;, &quot;study_period&quot;, &quot;capt_period&quot;, &quot;sex&quot;, &quot;age&quot;, &quot;type_exposure&quot;, &quot;n&quot;, &quot;prob&quot;, &quot;asymp.LCL&quot;, &quot;asymp.UCL&quot;)
+est_pb_exp_usgs_hist &lt;- est_pb_exp_usgs_hist[ ,neworder]
+# rename columns
+new_names &lt;- c(&quot;Data&quot;, &quot;Site&quot;, &quot;Study Period&quot;, &quot;Capture Period&quot;, &quot;Sex&quot;, &quot;Age&quot;, &quot;Lead Exposure&quot;, &quot;n&quot;, &quot;Prop Exposed&quot;, &quot;LCL&quot;, &quot;UCL&quot;)
+colnames(est_pb_exp_usgs_hist) &lt;- new_names
+
+# rbind historical and recent lead exposure prob tables
+est_pb_exp_all &lt;- rbind(est_pb_exp_fws_recent, est_pb_exp_kash22_inc, est_pb_exp_usgs_hist)
+means_pb_exp_all &lt;- est_pb_exp_all</code></pre>
+<pre class="r"><code># Plot prop exp estimates from 1990s and recent by capture period for all sites
+# Code below needs editing to update to current data frame names and variable names
+
+# 1. Plot recent and 1990s exposure at the Kashunuk color bars by &quot;Period&quot;
+# subset to Kasunkuk data
+plot_data_all_kash &lt;- subset(est_pb_exp_all, Site == &quot;Kashunuk&quot;)
+# add null data for missing site-year categories to get consistent figure format across sites (i.e., they all have arrival, incubation, brood-adult, brood-juv categories on plot even if there are no data for some of those capture periods. This is just to create consistency of what the plots look like).
+# vector of missing data
+vec_all_kash_arrv_nd &lt;- c(&quot;USGS&quot;, &quot;Kashunuk&quot;, &quot;2018-2025&quot;, &quot;Arrival&quot;, &quot;F,M&quot;, &quot;Adult&quot;, &quot;\u2265 0.20 pmm&quot;, &quot;&quot;,&quot;&quot;, &quot;&quot;, &quot;&quot;)
+plot_data_all_kash[nrow(plot_data_all_kash)+1, ] &lt;- vec_all_kash_arrv_nd
+# create var to set order of bars in plot
+#plot_data_all_kash$order &lt;- c(4,8,6,1,5,3,7,2)
+plot_data_all_kash$order &lt;- c(7,8,6,1,2,3,4,5) # order bars in fig, bar order L to R is 1,5,2,6,3,7,4,8 (historic first 1-4, then recent 5-8)
+# change column names to machine readable
+plot_names &lt;- c(&quot;data&quot;, &quot;site&quot;, &quot;Period&quot;, &quot;period_sampling&quot;, &quot;sex&quot;, &quot;age&quot;, &quot;exposure&quot;, &quot;n_sample&quot;, &quot;mean_exp&quot;, &quot;lcl_exp&quot;, &quot;ucl_exp&quot;, &quot;order&quot;)
+colnames(plot_data_all_kash) &lt;- plot_names
+# format data
+plot_data_all_kash$mean_exp &lt;- as.numeric(plot_data_all_kash$mean_exp)
+plot_data_all_kash$lcl_exp &lt;- as.numeric(plot_data_all_kash$lcl_exp)
+plot_data_all_kash$ucl_exp &lt;- as.numeric(plot_data_all_kash$ucl_exp)
+# plot
+p.all_exp_kash &lt;- ggplot(plot_data_all_kash, aes(fill = Period, y = mean_exp, x = reorder(x = period_sampling, order))) +
+  geom_bar(position = position_dodge(), stat = &quot;identity&quot;) +
+  geom_errorbar(aes(ymin = lcl_exp, ymax = ucl_exp), width = 0.2, position = position_dodge(0.9)) +
+  scale_fill_manual(&quot;Period&quot;, values = c(&quot;1990s&quot; = &quot;royalblue&quot;, &quot;2018-2025&quot; = &quot;darkorange&quot;))+
+  xlab(&quot;&quot;) +
+  ylab(&quot;Proportion Exposed to Lead \u2265 0.2 ppm&quot;) +
+  ylim(0, 0.75) +
+  geom_text(aes(period_sampling, mean_exp, label = n_sample, group = Period, y = 0.01),
+            size = 3.5,position = position_dodge(width = 0.9), color = &quot;black&quot;) +
+  geom_text(aes(period_sampling, mean_exp, label = round(mean_exp, digits = 2.0), group = Period, y = 0.6), # vjust = -16
+            size = 3.0, position = position_dodge(width = 0.9)) +
+  ggtitle(&quot;Kashunuk&quot;) +
+  theme_bw()
+p.all_exp_kash</code></pre>
+<p><img src="figure/spei_pb_data_summary_20260112.Rmd/plot_hist_recent-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code># save it
+#ggsave(&quot;output/fig_all_exp_kash.jpg&quot;, width = 20, height = 10, units = &quot;cm&quot;)
+
+# 2. Plot recent and 1990s exposure at Kig color bars by &quot;Period&quot;
+# subset data Kigigak
+plot_data_all_kig &lt;- subset(est_pb_exp_all, Site == &quot;Kigigak&quot;)
+# vector of missing data
+vec_all_kig_arrv_nd &lt;- c(&quot;USGS&quot;, &quot;Kigigak&quot;, &quot;1990s&quot;, &quot;Arrival&quot;, &quot;F,M&quot;, &quot;Adult&quot;, &quot;\u2265 0.20 pmm&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;)
+plot_data_all_kig[nrow(plot_data_all_kig)+1, ] &lt;- vec_all_kig_arrv_nd
+vec_all_kig_brood_loc_nd &lt;- c(&quot;USGS&quot;, &quot;Kigigak&quot;,&quot;1990s&quot;, &quot;Brood-Juv&quot;, &quot;F,M&quot;, &quot;Juv&quot;, &quot;\u2265 0.20 pmm&quot;, &quot;&quot;,&quot;&quot;, &quot;&quot;,&quot;&quot;)
+plot_data_all_kig[nrow(plot_data_all_kig)+1, ] &lt;- vec_all_kig_brood_loc_nd
+
+# create var to set order of bars in plot
+plot_data_all_kig$order &lt;- c(5,6,7,8,2,3,1,4)
+# change column names to machine readable
+plot_names &lt;- c(&quot;data&quot;, &quot;site&quot;, &quot;Period&quot;, &quot;period_sampling&quot;, &quot;sex&quot;, &quot;age&quot;, &quot;exposure&quot;, &quot;n_sample&quot;, &quot;mean_exp&quot;, &quot;lcl_exp&quot;, &quot;ucl_exp&quot;, &quot;order&quot;)
+colnames(plot_data_all_kig) &lt;- plot_names
+# format
+plot_data_all_kig$mean_exp &lt;- as.numeric(plot_data_all_kig$mean_exp)
+plot_data_all_kig$lcl_exp &lt;- as.numeric(plot_data_all_kig$lcl_exp)
+plot_data_all_kig$ucl_exp &lt;- as.numeric(plot_data_all_kig$ucl_exp)
+# plot
+p.all_exp_kig &lt;- ggplot(plot_data_all_kig, aes(fill = Period, y = mean_exp, x = reorder(x = period_sampling, order))) +
+  geom_bar(position = position_dodge(0.9), stat = &quot;identity&quot;) +
+  geom_errorbar(aes(ymin = lcl_exp, ymax = ucl_exp), width = 0.2, position = position_dodge(0.9)) +
+  scale_x_discrete(drop = FALSE) +
+  scale_fill_manual(&quot;Period&quot;, values = c(&quot;1990s&quot; = &quot;royalblue&quot;, &quot;2018-2025&quot; = &quot;darkorange&quot;))+
+  xlab(&quot;&quot;) +
+  ylab(&quot;Proportion Exposed to Lead \u2265 0.20 pmm&quot;) +
+  ylim(0, 0.75)+
+  geom_text(aes(period_sampling, mean_exp, label = n_sample, group = Period, y = 0.01),
+            size = 3.5,position = position_dodge(width = 0.9), color = &quot;black&quot;) +
+  geom_text(aes(period_sampling, mean_exp, label = round(mean_exp, digits = 2.0), group = Period, vjust = -15),
+            size = 3.0, position = position_dodge(width = 0.9)) +
+  ggtitle(&quot;Kigigak&quot;) +
+  theme_bw()
+p.all_exp_kig</code></pre>
+<p><img src="figure/spei_pb_data_summary_20260112.Rmd/plot_hist_recent-2.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code># save it
+#ggsave(&quot;output/fig_all_exp_kig.jpg&quot;, width = 20, height = 10, units = &quot;cm&quot;)
+
+# Tutakoke all ####
+# subset data to Tutakoke
+plot_data_all_tut &lt;- subset(est_pb_exp_all, Site == &quot;Tutakoke&quot;)
+# vector of missing data
+vec_hist_tut_arrv_nd &lt;- c(&quot;USGS&quot;, &quot;Tutakoke&quot;, &quot;1990s&quot;, &quot;Arrival&quot;, &quot;F,M&quot;, &quot;Adult&quot;, &quot;\u2265 0.20 pmm&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;)
+plot_data_all_tut[nrow(plot_data_all_tut)+1, ] &lt;- vec_hist_tut_arrv_nd
+
+vec_recent_tut_inc_nd &lt;- c(&quot;USGS&quot;, &quot;Tutakoke&quot;, &quot;2018-2025&quot;, &quot;Incubation&quot;, &quot;F&quot;, &quot;Adult&quot;, &quot;\u2265 0.20 pmm&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;)
+plot_data_all_tut[nrow(plot_data_all_tut)+1, ] &lt;- vec_recent_tut_inc_nd
+
+vec_hist_tut_rec_brood_ad_nd &lt;- c(&quot;USGS&quot;, &quot;Tutakoke&quot;, &quot;1990s&quot;, &quot;Brood-Adult&quot;, &quot;F&quot;, &quot;Adult&quot;, &quot;\u2265 0.20 pmm&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;)
+plot_data_all_tut[nrow(plot_data_all_tut)+1, ] &lt;- vec_hist_tut_rec_brood_ad_nd
+
+vec_recent_tut_rec_brood_loc_nd &lt;- c(&quot;FWS&quot;, &quot;Tutakoke&quot;, &quot;2018-2025&quot;, &quot;Brood-Adult&quot;, &quot;F&quot;, &quot;Adult&quot;, &quot;\u2265 0.20 pmm&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;)
+plot_data_all_tut[nrow(plot_data_all_tut)+1, ] &lt;- vec_recent_tut_rec_brood_loc_nd
+
+vec_hist_tut_rec_brood_loc_nd &lt;- c(&quot;USGS&quot;, &quot;Tutakoke&quot;, &quot;1990s&quot;, &quot;Brood-Juv&quot;, &quot;F,M&quot;, &quot;Juv&quot;, &quot;\u2265 0.20 pmm&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;)
+plot_data_all_tut[nrow(plot_data_all_tut)+1, ] &lt;- vec_hist_tut_rec_brood_loc_nd
+
+vec_recent_tut_rec_brood_ad_nd &lt;- c(&quot;FWS&quot;, &quot;Tutakoke&quot;, &quot;2018-2025&quot;, &quot;Brood-Juv&quot;, &quot;F,M&quot;, &quot;Juv&quot;, &quot;\u2265 0.20 pmm&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;)
+plot_data_all_tut[nrow(plot_data_all_tut)+1, ] &lt;- vec_recent_tut_rec_brood_ad_nd
+
+# create var to set order of bars in plot
+plot_data_all_tut$order &lt;- c(5,2,1,6,3,7,4,8)
+# change column names to machine readable
+plot_names &lt;- c(&quot;data&quot;, &quot;site&quot;, &quot;Period&quot;, &quot;period_sampling&quot;, &quot;sex&quot;, &quot;age&quot;, &quot;exposure&quot;, &quot;n_sample&quot;, &quot;mean_exp&quot;, &quot;lcl_exp&quot;, &quot;ucl_exp&quot;, &quot;order&quot;)
+colnames(plot_data_all_tut) &lt;- plot_names
+
+# format
+plot_data_all_tut$mean_exp &lt;- as.numeric(plot_data_all_tut$mean_exp)
+plot_data_all_tut$lcl_exp &lt;- as.numeric(plot_data_all_tut$lcl_exp)
+plot_data_all_tut$ucl_exp &lt;- as.numeric(plot_data_all_tut$ucl_exp)
+# plot
+p.all_exp_tut &lt;- ggplot(plot_data_all_tut, aes(fill = Period, y = mean_exp, x = reorder(x = period_sampling, order))) +
+  geom_bar(position = position_dodge(0.9), stat = &quot;identity&quot;) +
+  geom_errorbar(aes(ymin = lcl_exp, ymax = ucl_exp), width = 0.2, position = position_dodge(0.9)) +
+  scale_x_discrete(drop = FALSE) +
+  scale_fill_manual(&quot;Period&quot;, values = c(&quot;1990s&quot; = &quot;royalblue&quot;, &quot;2018-2025&quot; = &quot;darkorange&quot;))+
+  xlab(&quot;Sampling Period&quot;) +
+  ylab(&quot;Proportion Exposed to Lead &gt; 0.2 ppm&quot;) +
+  ylim(0, 0.75)+
+  geom_text(aes(period_sampling, mean_exp, label = n_sample, group = Period, y = 0.01),
+            size = 3.5,position = position_dodge(width = 0.9), color = &quot;black&quot;) +
+  geom_text(aes(period_sampling, mean_exp, label = round(mean_exp, digits = 2.0), group = Period, vjust = -10),
+            size = 3.0, position = position_dodge(width = 0.9)) +
+  ggtitle(&quot;Tutakoke&quot;) +
+  theme_bw()</code></pre>
+<pre class="r"><code>p.all_exp_tut</code></pre>
+<div class="figure" style="text-align: center">
+<img src="figure/spei_pb_data_summary_20260112.Rmd/plot_last-1.png" alt="&lt;div style = 'text-align:left'&gt;Fig. 2 Lead exposure probabilities for Spectacled Eiders based on blood lead concentration values ≥ 0.20 ppm by study site and sampling period. Error bars are 95% confidence intervals. Numbers above bars are estimated probabilities of exposure. Sample sizes are presented at the base of each bar. Estimates indicate exposure was still occurring during the 2018-2025 sampling period, sometimes at rates similar to those from the 1990s. &lt;/div&gt;" width="672" />
+<p class="caption">
+<div style="text-align:left">
+Fig. 2 Lead exposure probabilities for Spectacled Eiders based on blood
+lead concentration values ≥ 0.20 ppm by study site and sampling period.
+Error bars are 95% confidence intervals. Numbers above bars are
+estimated probabilities of exposure. Sample sizes are presented at the
+base of each bar. Estimates indicate exposure was still occurring during
+the 2018-2025 sampling period, sometimes at rates similar to those from
+the 1990s.
+</div>
+</p>
+</div>
+<pre class="r"><code># save it
+#ggsave(&quot;output/fig_all_exp_tut.jpg&quot;, width = 20, height = 10, units = &quot;cm&quot;)</code></pre>
+<pre class="r"><code># look at differences between exp probabilities of interest and 95% CI around those diffs
+# reorder columns of df_hist to match df_recent, and df_kash22
+neworder &lt;- c(&quot;band_metal&quot;, &quot;species&quot;, &quot;date_capture&quot;, &quot;site&quot;, &quot;period&quot;, &quot;age&quot;, &quot;sex&quot;, &quot;pb&quot;, &quot;exposed&quot;, &quot;clinical&quot;, &quot;severe&quot;)
+df_hist &lt;- df_hist[ ,neworder]
+# add study_period column to each
+df_recent$study &lt;- &quot;recent&quot;
+df_kash$study &lt;- &quot;recent&quot;
+df_hist$study &lt;- &quot;past&quot;
+# combine df_recent, df_kash, and df_hist into one data frame df_all
+df_all &lt;- rbind.data.frame(df_recent, df_kash, df_hist)
+
+# Kigigak glm to compare period by study
+glm_comp_kig &lt;- glm(formula = exposed ~ period + study + period*study , family = binomial(link = &quot;logit&quot;), data = df_all, subset = site == &quot;Kigigak&quot;)
+# means using emmeans to get grid to setup contrasts
+mean_comp_kig &lt;- emmeans(glm_comp_kig, ~ period*study, type = &quot;response&quot;)
+#print(mean_comp_kig) # look at ref grid to setup contrasts of interest, order is past: arrival, brood, incubation, then repeated for recent
+# specify contrasts of interest
+# compare incubation past to incubation recent
+# past brood vs. recent brood
+comps_kig &lt;- contrast(mean_comp_kig, method = list(
+  &quot;KigIncPast v KigIncRecent&quot; = c(0,0,1,0,0,-1),
+  &quot;KigBroodPast v KigBroodRecent&quot; = c(0,1,0,0,-1,0)
+))
+# confidence intervals
+comp_kig_ci &lt;- summary(comps_kig, infer = c(TRUE, TRUE))
+
+# Kashunuk Adults glm to compare period by study for Kash
+glm_comp_kash_ad &lt;- glm(formula = exposed ~ period + study + period*study , family = binomial(link = &quot;logit&quot;), data = df_all, subset = site == &quot;Kashunuk&quot; &amp; age != &quot;local&quot;)
+# means using emmeans to get grid to setup contrasts
+mean_comp_kash_ad &lt;- emmeans(glm_comp_kash_ad, ~ period*study, type = &quot;response&quot;)
+#print(mean_comp_kash_ad) # look at ref grid to setup contrasts of interest, order is past: arrival, brood, incubation, then repeated for recent
+# specify contrasts of interest
+# compare incubation past to incubation recent
+# past brood vs. recent brood
+comps_kash_ad &lt;- contrast(mean_comp_kash_ad, method = list(
+  &quot;KashIncPast v KashIncRecent&quot; = c(0,0,1,0,0,-1),
+  &quot;KashBroodPast v KashBroodRecent&quot; = c(0,1,0,0,-1,0)
+))
+# confidence intervals
+comp_kash_ad_ci &lt;- summary(comps_kash_ad, infer = c(TRUE, TRUE))
+#comp_kash_ad_ci
+
+# Kashunuk Ducklings glm to compare period by study for Kash
+temp_df_kash_loc &lt;- subset(df_all, site == &quot;Kashunuk&quot; &amp; age == &quot;loc&quot; | age == &quot;local&quot; &amp; period == &quot;brood&quot;)
+glm_comp_kash_loc &lt;- glm(formula = exposed ~ study , family = binomial(link = &quot;logit&quot;), data = temp_df_kash_loc)
+# means using emmeans to get grid to setup contrasts
+mean_comp_kash_loc &lt;- emmeans(glm_comp_kash_loc, ~ study, type = &quot;response&quot;)
+#print(mean_comp_kash_loc) # look at ref grid to setup contrasts of interest, order is past: arrival, brood, incubation, then repeated for recent
+# specify contrasts of interest
+# compare incubation past to incubation recent
+# past brood vs. recent brood
+comps_kash_loc &lt;- contrast(mean_comp_kash_loc, method = list(
+  &quot;KashBroodPast v KashBroodRecent&quot; = c(1,-1)
+))
+# confidence intervals
+comp_kash_loc_ci &lt;- summary(comps_kash_loc, infer = c(TRUE, TRUE))
+#comp_kash_loc_ci</code></pre>
+</div>
+</div>
+<div id="discussion" class="section level2">
+<h2>Discussion</h2>
+<p>[summary of findings] We found that Spectacled Eiders on the
+Yukon-Kuskokwim Delta of Alaska were exposed to lead three decades after
+the use of lead shotgun ammunition was prohibited by federal regulation.
+Further, th e lead exposure probability estimates from the 2018-2025
+period with the largest sample sizes and greatest precision were similar
+to those documented from the 1990s, suggesting similar levels of
+availability of lead at those sites rather than a decline in
+availability. Similarly, at the site where lead exposure was low in the
+1990s (the Tutakoke River), lead exposure remained low during the
+2018-2025 period. We found no evidence of lead exposure in the small
+sample from two sites on the Arctic Coastal Plain, consistent with
+previous studies that suggest lead exposure is less common in that
+region (Wilson et al. 2007, Miller et al. 2016). However, larger sample
+sizes are required to draw conclusions regarding lead exposure rates at
+sites on the Arctic Coastal Plain. On the Yukon-Kuskokwim Delta,
+exposure of Spectacled Eiders to lead was still prevalent during
+2018-2025.</p>
+<p>[linking lead in blood to spent lead shotgun pellets] The presence of
+lead in blood at concentrations &gt; 0.20 ppm indicates recent exposure
+related to a specific source of lead contamination (Franson and Pain
+2016). Spent shotgun pellets are the likely source of lead in the blood
+of Spectacled Eiders from the Yukon-Kuskokwim Delta. Spectacled Eiders,
+like other waterfowl, ingest lead pellets encountered in pond sediments
+while foraging, either incidentally or as grit (Mateo and Guitart 2000).
+In the 1990s, x-ray images of ducks, including Spectacled Eiders, at the
+Kashunuk River identified ingested shot in the gizzards of individuals
+with high concentrations of lead in their blood (Flint et al. 1997).
+Pellets removed by lavage were confirmed to be lead (Flint et al. 2016).
+Further, stable isotope ratios of lead from the lead in blood from
+eiders with high blood lead concentrations were most similar to the
+isotopic ratios of lead from shotgun pellets rather than the isotopic
+ratio of lead in local sediments, which occurred at a very low
+concentration (Matz and Flint 2009).</p>
+<p>[addressing pellet settlement rate uncertainty after 10 years] The
+relative contributions of recently and historically deposited lead shot
+to the exposure of Spectacled Eiders is unknown. Lead pellet settlement
+rates measured over ten years found 50% of deposited lead pellets
+remained in the upper 10 cm of pond bottom sediment, where they would be
+available to Spectacled Eiders (Flint and Schamber 2010). Extrapolating
+that settlement rate, Flint and Schamber (2010) predicted that 100% of
+pellets would settle to &gt; 10 cm and be unavailable to Spectacled
+Eiders 25 years after deposition. If that estimate is correct, the
+source of contemporary lead exposure in Spectacled Eiders is the recent
+use of lead shot. However, if the settlement rate of lead pellets
+decreased after ten years, then a longer duration than 25 years would be
+required to make all pellets unavailable to Spectacled Eiders and some
+portion of recent exposure may be related to pellets deposited in the
+1990s. Even with a slower settlement rate, the abundance of historically
+deposited lead pellets and the associated exposure probability of
+Spectacled Eiders both would likely be greatly reduced. Given similar
+exposure rates between the 1990s and 2018-2025, use of lead shot is
+highly likely to have occurred prior to and during that latter
+period.</p>
+<p>[further rationale for lead pellets as source of exposure] We did not
+investigate the source of lead in the 2018-2025 blood samples; however,
+we can identify no new source of lead in the local environment that
+offers a more plausible explanation for the source of lead than spent
+lead ammunition (e.g., mining or industrial waste, lead-based paint,
+etc.). This conclusion is supported by the continued availability of
+lead shotgun ammunition for purchase in communities near our study
+sites. The continued availability of lead shotgun ammunition for
+purchase is possible because the possession and use of lead shot while
+hunting is prohibited, not its sale. Use of non-toxic ammunition may
+also be influenced by its availability (Schwing 2022)</p>
+<p>[animal health implications of lead exposure and field observations]
+Lead exposure in birds typically is not associated with overt symptoms
+until exceeding blood concentrations ≥ 0.50 ppm, when symptoms like loss
+of body mass and ataxia can be apparent, and &gt; 1.0 ppm, when lead
+toxicosis can be life threatening (Fanson and Pain 2016). At Kigigak
+Island during incubation, 11.9% of samples had blood concentrations
+above the threshold for clinical poisoning. Overt toxicity and mortality
+due to lead was documented in Spectacled Eiders at the Kashunuk River
+and Kigigak Island in the 1990s (Franson et al. 1995, Flint and Grand
+1997), and lead toxicosis was documented in a Pacific Loon on Kigigak
+Island in 2002 (Wilson et al. 2004). Most Spectacled Eiders sampled
+during 2018-2025 appeared grossly normal; however, biologists in the
+field encountered two individuals during the incubation period at
+Kigigak Island that were unable to fly and were easily captured by hand.
+One individual (band 2007-06599 captured on 2024-06-01) had a blood lead
+concentration of 0.15 ppm, below the threshold for subclinical
+poisoning, and the other (band 2007-62282 captured on 2023-06-18) had a
+blood lead concentration of 2.5 ppm and was likely exhibiting symptoms
+of lead poisoning. [implications for eider populations] [implications
+for efforts to reduce use of lead shot]</p>
+<p>Blood lead concentrations in birds &gt;= 2.0 ppm indicate local
+exposure to a source of lead above background levels with effects that
+are subclinical effects and Even at very low doses, lead has some level
+of physiological effect (Franson and Pain 2011). Lead exposure in
+waterfowl resulting in blood lead concentrations &gt; 0.20 ppm are
+considered subclinical with effects that are insufficient to cause overt
+symptoms. Blood lead concentrations &gt; 0.50 ppm are typically
+associated with clinical poisoning and overt symptoms (loss of body
+mass, ataxia, etc.), and concentrations &gt; 1.0 ppm are considered
+severe and life threatening (Franson and Pain 2016).</p>
+<p>Implications of continued lead exposure: At breeding sites
+contaminated with lead, adult females that successful fledge their brood
+have the highest lead exposure probability because they are at the
+contaminated area the longest. These are typlically the oldest and most
+experienced breeders in a population and their survival has the largest
+influence on population trend. As demonstrated by Flint et al. (2016)
+the higher breeding success is in a given year, the higher the
+proportion of breeding females that are exposed to lead and experience
+reduced survival. However, high levels of productivity can offset
+reduced female survival. It would be smaller population sizes that the
+effects of lead would be most important to population trend. Numbers of
+Spectacled Eiders on the Yukon-Kuskokwim Delta have declined steeply
+between 2019-2025. At Kigigak Island, nest density was very low in 2025,
+with only 22 females incubating nests encountered during nest searches
+(the long-term mean is 105 nests). If low numbers of breeding eiders are
+indicative of a small population (rather than deferred breeding), the
+few individuals that attempt to breed are potentially exposed to lead
+and experience reduced survival, which would further accelerate
+population decline. In 2025, when only 22 breeding females were
+encountered on nests, 8 females were tested for lead exposure. Of those,
+results indicated 3 females were exposed to lead all at the level of
+clinical lead poisoning (&gt;= 0.50 ppm), and 1 at the level of severe
+lead toxicity (blood lead 8.8 ppm).</p>
+</div>
+<div id="literature-cited" class="section level2">
+<h2>Literature Cited</h2>
+<p>Cumming, G., F. Fidler, and D.L. Vaux. 2007. Error bars in
+experimental biology. The Journal of Cell Biology 177: 7-11.</p>
+<p>Dau, C. 1976. Capturing and marking Spectacled Eiders in Alaska. Bird
+Banding 47: 273. Flint, P.L., M.R. Petersen, and J.B. Grand. 1997.
+Exposure of Spectacled Eiders and other diving ducks to lead in western
+Alaska. Journal of Canadian Zoology 75: 439-443.</p>
+<p>Flint, P.L., J.B. Grand, and M.R. Petersen. 2016. Effects of lead
+exposure, environmental conditions, and metapopulation processes on
+population dynamics of Spectacled Eiders. North American Fauna 81:
+1-41.</p>
+<p>Flint, P.L. 2023. Status of Spectacled Eiders (<em>Somateria
+fisheri</em>) on the Yukon-Kuskokwim Delta, Alaska, 2022 – Testing and
+updating predictive models. US Geological Survey Open-file Report
+2023-1052. <a href="https://pubs.usgs.gov/publication/ofr20231052/full"
+class="uri">https://pubs.usgs.gov/publication/ofr20231052/full</a>.</p>
+<p>Flint, P.L., and J. Schamber. 2010. Long-term persistence of spent
+lead shot in tundra wetlands. Journal of Wildlife Management 74:
+148-151.</p>
+<p>Flint, P.L., and Petersen, M.R. 2023. Waterfowl lead exposure data in
+Alaska and Russia, 1993-2022: U.S. Geological Survey data release, <a
+href="https://doi.org/10.5066/F7B27SDZ"
+class="uri">https://doi.org/10.5066/F7B27SDZ</a>.</p>
+<p>Franson, J.C., and D.J.Pain. 2011. Lead in Birds, Chapter 16
+<em>in</em> Environmental Contaminants in Biota: Interpreting Tissue
+Concentrations, 2nd Edition. W. Beyer and J. Meador, editors. CRC Press,
+Boca Raton, Florida, USA.</p>
+<p>Magellan Diagnostics, Inc. 2022. LeadCare II Blood Analyzer User’s
+Guide (firmware version 1.09 or higher). Document Number: 70-6551 Rev
+12. Magellan Diagnostics, Inc., Billerica, Massachusetts, USA. <a
+href="http://www.magellandx.com/uploads/2025/11/MAN70-6551-LCII-Users-Manual-Rev-13.pdf"
+class="uri">http://www.magellandx.com/uploads/2025/11/MAN70-6551-LCII-Users-Manual-Rev-13.pdf</a>.</p>
+<p>Mateo, R., &amp; Guitart, R. (2000). The effects of grit
+supplementation and feed type on shot ingestion in mallards. Prev. Vet.
+Med., 44(3–4), 221–229.</p>
+<p>R Core Team. (2025). R: A language and environment for statistical
+computing (Version X.X.X) [Computer software]. R Foundation for
+Statistical Computing. <a href="https://www.R-project.org/"
+class="uri">https://www.R-project.org/</a>.</p>
+<p>Salyer, J. 1962. A bow-net trap for ducks. Journal of Wildlife
+Management 26: 219-221.</p>
+<p>Schwing, E. 2022. A shotgun shell shortage is making it hard for Y-K
+Delta hunters to harvest migratory birds. Alaska Public Media and
+KYUK.org. Retrieved from <a
+href="https://alaskapublic.org/xx-statewide-news/2022-05-23/a-shotgun-shell-shortage-is-making-it-hard-for-y-k-delta-hunters-to-harvest-migratory-birds"
+class="uri">https://alaskapublic.org/xx-statewide-news/2022-05-23/a-shotgun-shell-shortage-is-making-it-hard-for-y-k-delta-hunters-to-harvest-migratory-birds</a></p>
+<p>State of Alaska (2007). Department of Law, Alaska Administrative
+Register (Regulations adopted by the Alaska Board of Game amending 5 AAC
+92.080 to prohibit the use of lead shot in Unit 18). Juneau, AK: State
+of Alaska.</p>
+<p>TERL [Texas A&amp;M Agrilife Research Laboratory]. 2018. Analytical
+Results Report for Catalog 7030169. Texas A &amp; M Agrilife Research
+Veterinary Integrative Biosciences, College Station, Texas, USA.</p>
+<p>USFWS [U.S. Fish and Wildlife Service]. (1991). Migratory bird
+hunting: Nationwide requirement to use nontoxic shot for the taking of
+waterfowl, coots, and certain other species beginning in the 1991–92
+hunting season. Federal Register, 56(9), 1446–1453.</p>
+<p>WADDL [Washington Animal Disease Diagnostic Laboratory] 2022. QAQC
+Data File, eider_lead_2022_quality_control_case_VSEP22-045E.xlsx. WADDL,
+Analytical Sciences Laboratory, University of Idaho, Holm Research
+Center, Moscow, Idaho, USA.</p>
+</div>
+<div id="data-cited" class="section level2">
+<h2>Data Cited</h2>
+<p><em>Data Sets used for analysis</em>
+eider_lead_fws_2018-2025_20251203.csv: Program R object <em>pb_ms</em>;
+all mass spectrometry-derived measurements of blood lead concentration.
+Data include results from COEI, KIEI, and SPEI, but most results are
+from SPEI (all but 3 samples). Samples are uniquely identified by the
+combination of id_metalBand and dt_sampled (id_metalBand have been
+sampled on &gt; 1 dt_sampled); no internal replicates included from QAQC
+are provided (the labs that did these analysis provided QAQC values as
+separate files, as cited in the text).</p>
+<p>data_leadCare2_results_20251203.csv: Program R object <em>pb_lc</em>;
+blood lead concentration results from the LeadCare II blood analyzer
+(concentration determined by voltammetry). Results include both internal
+replicates (same sample analyzed twice in LeadCare II) and cross-method
+replicates (same sample analyzed by both LeadCare II and mass
+specrometry). Samples are uiquely identified by the combination of
+id_metalBand and dt_sampled; however, there are replicate samples for
+LeadCare II QAQC and cross-method validation with mass spectrometry
+results.</p>
+<p>pb_blood_spei_fws_2018-2025.csv: Program R object <em>pb_unique</em>;
+Spectacled Eider blood lead concentration from both mass spec and
+voltammetery that includes only unique samples (no internal or
+cross-method replicates) used to estimate lead exposure (&gt;= 0.20 ppm)
+by site and period.</p>
+<p>pb_blood_spei_fws_validation_20260120.csv: Program R object
+<em>pb_limits_wide</em>; Spectacled Eider blood lead concentration data
+for samples analyzed by both mass spectrometry and voltammetery used to
+validate LeadCare 2 voltammetry relative to mass spectrometry
+results.</p>
+<p>waterfowl_leadExposure_alaskaRussia_petersen_1993-1999.csv: Program R
+object <em>nineties</em>; data sourced from the USGS Alaska Science
+Center. Includes data from the 1990s and data collected from the
+Kashunuk in 2022 and reported in Flint 2023. Data are available at: <a
+href="https://www.usgs.gov/data/waterfowl-lead-exposure-data-alaska-and-russia-1993-2022"
+class="uri">https://www.usgs.gov/data/waterfowl-lead-exposure-data-alaska-and-russia-1993-2022</a></p>
+</div>
+<div id="appendix" class="section level2">
+<h2>Appendix</h2>
+<div id="sample-locations" class="section level3">
+<h3><em>Sample Locations</em></h3>
+<p>Interactive map showing capture locations of Spectacled Eiders
+sampled for blood lead concentrations on Yukon-Kuskokwim Delta (Kashunuk
+River, Kigigak Island, Tutakoke River) and the Arctic Coastal Plain
+(Utqiagvik, Teshekpuk Lake).</p>
+<pre class="r"><code>#eider_lead_fws &lt;- read.csv(&quot;data/eider_lead_fws.csv&quot;, header = TRUE)
+
+# sort by lat and lon to jitter overlapping points
+lead_spei &lt;- pb_unique
+lead_spei &lt;- lead_spei[order(lead_spei$val_lat, lead_spei$val_lon), ]
+
+# jitter lat for captures at same capture site
+lat_jit &lt;- ifelse(diff(lead_spei$val_lat) &lt; 0.001, lead_spei$val_lat + 0.0015, lead_spei$val_lat) # diff is lagged difference function in base R
+lat_jit[298] &lt;- lead_spei[298, 9] # because diffs are lagged, lat_jit is n-1 compared to lead_spei$val_lat, so add a final value where 298 is n lead_spei and 11 is the column val_lat
+lead_spei$val_lat_jit &lt;- lat_jit # add lat jit values as new column in data frame now that row length matches
+
+lon_jit &lt;- ifelse(diff(lead_spei$val_lon) &lt; 0.001, lead_spei$val_lon + 0.0015, lead_spei$val_lon)
+lon_jit[298] &lt;-lead_spei[298, 9]
+lead_spei$val_lon_jit &lt;- lon_jit
+
+# map to check locations
+m &lt;- leaflet() %&gt;%
+  #setView(lng = -170, lat = 63.5, zoom = 6) %&gt;%
+  addProviderTiles(&quot;Esri.WorldImagery&quot;, group = &quot;Satellite&quot;) %&gt;%
+  addCircles(data = lead_spei,
+             ~ val_lon,
+             ~ val_lat,
+             color = ifelse(lead_spei$pb_blood_ppm &lt; 0.20, &quot;blue&quot;,&quot;red&quot;),
+             radius = ~ pb_blood_ppm * 100,
+             #group =&quot;FourWeeks&quot;,
+             label = paste(&quot;ID:&quot;, lead_spei$id_metalBand, &quot;&lt;br&gt;&quot;,
+                           &quot;Sample Date:&quot;, lead_spei$dt_sampled, &quot;&lt;br&gt;&quot;,
+                           &quot;Species:&quot;, &quot;SPEI&quot;, &quot;&lt;br&gt;&quot;,
+                           &quot;Sex:&quot;, lead_spei$cat_sex, &quot;&lt;br&gt;&quot;,
+                           &quot;Age:&quot;, lead_spei$cat_age, &quot;&lt;br&gt;&quot;,
+                           &quot;Pb:&quot;, lead_spei$pb_blood_ppm)  %&gt;%
+               lapply(htmltools::HTML)
+  )
+m</code></pre>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-ed24df5b4846e30c77de" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-ed24df5b4846e30c77de">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,"Satellite",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addCircles","args":[[60.82154,60.821729,60.821943,60.822256,60.82399,60.825716,60.825955,60.825964,60.82655,60.82671,60.826722,60.82721,60.827726,60.828544,60.82907,60.829091,60.829625,60.829924,60.83043,60.83071,60.83103,60.831187,60.83168,60.831802,60.831818,60.832061,60.832153,60.83217,60.8322,60.83234,60.832347,60.832406,60.8326,60.83276,60.83286,60.832984,60.8331,60.83325,60.83352,60.83364,60.83393,60.834889,60.835654,60.83578,60.836173,60.83621,60.83664,60.837419,60.837419,60.83793,60.83811,60.83813,60.83833,60.83842,60.83881,60.84082,60.84103,60.84109,60.84109,60.841165,60.842048,60.842048,60.842048,60.842048,60.842048,60.842048,60.842048,60.842048,60.842048,60.842048,60.842048,60.842048,60.842048,60.842048,60.842048,60.842048,60.84257,60.84284,60.84317,60.84344,60.843477,60.843538,60.843538,60.843538,60.8436,60.843946,60.844208,60.844208,60.844208,60.844208,60.844422,60.844422,60.844422,60.84491,60.84513,60.845146,60.84532,60.84535,60.84536,60.84569,60.845987,60.846251,60.846251,60.846251,60.846282,60.846282,60.846294,60.846599,60.846897,60.846949,60.847027,60.84748,60.84752,60.847532,60.84768,60.84804,60.848193,60.848461,60.848461,60.848461,60.84872,60.848994,60.848994,60.84911,60.849368,60.849368,60.849368,60.849368,60.849979,60.85003,60.85003,60.85003,60.85003,60.850131,60.850216,60.850216,60.850216,60.850259,60.85031,60.851069,60.851069,60.85113,60.851164,60.85147,60.851756,60.851756,60.851756,60.851756,60.851792,60.851792,60.851848,60.851848,60.851848,60.851848,60.851848,60.852433,60.852433,60.852433,60.852433,60.852433,60.852433,60.852433,60.852433,60.852433,60.852475,60.852501,60.852501,60.852501,60.852501,60.852501,60.852501,60.852501,60.852541,60.852586,60.852742,60.85291,60.853096,60.853096,60.853562,60.853596,60.853719,60.85436,60.854467,60.85457,60.854666,60.854823,60.854881,60.854881,60.854881,60.854881,60.854961,60.855254,60.855267,60.855272,60.855272,60.855757,60.85596,60.85649,60.856696,60.857862,60.858366,60.858551,60.858827,60.85886,60.859022,60.85921,60.85957,60.85959,60.860358,60.860536,60.861937,60.863062,60.865313,60.868618,60.871703,61.23769,61.23769,61.23932,61.24001,61.24001,61.24001,61.24001,61.24009,61.24009,61.24009,61.24067,61.24067,61.24067,61.24067,61.24067,61.24067,61.24067,61.24067,61.24067,61.24067,61.24067,61.24067,61.24067,61.24067,61.24067,61.24068,61.24068,61.24068,61.24068,61.24121,61.24121,61.24121,61.24121,61.24121,61.24121,61.24277,61.24277,61.24734,61.24734,61.24734,61.24753,61.24753,61.24753,61.24753,61.24753,61.24753,61.29391,61.29391,61.29391,61.29391,61.297383,61.300611,61.300611,61.3015,61.301834,61.302067,61.332539,61.332539,61.332539,61.332539,61.335386,61.335386,61.335386,61.335386,61.336607,61.336607,61.336607,61.340964,61.340964,70.731016,70.731016,71.22594311,71.2481476,71.2481476,71.248937,71.248937,71.248937,71.248937,71.248937,71.248937,71.248937,71.28063563000001,71.2860773],[-165.00516,-165.003487,-165.003316,-165.004385,-164.99168,-164.983178,-164.994433,-164.994427,-164.98521,-164.99127,-164.98035,-164.98643,-164.993495,-164.984927,-164.99142,-164.996544,-164.992301,-164.955976,-164.95357,-164.95445,-164.9939,-164.993016,-164.94995,-165.020482,-164.995851,-164.992134,-164.991629,-165.008801,-164.95084,-164.96312,-165.018333,-164.990964,-164.95267,-164.98596,-164.98606,-164.999257,-164.97484,-164.97972,-164.97893,-164.97346,-165.0074,-165.006066,-165.009236,-164.97621,-165.012137,-165.02132,-164.97656,-164.973392,-164.973392,-165.0136,-164.94257,-164.93811,-164.94174,-164.965418,-164.93987,-164.94773,-164.94812,-164.96356,-164.96356,-165.005235,-164.952895,-164.952895,-164.952895,-164.952895,-164.952895,-164.952895,-164.952895,-164.952895,-164.952895,-164.952895,-164.952895,-164.952895,-164.952895,-164.952895,-164.952895,-164.952895,-164.93848,-164.95972,-164.950956,-164.94344,-164.942949,-165.007245,-165.007245,-165.007245,-164.944602,-164.977753,-164.946142,-164.946142,-164.946142,-164.946142,-164.945114,-164.945114,-164.945114,-164.93193,-164.93469,-164.963855,-164.93103,-164.94574,-164.94336,-164.95886,-164.963816,-164.963936,-164.963936,-164.963936,-164.980803,-164.980803,-164.994367,-164.997565,-164.980844,-164.954968,-164.982657,-164.97433,-164.98622,-164.975285,-164.98515,-164.98389,-164.996533,-164.998375,-164.998375,-164.998375,-164.972622,-164.990429,-164.990429,-164.987024,-164.975636,-164.975636,-164.975636,-164.975636,-164.954511,-164.97419,-164.97419,-164.97419,-164.97419,-164.984419,-164.955947,-164.955947,-164.955947,-164.989696,-164.95621,-164.970228,-164.970228,-164.983209,-164.978991,-164.97249,-165.008043,-165.008043,-165.008043,-165.008043,-164.983112,-164.983112,-164.996303,-164.996303,-164.996303,-164.996303,-164.996303,-164.96633,-164.96633,-164.96633,-164.96633,-164.96633,-164.96633,-164.96633,-164.96633,-164.96633,-164.99911,-164.974009,-164.974009,-164.974009,-164.974009,-164.974009,-164.974009,-164.974009,-164.953374,-164.95341,-164.990986,-164.95665,-164.960516,-164.960516,-164.973164,-164.947193,-164.95982,-164.95491,-164.982375,-164.95461,-164.982282,-164.982293,-164.983543,-164.983543,-164.983543,-164.983543,-164.955775,-164.947257,-164.968729,-165.006343,-165.006343,-165.00627,-164.9677,-164.96301,-164.969176,-164.96584,-165.001085,-164.967274,-164.959239,-164.95802,-164.972068,-164.96246,-164.959472,-164.96275,-164.961963,-164.964135,-164.973385,-165.009382,-164.971467,-164.998273,-164.991847,-165.61783,-165.61783,-165.63181,-165.62582,-165.62582,-165.62582,-165.62582,-165.61855,-165.61855,-165.61855,-165.62991,-165.62991,-165.62991,-165.62991,-165.62991,-165.62991,-165.62991,-165.62991,-165.62991,-165.62991,-165.62991,-165.62991,-165.62991,-165.62991,-165.62991,-165.632528,-165.632528,-165.632528,-165.632528,-165.62973,-165.62973,-165.62973,-165.62973,-165.62973,-165.62973,-165.62476,-165.62476,-165.61688,-165.61688,-165.61688,-165.61699,-165.61699,-165.61699,-165.61699,-165.61699,-165.61699,-165.526965,-165.526965,-165.526965,-165.526965,-165.52876,-165.547905,-165.547905,-165.54491,-165.546914,-165.568771,-165.631723,-165.631723,-165.631723,-165.631723,-165.672497,-165.672497,-165.672497,-165.672497,-165.643974,-165.643974,-165.643974,-165.653977,-165.653977,-153.719543,-153.719543,-156.7066627,-156.6239486,-156.6239486,-156.552302,-156.552302,-156.552302,-156.552302,-156.552302,-156.552302,-156.552302,-156.6841967,-156.6914573],[2.6,140,51,150,3.3,3.3,6.082788379743143,3.3,2,4,4.413332982823088,2,2.6,250,4,3.3,3.3,5.3,4.2,79,2.6,3.4,21,21.59920388886662,3.4,3.1,3.3,2.3,2.8,3.2,2,4.650338291162958,2.8,22,2.5,9.1,2,4.100000000000001,12,3.2,2.7,2.8,65,2,2,330,2,2,2,2,3.5,11,2.7,6.4,47,4,92,0.467,1.09,2.3,0.598,1.23,0.8120000000000001,0.39,1.03,0.8340000000000001,0.804,0.666,0.8999999999999999,1.32,0.8460000000000001,0.504,0.4969999999999999,1.07,0.9939999999999999,0.975,2.7,2.6,2,4.8,2.1,2,2,100,2.8,2.2,2,2,2,2,2,2,2,33,2.3,2,2.3,4.8,7.399999999999999,2.5,8.137293957780367,2.2,2,2.3,2,2,2,2.5,3.3,26,2.2,2,2,2,2,3.2,2.4,2,2,2,4.6,3.3,2,2.1,2,2,2,2,4.176886073749658,3.1,2,2,2,3.9,2,2,2,5.2,200,2,2,880.0000000000001,2,2.2,2,2,7.199999999999999,2,2,3.3,2,2,2,2,2,0.418,0.6879999999999999,0.549,1.54,0.362,0.876,0.626,0.459,0.369,2.4,191,1.68,0.679,2.98,0.754,0.454,0.538,3.3,2,3.3,2,0.681,1.12,8.1,5.364455787871479,2,13,4.8,2,2.5,3.9,1.36,2,4.67,1.4,3.3,6.5,15,2,2,3.3,2.3,2.7,8.5,2,2,890,8.300000000000001,17,3.3,19,65,3.5,3.8,2.3,4.3,3.3,890,5.600000000000001,110,2,2,2,2,2,2,2,2,2,2,1.89,1.4,0.63,1.31,0.416,1.71,0.619,1.6,0.6879999999999999,0.709,0.632,1.18,1.43,0.782,1.99,2.4,2,2.2,20,3.6,2,2,2,2,2,1.68,0.823,2,43,2,0.493,11.1,0.756,16.5,1.01,0.529,2,3.3,5.1,2,11,2,39,3,26,6.800000000000001,2,12,4,30,2,2,2,2,45,2,12,2,2,4.2,2.6,3.2,2.2,2.3,2,2.5,2.1,5.1,3.5,2,3.4,3.8,2],null,null,{"interactive":true,"className":"","stroke":true,"color":["blue","red","red","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","red","blue","blue","red","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","red","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","red","blue","blue","blue","blue","red","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue"],"weight":5,"opacity":0.5,"fill":true,"fillColor":["blue","red","red","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","red","blue","blue","red","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","red","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","red","blue","blue","blue","blue","red","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue"],"fillOpacity":0.2},null,null,["ID: 200706572 <br> Sample Date: 2019-06-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.026","ID: 200762284 <br> Sample Date: 2021-06-21 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 1.4","ID: 200762283 <br> Sample Date: 2021-06-21 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.51","ID: 200762282 <br> Sample Date: 2021-06-21 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 1.5","ID: 200762834 <br> Sample Date: 2019-06-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.033","ID: 200741883 <br> Sample Date: 2023-06-17 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.033","ID: 200762342 <br> Sample Date: 2024-06-15 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0608278837974314","ID: 250707638 <br> Sample Date: 2025-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.033","ID: 200741804 <br> Sample Date: 2019-06-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762824 <br> Sample Date: 2019-06-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.04","ID: 200741888 <br> Sample Date: 2023-06-27 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0441333298282309","ID: 200704132 <br> Sample Date: 2019-06-15 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762824 <br> Sample Date: 2021-06-16 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.026","ID: 200762282 <br> Sample Date: 2023-06-18 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 2.5","ID: 360701058 <br> Sample Date: 2019-06-15 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.04","ID: 200707639 <br> Sample Date: 2023-06-27 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.033","ID: 200762345 <br> Sample Date: 2024-06-23 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.033","ID: 200741886 <br> Sample Date: 2023-06-20 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.053","ID: 200762836 <br> Sample Date: 2019-06-14 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.042","ID: 200741810 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.79","ID: 200762825 <br> Sample Date: 2019-06-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.026","ID: 250707637 <br> Sample Date: 2025-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.034","ID: 200741809 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.21","ID: 200741887 <br> Sample Date: 2023-06-26 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.215992038888666","ID: 200762839 <br> Sample Date: 2021-06-16 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.034","ID: 200762285 <br> Sample Date: 2021-06-22 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.031","ID: 200762347 <br> Sample Date: 2025-06-09 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.033","ID: 200762846 <br> Sample Date: 2021-06-18 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.023","ID: 200741808 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.028","ID: 200762821 <br> Sample Date: 2019-06-09 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.032","ID: 200762845 <br> Sample Date: 2021-06-18 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762347 <br> Sample Date: 2024-06-19 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0465033829116296","ID: 200741807 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.028","ID: 200762833 <br> Sample Date: 2019-06-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.22","ID: 200762837 <br> Sample Date: 2019-06-15 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.025","ID: 200762841 <br> Sample Date: 2021-06-16 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.091","ID: 200762830 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762838 <br> Sample Date: 2019-06-17 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.041","ID: 200741806 <br> Sample Date: 2019-06-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.12","ID: 200762832 <br> Sample Date: 2019-06-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.032","ID: 200762847 <br> Sample Date: 2021-06-18 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.027","ID: 200762881 <br> Sample Date: 2023-06-24 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.028","ID: 200762288 <br> Sample Date: 2023-06-08 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.65","ID: 200762829 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762844 <br> Sample Date: 2021-06-17 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762835 <br> Sample Date: 2019-06-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 3.3","ID: 200730012 <br> Sample Date: 2019-06-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762854 <br> Sample Date: 2023-08-04 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762856 <br> Sample Date: 2023-08-04 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762831 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200741833 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.035","ID: 200741818 <br> Sample Date: 2019-06-16 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.11","ID: 200741823 <br> Sample Date: 2019-06-14 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.027","ID: 200762277 <br> Sample Date: 2023-06-22 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.064","ID: 200741803 <br> Sample Date: 2019-06-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.47","ID: 200741832 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.04","ID: 200741831 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.92","ID: 200762818 <br> Sample Date: 2018-05-14 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.00467","ID: 360700441 <br> Sample Date: 2018-05-14 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0109","ID: 360701059 <br> Sample Date: 2023-06-21 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.023","ID: 134782842 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00598","ID: 200762803 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.0123","ID: 200762804 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00812","ID: 200762805 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0039","ID: 200762806 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.0103","ID: 200762807 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00834","ID: 200762808 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00804","ID: 200762809 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.00666","ID: 200762810 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.009","ID: 200762811 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0132","ID: 200762812 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00846","ID: 200762813 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.00504","ID: 200762814 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.00497","ID: 200762815 <br> Sample Date: 2018-05-14 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0107","ID: 200762816 <br> Sample Date: 2018-05-14 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00994","ID: 200762817 <br> Sample Date: 2018-05-14 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.00975","ID: 200741815 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.027","ID: 200706545 <br> Sample Date: 2019-06-09 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.026","ID: 200762276 <br> Sample Date: 2023-06-19 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762828 <br> Sample Date: 2019-06-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.048","ID: 200704137 <br> Sample Date: 2023-06-28 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.021","ID: 200762292 <br> Sample Date: 2023-08-07 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 360700426 <br> Sample Date: 2023-08-07 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 360701086 <br> Sample Date: 2023-08-07 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 1","ID: 200762300 <br> Sample Date: 2023-06-19 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.028","ID: 200741842 <br> Sample Date: 2022-06-16 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.022","ID: 200762276 <br> Sample Date: 2023-08-03 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762853 <br> Sample Date: 2023-08-03 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200762857 <br> Sample Date: 2023-08-03 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200762858 <br> Sample Date: 2023-08-03 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200741842 <br> Sample Date: 2023-08-03 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762859 <br> Sample Date: 2023-08-03 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200762884 <br> Sample Date: 2023-08-03 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200741821 <br> Sample Date: 2019-06-14 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.33","ID: 200741802 <br> Sample Date: 2019-06-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.023","ID: 200762890 <br> Sample Date: 2024-06-28 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200741814 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.023","ID: 200741816 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.048","ID: 200762827 <br> Sample Date: 2019-06-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.074","ID: 200762820 <br> Sample Date: 2019-06-09 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.025","ID: 200762890 <br> Sample Date: 2023-06-28 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0813729395778037","ID: 200762890 <br> Sample Date: 2024-07-27 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.022","ID: 250707623 <br> Sample Date: 2024-07-27 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 250707625 <br> Sample Date: 2024-07-27 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.023","ID: 200762321 <br> Sample Date: 2024-07-24 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 250707615 <br> Sample Date: 2024-07-24 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 360700431 <br> Sample Date: 2024-07-26 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200706553 <br> Sample Date: 2021-06-15 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.025","ID: 200762321 <br> Sample Date: 2023-08-01 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.033","ID: 200762257 <br> Sample Date: 2023-07-30 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.26","ID: 200762299 <br> Sample Date: 2023-06-19 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.022","ID: 200706527 <br> Sample Date: 2019-06-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200741811 <br> Sample Date: 2019-06-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762275 <br> Sample Date: 2023-06-17 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 134752211 <br> Sample Date: 2019-06-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200741835 <br> Sample Date: 2019-06-14 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.032","ID: 200762340 <br> Sample Date: 2023-08-06 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.024","ID: 200762291 <br> Sample Date: 2023-08-06 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200762295 <br> Sample Date: 2023-08-06 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762296 <br> Sample Date: 2023-08-06 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 360701057 <br> Sample Date: 2021-06-15 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.046","ID: 200762339 <br> Sample Date: 2023-08-06 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.033","ID: 200762855 <br> Sample Date: 2023-08-06 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762840 <br> Sample Date: 2021-06-15 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.021","ID: 200741836 <br> Sample Date: 2023-07-31 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762278 <br> Sample Date: 2023-07-31 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762279 <br> Sample Date: 2023-07-31 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762298 <br> Sample Date: 2023-07-31 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762303 <br> Sample Date: 2024-06-17 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0417688607374966","ID: 200704154 <br> Sample Date: 2023-07-31 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.031","ID: 200762297 <br> Sample Date: 2023-07-31 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200762849 <br> Sample Date: 2023-07-31 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762888 <br> Sample Date: 2023-07-31 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200762848 <br> Sample Date: 2021-06-19 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.039","ID: 200762303 <br> Sample Date: 2023-07-30 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762304 <br> Sample Date: 2023-07-30 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762889 <br> Sample Date: 2023-07-30 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762842 <br> Sample Date: 2021-06-17 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.052","ID: 200741813 <br> Sample Date: 2019-06-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 2","ID: 200762849 <br> Sample Date: 2024-07-24 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 250707614 <br> Sample Date: 2024-07-24 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 250707636 <br> Sample Date: 2025-06-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 8.8","ID: 200741890 <br> Sample Date: 2023-06-18 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200741812 <br> Sample Date: 2019-06-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.022","ID: 200706524 <br> Sample Date: 2023-08-02 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762882 <br> Sample Date: 2023-08-02 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762883 <br> Sample Date: 2023-08-02 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.072","ID: 200762885 <br> Sample Date: 2023-08-02 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762326 <br> Sample Date: 2024-07-26 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 250707622 <br> Sample Date: 2024-07-26 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.033","ID: 200762851 <br> Sample Date: 2023-08-01 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762852 <br> Sample Date: 2023-08-01 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762860 <br> Sample Date: 2023-08-01 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200762886 <br> Sample Date: 2023-08-01 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762887 <br> Sample Date: 2023-08-01 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 198729016 <br> Sample Date: 2018-05-08 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00418","ID: 198729017 <br> Sample Date: 2018-05-08 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.00688","ID: 198729018 <br> Sample Date: 2018-05-09 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.00549","ID: 198729019 <br> Sample Date: 2018-05-09 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0154","ID: 198729020 <br> Sample Date: 2018-05-09 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00362","ID: 198729021 <br> Sample Date: 2018-05-09 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.00876","ID: 198729022 <br> Sample Date: 2018-05-09 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.00626","ID: 198729023 <br> Sample Date: 2018-05-09 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.00459","ID: 360700432 <br> Sample Date: 2018-05-09 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00369","ID: 200762274 <br> Sample Date: 2023-08-01 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.024","ID: 198729024 <br> Sample Date: 2018-05-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 1.91","ID: 198729025 <br> Sample Date: 2018-05-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0168","ID: 198729026 <br> Sample Date: 2018-05-10 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.00679","ID: 198729027 <br> Sample Date: 2018-05-10 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.0298","ID: 198729028 <br> Sample Date: 2018-05-10 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.00754","ID: 200704138 <br> Sample Date: 2018-05-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00454","ID: 200704149 <br> Sample Date: 2018-05-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00538","ID: 250707640 <br> Sample Date: 2025-06-23 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.033","ID: 200741889 <br> Sample Date: 2023-06-20 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762343 <br> Sample Date: 2024-06-18 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.033","ID: 200762822 <br> Sample Date: 2019-06-09 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200706574 <br> Sample Date: 2018-05-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00681","ID: 200762802 <br> Sample Date: 2018-05-12 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.0112","ID: 200762849 <br> Sample Date: 2021-06-20 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.081","ID: 250707620 <br> Sample Date: 2024-06-25 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0536445578787148","ID: 200762273 <br> Sample Date: 2023-06-17 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762823 <br> Sample Date: 2019-06-09 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.13","ID: 200762843 <br> Sample Date: 2021-06-17 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.048","ID: 200730039 <br> Sample Date: 2019-06-16 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200706516 <br> Sample Date: 2024-06-23 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.025","ID: 200762256 <br> Sample Date: 2022-06-18 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.039","ID: 198729029 <br> Sample Date: 2018-05-11 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.0136","ID: 198729030 <br> Sample Date: 2018-05-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200706535 <br> Sample Date: 2018-05-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0467","ID: 200762801 <br> Sample Date: 2018-05-11 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.014","ID: 200762275 <br> Sample Date: 2023-07-30 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.033","ID: 250707681 <br> Sample Date: 2024-06-22 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.065","ID: 200706599 <br> Sample Date: 2024-06-01 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.15","ID: 200762334 <br> Sample Date: 2023-08-06 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200762335 <br> Sample Date: 2023-08-06 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200762235 <br> Sample Date: 2023-08-06 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.033","ID: 200762819 <br> Sample Date: 2019-06-03 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.023","ID: 200741819 <br> Sample Date: 2019-06-18 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.027","ID: 200762309 <br> Sample Date: 2023-07-31 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.085","ID: 200762309 <br> Sample Date: 2024-06-23 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762344 <br> Sample Date: 2024-06-19 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762286 <br> Sample Date: 2023-06-17 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 8.9","ID: 200762257 <br> Sample Date: 2022-06-18 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.083","ID: 360700473 <br> Sample Date: 2019-06-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.17","ID: 200762274 <br> Sample Date: 2023-06-17 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.033","ID: 200741817 <br> Sample Date: 2019-06-14 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.19","ID: 200762260 <br> Sample Date: 2025-06-17 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.65","ID: 200706599 <br> Sample Date: 2019-06-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.035","ID: 200762259 <br> Sample Date: 2022-06-19 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.038","ID: 250707619 <br> Sample Date: 2024-06-29 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.023","ID: 200762286 <br> Sample Date: 2022-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.043","ID: 200762346 <br> Sample Date: 2024-06-21 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.033","ID: 200762260 <br> Sample Date: 2022-06-20 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 8.9","ID: 200762850 <br> Sample Date: 2021-06-20 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.056","ID: 200762281 <br> Sample Date: 2021-06-20 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 1.1","ID: 200741866 <br> Sample Date: 2022-05-17 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200741867 <br> Sample Date: 2022-05-17 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.02","ID: 200741878 <br> Sample Date: 2022-05-14 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.02","ID: 200741874 <br> Sample Date: 2022-05-13 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.02","ID: 200741876 <br> Sample Date: 2022-05-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200741877 <br> Sample Date: 2022-05-13 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.02","ID: 200741891 <br> Sample Date: 2022-05-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200741868 <br> Sample Date: 2022-05-18 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.02","ID: 200741869 <br> Sample Date: 2022-05-18 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.02","ID: 200741870 <br> Sample Date: 2022-05-18 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 198729004 <br> Sample Date: 2018-05-11 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.0189","ID: 198729005 <br> Sample Date: 2018-05-12 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.014","ID: 198729006 <br> Sample Date: 2018-05-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0063","ID: 198729008 <br> Sample Date: 2018-05-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0131","ID: 198729009 <br> Sample Date: 2018-05-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00416","ID: 198729010 <br> Sample Date: 2018-05-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0171","ID: 198729012 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00619","ID: 198729013 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.016","ID: 198729014 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.00688","ID: 198729015 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00709","ID: 200762861 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.00632","ID: 200762863 <br> Sample Date: 2018-05-14 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.0118","ID: 200762864 <br> Sample Date: 2018-05-14 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0143","ID: 200762865 <br> Sample Date: 2018-05-14 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.00782","ID: 200762868 <br> Sample Date: 2018-05-15 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0199","ID: 200741861 <br> Sample Date: 2022-05-15 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.024","ID: 200741862 <br> Sample Date: 2022-05-15 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.02","ID: 200741879 <br> Sample Date: 2022-05-15 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.022","ID: 200741880 <br> Sample Date: 2022-05-15 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.2","ID: 200741871 <br> Sample Date: 2022-05-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.036","ID: 200741872 <br> Sample Date: 2022-05-12 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.02","ID: 200741873 <br> Sample Date: 2022-05-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200741875 <br> Sample Date: 2022-05-12 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.02","ID: 200741892 <br> Sample Date: 2022-05-19 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200741893 <br> Sample Date: 2022-05-19 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.02","ID: 198729002 <br> Sample Date: 2018-05-18 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.0168","ID: 198729007 <br> Sample Date: 2018-05-09 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00823","ID: 200741863 <br> Sample Date: 2022-05-16 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.02","ID: 200741864 <br> Sample Date: 2022-05-16 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.43","ID: 200741865 <br> Sample Date: 2022-05-16 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.02","ID: 198729003 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.00493","ID: 198729011 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.111","ID: 200762862 <br> Sample Date: 2018-05-14 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.00756","ID: 200762866 <br> Sample Date: 2018-05-15 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.165","ID: 200762867 <br> Sample Date: 2018-05-15 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.0101","ID: 200762870 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.00529","ID: 200762896 <br> Sample Date: 2022-07-29 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200762897 <br> Sample Date: 2022-07-29 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.033","ID: 200762898 <br> Sample Date: 2022-07-29 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.051","ID: 200762900 <br> Sample Date: 2022-07-29 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 226703029 <br> Sample Date: 2022-07-28 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.11","ID: 200762895 <br> Sample Date: 2022-07-28 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 226703001 <br> Sample Date: 2022-07-28 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.39","ID: 200762893 <br> Sample Date: 2022-07-27 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.03","ID: 200762894 <br> Sample Date: 2022-07-28 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.26","ID: 226703019 <br> Sample Date: 2022-07-30 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.068","ID: 200762261 <br> Sample Date: 2022-07-31 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762262 <br> Sample Date: 2022-07-31 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.12","ID: 200762263 <br> Sample Date: 2022-07-31 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.04","ID: 200762899 <br> Sample Date: 2022-07-31 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.3","ID: 200762270 <br> Sample Date: 2022-08-02 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762271 <br> Sample Date: 2022-08-02 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762272 <br> Sample Date: 2022-08-02 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200762877 <br> Sample Date: 2022-08-02 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762265 <br> Sample Date: 2022-08-01 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.45","ID: 200762266 <br> Sample Date: 2022-08-01 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762267 <br> Sample Date: 2022-08-01 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.12","ID: 200762268 <br> Sample Date: 2022-08-01 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762269 <br> Sample Date: 2022-08-01 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200741894 <br> Sample Date: 2022-06-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.042","ID: 200741900 <br> Sample Date: 2022-06-10 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.026","ID: 198729048 <br> Sample Date: 2022-07-16 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.032","ID: 200741856 <br> Sample Date: 2022-06-19 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.022","ID: 200741857 <br> Sample Date: 2022-06-19 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.023","ID: 176722663 <br> Sample Date: 2022-06-14 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 176722676 <br> Sample Date: 2022-06-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.025","ID: 200741851 <br> Sample Date: 2022-06-10 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.021","ID: 200741852 <br> Sample Date: 2022-06-11 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.051","ID: 200741853 <br> Sample Date: 2022-06-14 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.035","ID: 200741854 <br> Sample Date: 2022-06-14 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.02","ID: 200741855 <br> Sample Date: 2022-06-18 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.034","ID: 198723458 <br> Sample Date: 2022-07-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.038","ID: 198729046 <br> Sample Date: 2022-07-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]}],"limits":{"lat":[60.82154,71.2860773],"lng":[-165.672497,-153.719543]}},"evals":[],"jsHooks":[]}</script>
+<br>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+Session information
+</button>
+</p>
+<div id="workflowr-sessioninfo" class="collapse">
+<pre class="r"><code>sessionInfo()</code></pre>
+<pre><code>R version 4.5.1 (2025-06-13 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 22631)
+
+Matrix products: default
+  LAPACK version 3.12.1
+
+locale:
+[1] LC_COLLATE=English_United States.utf8 
+[2] LC_CTYPE=English_United States.utf8   
+[3] LC_MONETARY=English_United States.utf8
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.utf8    
+
+time zone: America/Anchorage
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] leaflet_2.2.2    kableExtra_1.4.0 emmeans_1.11.2   knitr_1.50      
+[5] plotly_4.11.0    ggplot2_3.5.2   
+
+loaded via a namespace (and not attached):
+ [1] sass_0.4.10             generics_0.1.4          tidyr_1.3.1            
+ [4] xml2_1.3.8              lattice_0.22-7          stringi_1.8.7          
+ [7] digest_0.6.37           magrittr_2.0.3          evaluate_1.0.4         
+[10] grid_4.5.1              estimability_1.5.1      RColorBrewer_1.1-3     
+[13] mvtnorm_1.3-3           fastmap_1.2.0           rprojroot_2.1.0        
+[16] workflowr_1.7.1         jsonlite_2.0.0          promises_1.3.3         
+[19] httr_1.4.7              purrr_1.1.0             crosstalk_1.2.1        
+[22] viridisLite_0.4.2       scales_1.4.0            textshaping_1.0.1      
+[25] lazyeval_0.2.2          jquerylib_0.1.4         cli_3.6.5              
+[28] rlang_1.1.6             withr_3.0.2             cachem_1.1.0           
+[31] yaml_2.3.10             tools_4.5.1             coda_0.19-4.1          
+[34] dplyr_1.1.4             httpuv_1.6.16           vctrs_0.6.5            
+[37] R6_2.6.1                lifecycle_1.0.4         git2r_0.36.2           
+[40] stringr_1.5.1           leaflet.providers_2.0.0 fs_1.6.6               
+[43] htmlwidgets_1.6.4       pkgconfig_2.0.3         pillar_1.11.0          
+[46] bslib_0.9.0             later_1.4.2             gtable_0.3.6           
+[49] glue_1.8.0              data.table_1.17.8       Rcpp_1.1.0             
+[52] systemfonts_1.2.3       xfun_0.52               tibble_3.3.0           
+[55] tidyselect_1.2.1        rstudioapi_0.17.1       xtable_1.8-4           
+[58] farver_2.1.2            htmltools_0.5.8.1       labeling_0.4.3         
+[61] svglite_2.2.1           rmarkdown_2.29          compiler_4.5.1         </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- Adjust MathJax settings so that all math formulae are shown using
+TeX fonts only; see
+https://docs.mathjax.org/en/latest/web/configuration.html. This will make
+the presentation more consistent at the cost of the webpage sometimes
+taking slightly longer to load. Note that this only works because the
+footer is added to webpages before the MathJax javascript. -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

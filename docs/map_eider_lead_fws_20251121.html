@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="" />
+
+<meta name="date" content="2025-12-02" />
+
+<title>Blood lead levels in eiders captured for FWS projects, 2018-2022</title>
+
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-binding-2.2.2/leaflet.js"></script>
+<script src="site_libs/leaflet-providers-2.0.0/leaflet-providers_2.0.0.js"></script>
+<script src="site_libs/leaflet-providers-plugin-2.2.2/leaflet-providers-plugin.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<link rel="icon" href="https://github.com/workflowr/workflowr-assets/raw/main/img/reproducible.png">
+<!-- Add a small amount of space between sections. -->
+<style type="text/css">
+div.section {
+  padding-top: 12px;
+}
+</style>
+
+
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">spei_lead</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="map_eider_lead_fws.html">Map</a>
+</li>
+<li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="license.html">License</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/DJRIZZ/spei_lead">
+    <span class="fab fa-github"></span>
+     
+    Source code
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Blood lead levels in eiders captured for
+FWS projects, 2018-2022</h1>
+<h4 class="author"></h4>
+<h4 class="date">2025-12-02</h4>
+
+</div>
+
+
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span>
+</button>
+</p>
+<div id="workflowr-report" class="collapse">
+<ul class="nav nav-tabs">
+<li class="active">
+<a data-toggle="tab" href="#summary">Summary</a>
+</li>
+<li>
+<a data-toggle="tab" href="#checks"> Checks <span
+class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> </a>
+</li>
+<li>
+<a data-toggle="tab" href="#versions">Past versions</a>
+</li>
+</ul>
+<div class="tab-content">
+<div id="summary" class="tab-pane fade in active">
+<p>
+<strong>Last updated:</strong> 2025-12-02
+</p>
+<p>
+<strong>Checks:</strong> <span
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> 1
+</p>
+<p>
+<strong>Knit directory:</strong> <code>spei_lead/</code> <span
+class="glyphicon glyphicon-question-sign" aria-hidden="true"
+title="This is the local directory in which the code in this file was executed.">
+</span>
+</p>
+<p>
+This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a>
+analysis was created with <a
+  href="https://github.com/workflowr/workflowr">workflowr</a> (version
+1.7.1). The <em>Checks</em> tab describes the reproducibility checks
+that were applied when the results were created. The <em>Past
+versions</em> tab lists the development history.
+</p>
+<hr>
+</div>
+<div id="checks" class="tab-pane fade">
+<div id="workflowr-checks" class="panel-group">
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
+changes </a>
+</p>
+</div>
+<div id="strongRMarkdownfilestronguncommittedchanges"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>The R Markdown is untracked by Git. To know which version of the R
+Markdown file created these results, you’ll want to first commit it to
+the Git repo. If you’re still working on the analysis, you can ignore
+this warning. When you’re finished, you can run
+<code>wflow_publish</code> to commit the R Markdown file and build the
+HTML.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
+</p>
+</div>
+<div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! The global environment was empty. Objects defined in the
+global environment can affect the analysis in your R Markdown file in
+unknown ways. For reproduciblity it’s best to always run the code in an
+empty environment.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed20230228code">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Seed:</strong>
+<code>set.seed(20230228)</code> </a>
+</p>
+</div>
+<div id="strongSeedstrongcodesetseed20230228code"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>The command <code>set.seed(20230228)</code> was run prior to running
+the code in the R Markdown file. Setting a seed ensures that any results
+that rely on randomness, e.g. subsampling or permutations, are
+reproducible.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Session information:</strong>
+recorded </a>
+</p>
+</div>
+<div id="strongSessioninformationstrongrecorded"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Recording the operating system, R version, and package
+versions is critical for reproducibility.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+</p>
+</div>
+<div id="strongCachestrongnone" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Nice! There were no cached chunks for this analysis, so you can be
+confident that you successfully produced the results during this
+run.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
+</p>
+</div>
+<div id="strongFilepathsstrongrelative" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Using relative paths to the files within your workflowr
+project makes it easier to run your code on other machines.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDJRIZZspeileadtreea41a727c7c9898c16aeaedd47d105379bc614c63targetblanka41a727a">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Repository version:</strong>
+<a href="https://github.com/DJRIZZ/spei_lead/tree/a41a727c7c9898c16aeaedd47d105379bc614c63" target="_blank">a41a727</a>
+</a>
+</p>
+</div>
+<div
+id="strongRepositoryversionstrongahrefhttpsgithubcomDJRIZZspeileadtreea41a727c7c9898c16aeaedd47d105379bc614c63targetblanka41a727a"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>
+Great! You are using Git for version control. Tracking code development
+and connecting the code version to the results is critical for
+reproducibility.
+</p>
+<p>
+The results in this page were generated with repository version
+<a href="https://github.com/DJRIZZ/spei_lead/tree/a41a727c7c9898c16aeaedd47d105379bc614c63" target="_blank">a41a727</a>.
+See the <em>Past versions</em> tab to see a history of the changes made
+to the R Markdown and HTML files.
+</p>
+<p>
+Note that you need to be careful to ensure that all relevant files for
+the analysis have been committed to Git prior to generating the results
+(you can use <code>wflow_publish</code> or
+<code>wflow_git_commit</code>). workflowr only checks the R Markdown
+file, but you know if there are other scripts or data files that it
+depends on. Below is the status of the Git repository when the results
+were generated:
+</p>
+<pre><code>
+Ignored files:
+    Ignored:    .Rhistory
+    Ignored:    .Rproj.user/
+    Ignored:    admin/
+    Ignored:    analysis/figure/
+    Ignored:    documents/
+    Ignored:    protocols/
+
+Untracked files:
+    Untracked:  analysis/map_eider_lead_fws_20251121.Rmd
+    Untracked:  data/7030169 data.csv
+    Untracked:  data/README_spei_blood_lead_data.txt
+    Untracked:  data/Rizzolo Lead VSEP22-045 E-report.xlsx
+    Untracked:  data/TEMP_eider_lead_fws_2018-2025.csv
+    Untracked:  data/eider_blood_samples_bands_utq_2022.csv
+    Untracked:  data/eider_lead_fws.csv
+    Untracked:  data/eider_lead_fws_2018-2022.csv
+    Untracked:  data/eider_lead_fws_2018-2025.csv
+    Untracked:  data/eider_lead_fws_2023-2025.csv
+    Untracked:  data/eider_lead_fws_FOR_REP_SELECTION.csv
+    Untracked:  data/leadcare2_validation/
+    Untracked:  data/pb_merged_all_msResults_lc2Results_20251124.csv
+    Untracked:  data/qtbl_pb_2023-2025.xlsx
+    Untracked:  data/sample_id_spei_blood_lead_2018.csv
+    Untracked:  data/samples_analyzed_2018/
+    Untracked:  data/samples_analyzed_2022/
+    Untracked:  data/samples_analyzed_2025/
+    Untracked:  data/samples_leadCare2_results/
+    Untracked:  data/sourced/
+    Untracked:  data/spei_pb_ms_lc_20251124
+    Untracked:  data/spei_pb_ms_lc_20251124.csv
+    Untracked:  data/temp_spei_pb_lc2.csv
+    Untracked:  data/temp_tbl_pb_2.xlsx
+    Untracked:  metadata/
+
+Unstaged changes:
+    Modified:   .gitignore
+    Modified:   analysis/spei_pb_plot_validation_mass_spec_voltem.Rmd
+
+</code></pre>
+<p>
+Note that any generated files, e.g. HTML, png, CSS, etc., are not
+included in this status report because it is ok for generated content to
+have uncommitted changes.
+</p>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="versions" class="tab-pane fade">
+<p>
+There are no past versions. Publish this analysis with
+<code>wflow_publish()</code> to start tracking its development.
+</p>
+<hr>
+</div>
+</div>
+</div>
+<div id="data-background" class="section level2">
+<h2>Data Background</h2>
+<p>The US Fish and Wildlife Service Endangered Species Recovery Program
+out of the Northern Alaska Fish and Wildlife Field Office has collected
+blood samples from Spectacled Eiders in Alaska since 2018. Samples were
+collected during captures to deploy satellite transmitters at Kigigak
+Island (2018, 2023), the Tutakoke River (2018, 2022), the Kashunuk River
+(2022), and the Utqiagvik (2022), and Teshekpuk Lake (2022).</p>
+</div>
+<div id="methods" class="section level2">
+<h2>Methods</h2>
+<p>All captures for satellite transmitter deployments occurred when
+eiders were arriving to the breeding areas, prior to mean nest
+initiation, except at the Kashunk River and Kigigak Island in 2022 and
+2023, respectively, when we captured eiders during the brood rearing
+period. We also collected blood samples from eiders captured for banding
+during the incubation period in 2019, 2021-2025.</p>
+<p>We captured eiders at arrival using vertical mist nets setup in lakes
+and decoys. During incubation, we captured females on nests using bow
+nets, and during brood rearing, we captured ducklings and associated
+females by herding broods into mist nets setup vertically in lakes, both
+above and below the water level.</p>
+<p>We collected blood samples from captured eiders using either jugular
+venipuncture or venipuncture of the tibiotarsal vein. Jugular blood
+samples were 1-4 mL and collected using 21-22 gauge needles and 6 mL
+syringes; samples were transferred into 4 mL heparinized Vaccutainers.
+Tibiotarsal blood samples were &lt; 0.5 mL and collected by pricking the
+vein with a 25 g needle and collecting blood in 1-3 capillary tubes
+which were transferred into a 1 mL heparinized MicroTainer.</p>
+<p>All samples were stored frozen in the field and laboratory until
+analysis. Samples that were &gt; 0.5 mL were analyzed using mass
+spectrometry and samples &lt; 0.5 mL were analyzed using voltemmetry.
+Samples collected in 2018 were analyzed at the Texas A &amp; M Agrilife
+Research Veterinary Integrative Biosciences Laboratory (n = 66). Samples
+were freeze dried and homogenized and then digested and analyzed as dry
+samples. Results were converted to concentrations on a wet mass basis
+given a mean moisture content for whole blood of 78.6% (CV = 2.51%).
+Lead concentration was determined using inductively coupled plasma-mass
+spectroscopy.QAQC procedures included procedural blanks (n = 4, mean
+blank equivalent concentration &lt; 0.00825), duplicate samples (n = 3,
+mean relative difference 3.46%, range 0.38 to 7.48%), and standard
+reference material percent spike recoveries (mean 103.99%, range 99.16%
+to 107.56%). Analytical methods, results, and QAQC procedures were
+described in the summary report provided by TAMN
+(report_eider_2018_lead_7030169_results.pdf).</p>
+<p>Blood samples &gt; 0.5 mL collected 2021-2025 were analyzed in two
+batches (samples collected 2021-2022, n = X, 2023-2025, n = X) at the
+Washington Animal Disease Diagnostic Laboratory using inductively
+coupled plasma mass spectrometry and nitric acid digestion. QAQC tests,
+including duplicates, blanks, and reference samples, were run on 10% of
+samples.QAQC results were all acceptable and were provided by WADDLE in
+the file eider_lead_2022_quality_control_case_VSEP22-045E.xlsx.</p>
+<p>Blood samples &lt; 0.5 mL collected 2023-2025 (n = X) were analyzed
+using a LeadCare II blood point-of-care blood lead testing system
+(Meridian Bioscience), which uses Anodic Stripping Voltammetry to detect
+lead in whole blood. Technicians in the USFWS Fairbanks Fish and
+Wildlife Field Office Laboratory tested samples with LeadCare II
+following instructional materials and the LeadCare II User’s Guide.</p>
+</div>
+<div id="plotted-data" class="section level2">
+<h2>Plotted data</h2>
+<p>Capture locations of eiders (mostly Spectacled Eiders, but also 2
+King Eiders on the ACP and 1 Common Eider at Kigigak) tested for blood
+lead levels. Blue symbols are individuals &lt; 0.2 ppm lead. Red symbols
+are &gt;= 0.20 ppm. Circle size is scaled to lead concentration. Hover
+your cursor over points to get associated info.</p>
+<pre class="r"><code>eider_lead_fws &lt;- read.csv(&quot;data/eider_lead_fws.csv&quot;, header = TRUE)
+
+# sort by lat and lon to jitter overlapping points
+eider_lead_fws &lt;- eider_lead_fws[order(eider_lead_fws$lat, eider_lead_fws$lon), ]
+
+# jitter lat for captures at same capture site
+lat_jit &lt;- ifelse(diff(eider_lead_fws$lat) &lt; 0.001, eider_lead_fws$lat + 0.0015, eider_lead_fws$lat)
+lat_jit[280] &lt;-eider_lead_fws[280, 11]
+eider_lead_fws$lat_jit &lt;- lat_jit
+
+lon_jit &lt;- ifelse(diff(eider_lead_fws$lon) &lt; 0.001, eider_lead_fws$lon + 0.0015, eider_lead_fws$lon)
+lon_jit[280] &lt;-eider_lead_fws[280, 11]
+eider_lead_fws$lon_jit &lt;- lon_jit
+
+# map to check locations
+m &lt;- leaflet() %&gt;%
+  #setView(lng = -170, lat = 63.5, zoom = 6) %&gt;%
+  addProviderTiles(&quot;Esri.WorldImagery&quot;, group = &quot;Satellite&quot;) %&gt;%
+  addCircles(data = eider_lead_fws,
+             ~ lon_jit,
+             ~ lat_jit,
+             color = ifelse(eider_lead_fws$pb_ppm &lt; 0.20, &quot;blue&quot;,&quot;red&quot;),
+             radius = ~ pb_ppm * 100,
+             #group =&quot;FourWeeks&quot;,
+             label = paste(&quot;ID:&quot;, eider_lead_fws$band_metal, &quot;&lt;br&gt;&quot;,
+                           &quot;Sample Date:&quot;, eider_lead_fws$date_capture, &quot;&lt;br&gt;&quot;,
+                           &quot;Species:&quot;, eider_lead_fws$species, &quot;&lt;br&gt;&quot;,
+                           &quot;Sex:&quot;, eider_lead_fws$sex, &quot;&lt;br&gt;&quot;,
+                           &quot;Age:&quot;, eider_lead_fws$age, &quot;&lt;br&gt;&quot;,
+                           &quot;Pb:&quot;, eider_lead_fws$pb_ppm)  %&gt;%
+               lapply(htmltools::HTML)
+  )
+m</code></pre>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-ed24df5b4846e30c77de" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-ed24df5b4846e30c77de">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,"Satellite",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addCircles","args":[[60.82304,60.823229,60.823443,60.822256,60.82399,60.82805,60.82821,60.82821,60.82721,60.830044,60.83057,60.831424,60.83193,60.83221,60.83253,60.832687,60.83318,60.833318,60.833561,60.83367,60.8337,60.83384,60.833847,60.8341,60.83426,60.83436,60.834484,60.8346,60.83475,60.83502,60.83514,60.83543,60.836389,60.83728,60.837673,60.83771,60.83814,60.838919,60.838919,60.83943,60.83961,60.839618,60.83963,60.83983,60.83992,60.83881,60.84232,60.84253,60.84259,60.842665,60.843548,60.843548,60.843548,60.843548,60.843548,60.843548,60.843548,60.843548,60.843548,60.843548,60.843548,60.843548,60.843548,60.843548,60.843548,60.843548,60.84407,60.84434,60.84467,60.84494,60.84494,60.844977,60.845038,60.845038,60.845038,60.8451,60.845446,60.845708,60.845708,60.845708,60.845708,60.845922,60.845922,60.845922,60.84641,60.84663,60.846646,60.84682,60.84685,60.84686,60.84719,60.847751,60.847751,60.847751,60.847782,60.847782,60.847794,60.848099,60.848449,60.848527,60.84898,60.84902,60.849032,60.84918,60.84954,60.849693,60.849961,60.849961,60.849961,60.85022,60.850494,60.85061,60.850868,60.850868,60.850868,60.850868,60.85153,60.85153,60.85153,60.85153,60.851631,60.851716,60.851716,60.851716,60.851759,60.85181,60.852569,60.852569,60.85263,60.852664,60.85297,60.853256,60.853256,60.853256,60.853256,60.853292,60.853348,60.853348,60.853348,60.853348,60.853348,60.853933,60.853933,60.853933,60.853933,60.853933,60.853933,60.853933,60.853933,60.853933,60.853975,60.854001,60.854001,60.854001,60.854001,60.854001,60.854001,60.854001,60.854086,60.85441,60.854596,60.854596,60.854596,60.855062,60.855079,60.855219,60.85586,60.855967,60.85607,60.856166,60.856323,60.856381,60.856381,60.856381,60.856381,60.856754,60.856767,60.856772,60.856772,60.85746,60.85799,60.856696,60.859362,60.859866,60.860051,60.860327,60.86036,60.86071,60.86109,60.861858,60.860536,60.861937,60.865313,60.868618,60.871703,61.23919,61.23769,61.24082,61.24151,61.24151,61.24151,61.24151,61.24159,61.24159,61.24159,61.24217,61.24217,61.24217,61.24217,61.24217,61.24217,61.24217,61.24217,61.24217,61.24217,61.24217,61.24217,61.24217,61.24217,61.24217,61.24218,61.24218,61.24218,61.24218,61.24271,61.24271,61.24271,61.24271,61.24271,61.24121,61.24427,61.24277,61.24884,61.24884,61.24884,61.24903,61.24903,61.24903,61.24903,61.24903,61.24753,61.29541,61.29541,61.29541,61.29391,61.297383,61.302111,61.302111,61.303,61.303334,61.302067,61.334039,61.334039,61.334039,61.332539,61.336886,61.336886,61.336886,61.335386,61.338107,61.338107,61.336607,61.342464,61.340964,70.73251599999999,70.731016,71.22594311,71.24964759999999,71.24964759999999,71.25043699999999,71.25043699999999,71.25043699999999,71.25043699999999,71.25043699999999,71.25043699999999,71.248937,71.25537083,71.28063563000001,71.28702532,-9],[-165.00516,-165.001987,-165.001816,-165.004385,-164.99168,-164.98371,-164.98977,-164.99127,-164.98643,-164.983427,-164.99142,-164.955976,-164.95207,-164.95295,-164.9924,-164.993016,-164.94845,-164.995851,-164.990634,-165.008801,-164.94934,-164.96162,-165.018333,-164.95117,-164.98446,-164.98456,-164.999257,-164.97334,-164.97822,-164.97893,-164.97196,-165.0074,-165.006066,-164.97471,-165.010637,-165.02132,-164.97656,-164.971892,-164.971892,-165.0136,-164.94107,-164.975319,-164.93661,-164.94024,-164.965418,-164.93837,-164.94623,-164.94662,-164.96206,-165.005235,-164.951395,-164.951395,-164.951395,-164.951395,-164.951395,-164.951395,-164.951395,-164.951395,-164.951395,-164.951395,-164.951395,-164.951395,-164.951395,-164.951395,-164.951395,-164.952895,-164.93698,-164.95972,-164.950956,-164.94194,-164.94194,-164.941449,-165.005745,-165.005745,-165.007245,-164.943102,-164.977753,-164.944642,-164.944642,-164.944642,-164.946142,-164.943614,-164.943614,-164.945114,-164.93043,-164.93319,-164.963855,-164.92953,-164.94574,-164.94186,-164.95736,-164.962436,-164.962436,-164.962436,-164.979303,-164.979303,-164.992867,-164.997565,-164.953468,-164.982657,-164.97283,-164.98622,-164.973785,-164.98515,-164.98239,-164.995033,-164.996875,-164.996875,-164.998375,-164.971122,-164.990429,-164.987024,-164.974136,-164.974136,-164.974136,-164.975636,-164.97269,-164.97269,-164.97269,-164.97269,-164.984419,-164.954447,-164.954447,-164.954447,-164.989696,-164.95471,-164.968728,-164.968728,-164.983209,-164.978991,-164.97099,-165.006543,-165.006543,-165.006543,-165.008043,-164.981612,-164.994803,-164.994803,-164.994803,-164.994803,-164.996303,-164.96483,-164.96483,-164.96483,-164.96483,-164.96483,-164.96483,-164.96483,-164.96483,-164.96483,-164.99911,-164.972509,-164.972509,-164.972509,-164.972509,-164.972509,-164.972509,-164.974009,-164.95191,-164.95515,-164.959016,-164.959016,-164.959016,-164.971664,-164.97344,-164.95982,-164.95341,-164.982375,-164.95311,-164.980782,-164.980793,-164.982043,-164.982043,-164.982043,-164.983543,-164.945757,-164.967229,-165.004843,-165.006343,-164.9677,-164.96151,-164.969176,-164.96434,-165.001085,-164.967274,-164.959239,-164.95652,-164.96096,-164.96125,-164.960463,-164.962635,-164.973385,-164.969967,-164.998273,-164.990347,-165.61633,-165.61633,-165.63181,-165.62432,-165.62432,-165.62432,-165.62582,-165.61705,-165.61705,-165.61705,-165.62841,-165.62841,-165.62841,-165.62841,-165.62841,-165.62841,-165.62841,-165.62841,-165.62841,-165.62841,-165.62841,-165.62841,-165.62841,-165.62841,-165.62841,-165.631028,-165.631028,-165.631028,-165.632528,-165.62823,-165.62823,-165.62823,-165.62823,-165.62823,-165.62973,-165.62326,-165.62476,-165.61538,-165.61538,-165.61538,-165.61549,-165.61549,-165.61549,-165.61549,-165.61549,-165.61699,-165.525465,-165.525465,-165.525465,-165.525465,-165.52726,-165.546405,-165.547905,-165.54341,-165.545414,-165.567271,-165.630223,-165.630223,-165.630223,-165.630223,-165.670997,-165.670997,-165.670997,-165.672497,-165.642474,-165.642474,-165.642474,-165.652477,-165.653977,-153.718043,-153.718043,-156.7066627,-156.6224486,-156.6239486,-156.550802,-156.550802,-156.550802,-156.550802,-156.550802,-156.550802,-156.552302,-156.3564546,-156.6841967,-156.6114519,-9],[2.6,140,51,150,3.3,2,4,2.6,2,250,4,5.3,4.2,79,2.6,3.4,21,3.4,3.1,2.3,2.8,3.2,2,2.8,22,2.5,9.1,2,4.100000000000001,12,3.2,2.7,2.8,2,2,330,2,2,2,2,3.5,2.2,11,2.7,6.4,47,4,92,1.09,2.3,0.598,1.23,0.8120000000000001,0.39,1.03,0.8340000000000001,0.804,0.666,0.8999999999999999,1.32,0.8460000000000001,0.504,0.4969999999999999,1.07,0.9939999999999999,0.975,2.7,2.6,2,0.467,4.8,2.1,100,2,2,2.8,2.2,2,2,2,2,2,2,2,33,2.3,2,2.3,4.8,7.399999999999999,2.5,2.2,2.3,2,2,2,2,2.5,26,2.2,2,2,2,2,3.2,2.4,2,2,2,4.6,2,2.1,2,2,2,2,3.1,2,2,2,3.9,2,2,2,5.2,200,2,2,880.0000000000001,2,2.2,7.199999999999999,2,2,2,2,2,2,2,2,2,0.418,0.6879999999999999,0.549,1.54,0.362,0.876,0.626,0.459,0.369,2.4,191,1.68,0.679,2.98,0.754,0.454,0.538,2,2,1.43,0.681,1.12,8.1,8.1,2,13,4.8,2,2.5,3.9,1.36,2,4.67,1.4,6.5,15,2,2,2.3,2.7,8.5,2,2,890,8.300000000000001,17,19,3.5,3.8,2.3,4.3,890,5.600000000000001,110,2,2,2,2,2,2,2,2,2,2,0.63,1.31,1.89,0.416,1.4,1.71,0.619,1.6,0.6879999999999999,0.709,0.632,1.18,1.43,0.782,1.99,2.4,2,2.2,20,3.6,2,2,2,2,2,0.823,1.68,2,43,2,0.493,11.1,0.529,0.756,16.5,1.01,2,3.3,5.1,2,11,2,39,3,26,6.800000000000001,2,12,4,30,2,2,2,2,45,2,12,2,2,4.2,2.6,3.2,2.2,2.3,2.1,2.5,5.1,2,3.5,2,3.4,4,3.8,2.5,2],null,null,{"interactive":true,"className":"","stroke":true,"color":["blue","red","red","red","blue","blue","blue","blue","blue","red","blue","blue","blue","red","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","red","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","red","blue","blue","blue","blue","red","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue"],"weight":5,"opacity":0.5,"fill":true,"fillColor":["blue","red","red","red","blue","blue","blue","blue","blue","red","blue","blue","blue","red","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","red","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","red","blue","blue","blue","blue","red","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue"],"fillOpacity":0.2},null,null,["ID: 200706572 <br> Sample Date: 2019-06-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.026","ID: 200762284 <br> Sample Date: 2021-06-21 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 1.4","ID: 200762283 <br> Sample Date: 2021-06-21 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.51","ID: 200762282 <br> Sample Date: 2021-06-21 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 1.5","ID: 200762834 <br> Sample Date: 2019-06-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.033","ID: 200741804 <br> Sample Date: 2019-06-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762824 <br> Sample Date: 2019-06-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.04","ID: 200762824 <br> Sample Date: 2019-06-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.026","ID: 200704132 <br> Sample Date: 2019-06-15 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762282 <br> Sample Date: 2023-06-18 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 2.5","ID: 360701058 <br> Sample Date: 2019-06-15 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.04","ID: 200741886 <br> Sample Date: 2023-06-20 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.053","ID: 200762836 <br> Sample Date: 2019-06-14 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.042","ID: 200741810 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.79","ID: 200762825 <br> Sample Date: 2019-06-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.026","ID: 250707637 <br> Sample Date: 2025-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.034","ID: 200741809 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.21","ID: 200762839 <br> Sample Date: 2021-06-16 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.034","ID: 200762285 <br> Sample Date: 2021-06-22 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.031","ID: 200762846 <br> Sample Date: 2021-06-18 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.023","ID: 200741808 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.028","ID: 200762821 <br> Sample Date: 2019-06-09 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.032","ID: 200762845 <br> Sample Date: 2021-06-18 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200741807 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.028","ID: 200762833 <br> Sample Date: 2019-06-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.22","ID: 200762837 <br> Sample Date: 2019-06-15 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.025","ID: 200762841 <br> Sample Date: 2021-06-16 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.091","ID: 200762830 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762838 <br> Sample Date: 2019-06-17 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.041","ID: 200741806 <br> Sample Date: 2019-06-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.12","ID: 200762832 <br> Sample Date: 2019-06-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.032","ID: 200762847 <br> Sample Date: 2021-06-18 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.027","ID: 200762881 <br> Sample Date: 2023-06-24 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.028","ID: 200762829 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762844 <br> Sample Date: 2021-06-17 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762835 <br> Sample Date: 2019-06-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 3.3","ID: 200730012 <br> Sample Date: 2019-06-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762854 <br> Sample Date: 2023-08-04 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762856 <br> Sample Date: 2023-08-04 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762831 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200741833 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.035","ID: 200741842 <br> Sample Date: 2021-06-20 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.022","ID: 200741818 <br> Sample Date: 2019-06-16 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.11","ID: 200741823 <br> Sample Date: 2019-06-14 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.027","ID: 200762277 <br> Sample Date: 2023-06-22 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.064","ID: 200741803 <br> Sample Date: 2019-06-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.47","ID: 200741832 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.04","ID: 200741831 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.92","ID: 360700441 <br> Sample Date: 2018-05-14 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0109","ID: 360701059 <br> Sample Date: 2023-06-21 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.023","ID: 134782842 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00598","ID: 200762803 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.0123","ID: 200762804 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00812","ID: 200762805 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0039","ID: 200762806 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.0103","ID: 200762807 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00834","ID: 200762808 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00804","ID: 200762809 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.00666","ID: 200762810 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.009","ID: 200762811 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0132","ID: 200762812 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00846","ID: 200762813 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.00504","ID: 200762814 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.00497","ID: 200762815 <br> Sample Date: 2018-05-14 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0107","ID: 200762816 <br> Sample Date: 2018-05-14 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00994","ID: 200762817 <br> Sample Date: 2018-05-14 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.00975","ID: 200741815 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.027","ID: 200706545 <br> Sample Date: 2019-06-09 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.026","ID: 200762276 <br> Sample Date: 2023-06-19 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762828 <br> Sample Date: 2019-06-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00467","ID: 200762828 <br> Sample Date: 2019-06-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.048","ID: 200704137 <br> Sample Date: 2023-06-28 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.021","ID: 360701086 <br> Sample Date: 2023-08-07 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 1","ID: 200762292 <br> Sample Date: 2023-08-07 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 360700426 <br> Sample Date: 2023-08-07 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762300 <br> Sample Date: 2023-06-19 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.028","ID: 200741842 <br> Sample Date: 2022-06-16 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.022","ID: 200762276 <br> Sample Date: 2023-08-03 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762853 <br> Sample Date: 2023-08-03 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200762857 <br> Sample Date: 2023-08-03 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200762858 <br> Sample Date: 2023-08-03 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200741842 <br> Sample Date: 2023-08-03 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762859 <br> Sample Date: 2023-08-03 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200762884 <br> Sample Date: 2023-08-03 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200741821 <br> Sample Date: 2019-06-14 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.33","ID: 200741802 <br> Sample Date: 2019-06-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.023","ID: 200762890 <br> Sample Date: 2024-06-28 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200741814 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.023","ID: 200741816 <br> Sample Date: 2019-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.048","ID: 200762827 <br> Sample Date: 2019-06-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.074","ID: 200762820 <br> Sample Date: 2019-06-09 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.025","ID: 200762890 <br> Sample Date: 2024-07-27 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.022","ID: 250707625 <br> Sample Date: 2024-07-27 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.023","ID: 250707623 <br> Sample Date: 2024-07-27 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762321 <br> Sample Date: 2024-07-24 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 250707615 <br> Sample Date: 2024-07-24 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 360700431 <br> Sample Date: 2024-07-26 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200706553 <br> Sample Date: 2021-06-15 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.025","ID: 200762257 <br> Sample Date: 2023-07-30 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.26","ID: 200762299 <br> Sample Date: 2023-06-19 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.022","ID: 200706527 <br> Sample Date: 2019-06-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200741811 <br> Sample Date: 2019-06-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762275 <br> Sample Date: 2023-06-17 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 134752211 <br> Sample Date: 2019-06-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200741835 <br> Sample Date: 2019-06-14 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.032","ID: 200762340 <br> Sample Date: 2023-08-06 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.024","ID: 200762291 <br> Sample Date: 2023-08-06 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200762295 <br> Sample Date: 2023-08-06 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762296 <br> Sample Date: 2023-08-06 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 360701057 <br> Sample Date: 2021-06-15 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.046","ID: 200762855 <br> Sample Date: 2023-08-06 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762840 <br> Sample Date: 2021-06-15 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.021","ID: 200741836 <br> Sample Date: 2023-07-31 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762278 <br> Sample Date: 2023-07-31 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762279 <br> Sample Date: 2023-07-31 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762298 <br> Sample Date: 2023-07-31 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200704154 <br> Sample Date: 2023-07-31 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.031","ID: 200762297 <br> Sample Date: 2023-07-31 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200762849 <br> Sample Date: 2023-07-31 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762888 <br> Sample Date: 2023-07-31 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200762848 <br> Sample Date: 2021-06-19 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.039","ID: 200762303 <br> Sample Date: 2023-07-30 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762304 <br> Sample Date: 2023-07-30 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762889 <br> Sample Date: 2023-07-30 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762842 <br> Sample Date: 2021-06-17 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.052","ID: 200741813 <br> Sample Date: 2019-06-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 2","ID: 200762849 <br> Sample Date: 2024-07-24 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 250707614 <br> Sample Date: 2024-07-24 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 250707636 <br> Sample Date: 2025-06-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 8.8","ID: 200741890 <br> Sample Date: 2023-06-18 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200741812 <br> Sample Date: 2019-06-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.022","ID: 200762883 <br> Sample Date: 2023-08-02 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.072","ID: 200706524 <br> Sample Date: 2023-08-02 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762882 <br> Sample Date: 2023-08-02 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762885 <br> Sample Date: 2023-08-02 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762326 <br> Sample Date: 2024-07-26 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762851 <br> Sample Date: 2023-08-01 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762852 <br> Sample Date: 2023-08-01 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762860 <br> Sample Date: 2023-08-01 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200762886 <br> Sample Date: 2023-08-01 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762887 <br> Sample Date: 2023-08-01 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 198729016 <br> Sample Date: 2018-05-08 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00418","ID: 198729017 <br> Sample Date: 2018-05-08 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.00688","ID: 198729018 <br> Sample Date: 2018-05-09 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.00549","ID: 198729019 <br> Sample Date: 2018-05-09 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0154","ID: 198729020 <br> Sample Date: 2018-05-09 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00362","ID: 198729021 <br> Sample Date: 2018-05-09 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.00876","ID: 198729022 <br> Sample Date: 2018-05-09 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.00626","ID: 198729023 <br> Sample Date: 2018-05-09 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.00459","ID: 360700432 <br> Sample Date: 2018-05-09 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00369","ID: 200762274 <br> Sample Date: 2023-08-01 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.024","ID: 198729024 <br> Sample Date: 2018-05-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 1.91","ID: 198729025 <br> Sample Date: 2018-05-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0168","ID: 198729026 <br> Sample Date: 2018-05-10 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.00679","ID: 198729027 <br> Sample Date: 2018-05-10 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.0298","ID: 198729028 <br> Sample Date: 2018-05-10 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.00754","ID: 200704138 <br> Sample Date: 2018-05-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00454","ID: 200704149 <br> Sample Date: 2018-05-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00538","ID: 200741889 <br> Sample Date: 2023-06-20 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762822 <br> Sample Date: 2019-06-09 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 0 <br> Sample Date: 2018-05-12 <br> Species: COEI <br> Sex: male <br> Age: AHY <br> Pb: 0.0143","ID: 200706574 <br> Sample Date: 2018-05-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00681","ID: 200762802 <br> Sample Date: 2018-05-12 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.0112","ID: 200762849 <br> Sample Date: 2021-06-20 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.081","ID: 200762849 <br> Sample Date: 2022-06-17 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.081","ID: 200762273 <br> Sample Date: 2023-06-17 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762823 <br> Sample Date: 2019-06-09 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.13","ID: 200762843 <br> Sample Date: 2021-06-17 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.048","ID: 200730039 <br> Sample Date: 2019-06-16 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200706516 <br> Sample Date: 2024-06-23 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.025","ID: 200762256 <br> Sample Date: 2022-06-18 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.039","ID: 198729029 <br> Sample Date: 2018-05-11 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.0136","ID: 198729030 <br> Sample Date: 2018-05-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200706535 <br> Sample Date: 2018-05-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0467","ID: 200762801 <br> Sample Date: 2018-05-11 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.014","ID: 250707681 <br> Sample Date: 2024-06-22 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.065","ID: 200706599 <br> Sample Date: 2024-06-01 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.15","ID: 200762335 <br> Sample Date: 2023-08-06 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200762334 <br> Sample Date: 2023-08-06 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200762819 <br> Sample Date: 2019-06-03 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.023","ID: 200741819 <br> Sample Date: 2019-06-18 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.027","ID: 200762309 <br> Sample Date: 2023-07-31 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.085","ID: 200762309 <br> Sample Date: 2024-06-23 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762344 <br> Sample Date: 2024-06-19 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762286 <br> Sample Date: 2023-06-17 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 8.9","ID: 200762257 <br> Sample Date: 2022-06-18 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.083","ID: 360700473 <br> Sample Date: 2019-06-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.17","ID: 200741817 <br> Sample Date: 2019-06-14 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.19","ID: 200706599 <br> Sample Date: 2019-06-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.035","ID: 200762259 <br> Sample Date: 2022-06-19 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.038","ID: 250707619 <br> Sample Date: 2024-06-29 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.023","ID: 200762286 <br> Sample Date: 2022-06-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.043","ID: 200762260 <br> Sample Date: 2022-06-20 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 8.9","ID: 200762850 <br> Sample Date: 2021-06-20 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.056","ID: 200762281 <br> Sample Date: 2021-06-20 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 1.1","ID: 200741866 <br> Sample Date: 2022-05-17 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200741867 <br> Sample Date: 2022-05-17 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.02","ID: 200741878 <br> Sample Date: 2022-05-14 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.02","ID: 200741874 <br> Sample Date: 2022-05-13 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.02","ID: 200741876 <br> Sample Date: 2022-05-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200741877 <br> Sample Date: 2022-05-13 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.02","ID: 200741891 <br> Sample Date: 2022-05-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200741868 <br> Sample Date: 2022-05-18 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.02","ID: 200741869 <br> Sample Date: 2022-05-18 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.02","ID: 200741870 <br> Sample Date: 2022-05-18 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 198729006 <br> Sample Date: 2018-05-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0063","ID: 198729008 <br> Sample Date: 2018-05-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0131","ID: 198729004 <br> Sample Date: 2018-05-11 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.0189","ID: 198729009 <br> Sample Date: 2018-05-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00416","ID: 198729005 <br> Sample Date: 2018-05-12 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.014","ID: 198729010 <br> Sample Date: 2018-05-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0171","ID: 198729012 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00619","ID: 198729013 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.016","ID: 198729014 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.00688","ID: 198729015 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00709","ID: 200762861 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.00632","ID: 200762863 <br> Sample Date: 2018-05-14 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.0118","ID: 200762864 <br> Sample Date: 2018-05-14 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0143","ID: 200762865 <br> Sample Date: 2018-05-14 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.00782","ID: 200762868 <br> Sample Date: 2018-05-15 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.0199","ID: 200741861 <br> Sample Date: 2022-05-15 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.024","ID: 200741862 <br> Sample Date: 2022-05-15 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.02","ID: 200741879 <br> Sample Date: 2022-05-15 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.022","ID: 200741880 <br> Sample Date: 2022-05-15 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.2","ID: 200741871 <br> Sample Date: 2022-05-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.036","ID: 200741872 <br> Sample Date: 2022-05-12 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.02","ID: 200741873 <br> Sample Date: 2022-05-12 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200741875 <br> Sample Date: 2022-05-12 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.02","ID: 200741892 <br> Sample Date: 2022-05-19 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200741893 <br> Sample Date: 2022-05-19 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.02","ID: 198729007 <br> Sample Date: 2018-05-09 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.00823","ID: 198729002 <br> Sample Date: 2018-05-18 <br> Species: SPEI <br> Sex: male <br> Age: AHY <br> Pb: 0.0168","ID: 200741863 <br> Sample Date: 2022-05-16 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.02","ID: 200741864 <br> Sample Date: 2022-05-16 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.43","ID: 200741865 <br> Sample Date: 2022-05-16 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.02","ID: 198729003 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.00493","ID: 198729011 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.111","ID: 200762870 <br> Sample Date: 2018-05-13 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.00529","ID: 200762862 <br> Sample Date: 2018-05-14 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.00756","ID: 200762866 <br> Sample Date: 2018-05-15 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.165","ID: 200762867 <br> Sample Date: 2018-05-15 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.0101","ID: 200762896 <br> Sample Date: 2022-07-29 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200762897 <br> Sample Date: 2022-07-29 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.033","ID: 200762898 <br> Sample Date: 2022-07-29 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.051","ID: 200762900 <br> Sample Date: 2022-07-29 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 226703029 <br> Sample Date: 2022-07-28 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.11","ID: 200762895 <br> Sample Date: 2022-07-28 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 226703001 <br> Sample Date: 2022-07-28 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.39","ID: 200762893 <br> Sample Date: 2022-07-27 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.03","ID: 200762894 <br> Sample Date: 2022-07-28 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.26","ID: 226703019 <br> Sample Date: 2022-07-30 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.068","ID: 200762261 <br> Sample Date: 2022-07-31 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762262 <br> Sample Date: 2022-07-31 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.12","ID: 200762263 <br> Sample Date: 2022-07-31 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.04","ID: 200762899 <br> Sample Date: 2022-07-31 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.3","ID: 200762270 <br> Sample Date: 2022-08-02 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762271 <br> Sample Date: 2022-08-02 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762272 <br> Sample Date: 2022-08-02 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200762877 <br> Sample Date: 2022-08-02 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200762265 <br> Sample Date: 2022-08-01 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.45","ID: 200762266 <br> Sample Date: 2022-08-01 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762267 <br> Sample Date: 2022-08-01 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.12","ID: 200762268 <br> Sample Date: 2022-08-01 <br> Species: SPEI <br> Sex: male <br> Age: local <br> Pb: 0.02","ID: 200762269 <br> Sample Date: 2022-08-01 <br> Species: SPEI <br> Sex: female <br> Age: local <br> Pb: 0.02","ID: 200741894 <br> Sample Date: 2022-06-10 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.042","ID: 200741900 <br> Sample Date: 2022-06-10 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.026","ID: 198729048 <br> Sample Date: 2022-07-16 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.032","ID: 200741856 <br> Sample Date: 2022-06-19 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.022","ID: 200741857 <br> Sample Date: 2022-06-19 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.023","ID: 200741851 <br> Sample Date: 2022-06-10 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.021","ID: 176722676 <br> Sample Date: 2022-06-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.025","ID: 200741852 <br> Sample Date: 2022-06-11 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.051","ID: 176722663 <br> Sample Date: 2022-06-14 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02","ID: 200741853 <br> Sample Date: 2022-06-14 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.035","ID: 200741854 <br> Sample Date: 2022-06-14 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.02","ID: 200741855 <br> Sample Date: 2022-06-18 <br> Species: SPEI <br> Sex: male <br> Age: ASY <br> Pb: 0.034","ID: 198729052 <br> Sample Date: 2022-07-18 <br> Species: KIEI <br> Sex: female <br> Age: AHY <br> Pb: 0.04","ID: 198723458 <br> Sample Date: 2022-07-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.038","ID: 198723454 <br> Sample Date: 2022-07-15 <br> Species: KIEI <br> Sex: female <br> Age: AHY <br> Pb: 0.025","ID: 198729046 <br> Sample Date: 2022-07-11 <br> Species: SPEI <br> Sex: female <br> Age: AHY <br> Pb: 0.02"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]}],"limits":{"lat":[-9,71.28702532],"lng":[-165.672497,-9]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="lead-exposure-rates" class="section level2">
+<h2>Lead Exposure Rates</h2>
+<pre class="r"><code># subset SPEI
+lead_spei &lt;- subset(eider_lead_fws, species == &quot;SPEI&quot;)
+# create indicator variable for lead levels &lt;= 0.20
+lead_spei$exposed &lt;- ifelse(lead_spei$pb_ppm &gt;= 0.20, 1,0)
+lead_spei$notexp &lt;- ifelse(lead_spei$pb_ppm &lt;= 0.20, 1,0)
+# aggregate by site and period
+lead_spei_exp &lt;- aggregate(lead_spei$exposed ~ lead_spei$site_study*lead_spei$capture_period, FUN = &quot;sum&quot;)
+lead_spei_notexp &lt;- aggregate(lead_spei$notexp ~ lead_spei$site_study*lead_spei$capture_period, FUN = &quot;sum&quot;)
+# cbind 
+lead_table &lt;- cbind.data.frame(lead_spei_exp[1:3], lead_spei_notexp[3])
+colnames(lead_table) &lt;- c(&quot;Study site&quot;, &quot;Status&quot;, &quot;No. exposed&quot;, &quot;No. unexposed&quot;)
+# calc prop exp
+lead_table$`Proportion exposed` &lt;- as.numeric(lead_table$`No. exposed`/(lead_table$`No. exposed`+lead_table$`No. unexposed`))
+lead_table[ , 5] = round(lead_table[ ,5], 2)
+# sort
+lead_table &lt;- lead_table[order(lead_table$`Study site`, lead_table$Status, decreasing = FALSE), ]
+
+# Table formatting in Kable package
+t1&lt;-kbl(lead_table[ ,1:5], caption=&quot;Spectacled Eider blood lead levels above 0.20 ppm (exposed) and below 0.20 ppm (unexposed) from samples collected on the Yukon-Kuskokwim Delta and Arctic Coastal Plain, Alaska, 2018-2022.&quot;)
+kable_styling(t1,bootstrap_options=&quot;striped&quot;, full_width=FALSE, position=&quot;center&quot;)</code></pre>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+Spectacled Eider blood lead levels above 0.20 ppm (exposed) and below
+0.20 ppm (unexposed) from samples collected on the Yukon-Kuskokwim Delta
+and Arctic Coastal Plain, Alaska, 2018-2022.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+Study site
+</th>
+<th style="text-align:left;">
+Status
+</th>
+<th style="text-align:right;">
+No. exposed
+</th>
+<th style="text-align:right;">
+No. unexposed
+</th>
+<th style="text-align:right;">
+Proportion exposed
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+Kashunuk
+</td>
+<td style="text-align:left;">
+brood
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+19
+</td>
+<td style="text-align:right;">
+0.17
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+Kigigak
+</td>
+<td style="text-align:left;">
+arrival
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+39
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:left;">
+Kigigak
+</td>
+<td style="text-align:left;">
+brood
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:right;">
+0.04
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+7
+</td>
+<td style="text-align:left;">
+Kigigak
+</td>
+<td style="text-align:left;">
+incubation
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+87
+</td>
+<td style="text-align:right;">
+0.16
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+Teshekpuk
+</td>
+<td style="text-align:left;">
+arrival
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+Tutakoke
+</td>
+<td style="text-align:left;">
+arrival
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+0.04
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+Utqiagvik
+</td>
+<td style="text-align:left;">
+arrival
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+8
+</td>
+<td style="text-align:left;">
+Utqiagvik
+</td>
+<td style="text-align:left;">
+incubation
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="histograms-by-site-and-capture-period" class="section level2">
+<h2>Histograms by site and capture period</h2>
+<pre class="r"><code># create site-capture period variable for partitioning data for histograms
+lead_spei$site_stage &lt;- paste(lead_spei$site_study, lead_spei$capture_period, sep = &quot;_&quot;)
+
+# create histograms
+for(var in unique(lead_spei$site_stage)){
+  print(ggplot(lead_spei[lead_spei$site_stage==var,], aes(pb_ppm)) +
+          geom_histogram(binwidth = 0.1, 
+                         color = &quot;white&quot;, 
+                         fill = &quot;blue&quot;) +
+          # put x-axis labels where there are values
+          scale_x_continuous(name = &quot;Blood lead (ppm)&quot;, breaks = c(0.0, 0.15, 0.1, 0.2, 0.3, 0.4, 0.5, 0.8, 0.9, 1.1, 1.4, 1.5, 2.0, 3.3, 8.9)) +
+          scale_y_continuous(name = &quot;Count&quot;) +
+          geom_vline(xintercept = 0.20, color = &quot;red&quot;)  + # line at level interpreted as indicating exposure
+          ggtitle(label = var)
+  )
+}</code></pre>
+<p><img src="figure/map_eider_lead_fws_20251121.Rmd/histograms-1.png" width="672" style="display: block; margin: auto;" /><img src="figure/map_eider_lead_fws_20251121.Rmd/histograms-2.png" width="672" style="display: block; margin: auto;" /><img src="figure/map_eider_lead_fws_20251121.Rmd/histograms-3.png" width="672" style="display: block; margin: auto;" /><img src="figure/map_eider_lead_fws_20251121.Rmd/histograms-4.png" width="672" style="display: block; margin: auto;" /><img src="figure/map_eider_lead_fws_20251121.Rmd/histograms-5.png" width="672" style="display: block; margin: auto;" /><img src="figure/map_eider_lead_fws_20251121.Rmd/histograms-6.png" width="672" style="display: block; margin: auto;" /><img src="figure/map_eider_lead_fws_20251121.Rmd/histograms-7.png" width="672" style="display: block; margin: auto;" /><img src="figure/map_eider_lead_fws_20251121.Rmd/histograms-8.png" width="672" style="display: block; margin: auto;" /></p>
+<br>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+Session information
+</button>
+</p>
+<div id="workflowr-sessioninfo" class="collapse">
+<pre class="r"><code>sessionInfo()</code></pre>
+<pre><code>R version 4.5.1 (2025-06-13 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 22631)
+
+Matrix products: default
+  LAPACK version 3.12.1
+
+locale:
+[1] LC_COLLATE=English_United States.utf8 
+[2] LC_CTYPE=English_United States.utf8   
+[3] LC_MONETARY=English_United States.utf8
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.utf8    
+
+time zone: America/Anchorage
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] kableExtra_1.4.0 lubridate_1.9.4  forcats_1.0.0    stringr_1.5.1   
+ [5] dplyr_1.1.4      purrr_1.1.0      readr_2.1.5      tidyr_1.3.1     
+ [9] tibble_3.3.0     ggplot2_3.5.2    tidyverse_2.0.0  leaflet_2.2.2   
+[13] workflowr_1.7.1 
+
+loaded via a namespace (and not attached):
+ [1] sass_0.4.10             generics_0.1.4          xml2_1.3.8             
+ [4] stringi_1.8.7           hms_1.1.3               digest_0.6.37          
+ [7] magrittr_2.0.3          timechange_0.3.0        evaluate_1.0.4         
+[10] grid_4.5.1              RColorBrewer_1.1-3      fastmap_1.2.0          
+[13] rprojroot_2.1.0         jsonlite_2.0.0          processx_3.8.6         
+[16] whisker_0.4.1           ps_1.9.1                promises_1.3.3         
+[19] httr_1.4.7              viridisLite_0.4.2       crosstalk_1.2.1        
+[22] scales_1.4.0            textshaping_1.0.1       jquerylib_0.1.4        
+[25] cli_3.6.5               rlang_1.1.6             withr_3.0.2            
+[28] cachem_1.1.0            yaml_2.3.10             tools_4.5.1            
+[31] tzdb_0.5.0              httpuv_1.6.16           vctrs_0.6.5            
+[34] R6_2.6.1                lifecycle_1.0.4         git2r_0.36.2           
+[37] leaflet.providers_2.0.0 fs_1.6.6                htmlwidgets_1.6.4      
+[40] pkgconfig_2.0.3         callr_3.7.6             pillar_1.11.0          
+[43] bslib_0.9.0             later_1.4.2             gtable_0.3.6           
+[46] glue_1.8.0              Rcpp_1.1.0              systemfonts_1.2.3      
+[49] xfun_0.52               tidyselect_1.2.1        rstudioapi_0.17.1      
+[52] knitr_1.50              farver_2.1.2            htmltools_0.5.8.1      
+[55] labeling_0.4.3          svglite_2.2.1           rmarkdown_2.29         
+[58] compiler_4.5.1          getPass_0.2-4          </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- Adjust MathJax settings so that all math formulae are shown using
+TeX fonts only; see
+https://docs.mathjax.org/en/latest/web/configuration.html. This will make
+the presentation more consistent at the cost of the webpage sometimes
+taking slightly longer to load. Note that this only works because the
+footer is added to webpages before the MathJax javascript. -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

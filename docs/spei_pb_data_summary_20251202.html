@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="" />
+
+<meta name="date" content="2025-12-09" />
+
+<title>Blood lead concentration data summary</title>
+
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<link rel="icon" href="https://github.com/workflowr/workflowr-assets/raw/main/img/reproducible.png">
+<!-- Add a small amount of space between sections. -->
+<style type="text/css">
+div.section {
+  padding-top: 12px;
+}
+</style>
+
+
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">spei_lead</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="map_eider_lead_fws.html">Map</a>
+</li>
+<li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="license.html">License</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/DJRIZZ/spei_lead">
+    <span class="fab fa-github"></span>
+     
+    Source code
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Blood lead concentration data summary</h1>
+<h4 class="author"></h4>
+<h4 class="date">2025-12-09</h4>
+
+</div>
+
+
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span>
+</button>
+</p>
+<div id="workflowr-report" class="collapse">
+<ul class="nav nav-tabs">
+<li class="active">
+<a data-toggle="tab" href="#summary">Summary</a>
+</li>
+<li>
+<a data-toggle="tab" href="#checks"> Checks <span
+class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> </a>
+</li>
+<li>
+<a data-toggle="tab" href="#versions">Past versions</a>
+</li>
+</ul>
+<div class="tab-content">
+<div id="summary" class="tab-pane fade in active">
+<p>
+<strong>Last updated:</strong> 2025-12-09
+</p>
+<p>
+<strong>Checks:</strong> <span
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> 1
+</p>
+<p>
+<strong>Knit directory:</strong> <code>spei_lead/</code> <span
+class="glyphicon glyphicon-question-sign" aria-hidden="true"
+title="This is the local directory in which the code in this file was executed.">
+</span>
+</p>
+<p>
+This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a>
+analysis was created with <a
+  href="https://github.com/workflowr/workflowr">workflowr</a> (version
+1.7.1). The <em>Checks</em> tab describes the reproducibility checks
+that were applied when the results were created. The <em>Past
+versions</em> tab lists the development history.
+</p>
+<hr>
+</div>
+<div id="checks" class="tab-pane fade">
+<div id="workflowr-checks" class="panel-group">
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
+changes </a>
+</p>
+</div>
+<div id="strongRMarkdownfilestronguncommittedchanges"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>The R Markdown is untracked by Git. To know which version of the R
+Markdown file created these results, you’ll want to first commit it to
+the Git repo. If you’re still working on the analysis, you can ignore
+this warning. When you’re finished, you can run
+<code>wflow_publish</code> to commit the R Markdown file and build the
+HTML.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
+</p>
+</div>
+<div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! The global environment was empty. Objects defined in the
+global environment can affect the analysis in your R Markdown file in
+unknown ways. For reproduciblity it’s best to always run the code in an
+empty environment.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed20230228code">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Seed:</strong>
+<code>set.seed(20230228)</code> </a>
+</p>
+</div>
+<div id="strongSeedstrongcodesetseed20230228code"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>The command <code>set.seed(20230228)</code> was run prior to running
+the code in the R Markdown file. Setting a seed ensures that any results
+that rely on randomness, e.g. subsampling or permutations, are
+reproducible.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Session information:</strong>
+recorded </a>
+</p>
+</div>
+<div id="strongSessioninformationstrongrecorded"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Recording the operating system, R version, and package
+versions is critical for reproducibility.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+</p>
+</div>
+<div id="strongCachestrongnone" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Nice! There were no cached chunks for this analysis, so you can be
+confident that you successfully produced the results during this
+run.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
+</p>
+</div>
+<div id="strongFilepathsstrongrelative" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Using relative paths to the files within your workflowr
+project makes it easier to run your code on other machines.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDJRIZZspeileadtreea41a727c7c9898c16aeaedd47d105379bc614c63targetblanka41a727a">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Repository version:</strong>
+<a href="https://github.com/DJRIZZ/spei_lead/tree/a41a727c7c9898c16aeaedd47d105379bc614c63" target="_blank">a41a727</a>
+</a>
+</p>
+</div>
+<div
+id="strongRepositoryversionstrongahrefhttpsgithubcomDJRIZZspeileadtreea41a727c7c9898c16aeaedd47d105379bc614c63targetblanka41a727a"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>
+Great! You are using Git for version control. Tracking code development
+and connecting the code version to the results is critical for
+reproducibility.
+</p>
+<p>
+The results in this page were generated with repository version
+<a href="https://github.com/DJRIZZ/spei_lead/tree/a41a727c7c9898c16aeaedd47d105379bc614c63" target="_blank">a41a727</a>.
+See the <em>Past versions</em> tab to see a history of the changes made
+to the R Markdown and HTML files.
+</p>
+<p>
+Note that you need to be careful to ensure that all relevant files for
+the analysis have been committed to Git prior to generating the results
+(you can use <code>wflow_publish</code> or
+<code>wflow_git_commit</code>). workflowr only checks the R Markdown
+file, but you know if there are other scripts or data files that it
+depends on. Below is the status of the Git repository when the results
+were generated:
+</p>
+<pre><code>
+Ignored files:
+    Ignored:    .Rhistory
+    Ignored:    .Rproj.user/
+    Ignored:    admin/
+    Ignored:    analysis/figure/
+    Ignored:    documents/
+    Ignored:    protocols/
+
+Untracked files:
+    Untracked:  analysis/map_eider_lead_fws_20251121.Rmd
+    Untracked:  analysis/spei_pb_data_summary_20251202.Rmd
+    Untracked:  code/est_exp_prob_create_plots_spei_lead_20231211.R
+    Untracked:  data/7030169 data.csv
+    Untracked:  data/README_spei_blood_lead_data.txt
+    Untracked:  data/Rizzolo Lead VSEP22-045 E-report.xlsx
+    Untracked:  data/eider_blood_samples_bands_utq_2022.csv
+    Untracked:  data/eider_lead_fws.csv
+    Untracked:  data/eider_lead_fws_2018-2022.csv
+    Untracked:  data/eider_lead_fws_2018-2025.csv
+    Untracked:  data/eider_lead_fws_2018-2025_20251203.csv
+    Untracked:  data/eider_lead_fws_2023-2025_v2.csv
+    Untracked:  data/eider_lead_fws_FOR_REP_SELECTION.csv
+    Untracked:  data/leadcare2_validation/
+    Untracked:  data/pb_merged_all_msResults_lc2Results_20251124.csv
+    Untracked:  data/qtbl_pb_2023-2025.xlsx
+    Untracked:  data/sample_id_spei_blood_lead_2018.csv
+    Untracked:  data/samples_analyzed_2018/
+    Untracked:  data/samples_analyzed_2022/
+    Untracked:  data/samples_analyzed_2025/
+    Untracked:  data/samples_leadCare2_results/
+    Untracked:  data/sourced/
+    Untracked:  data/spei_pb_all_2018-2025.csv
+    Untracked:  data/spei_pb_ms_lc_20251124
+    Untracked:  data/spei_pb_ms_lc_20251124.csv
+    Untracked:  metadata/
+
+Unstaged changes:
+    Modified:   .gitignore
+    Modified:   analysis/spei_pb_plot_validation_mass_spec_voltem.Rmd
+
+</code></pre>
+<p>
+Note that any generated files, e.g. HTML, png, CSS, etc., are not
+included in this status report because it is ok for generated content to
+have uncommitted changes.
+</p>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="versions" class="tab-pane fade">
+<p>
+There are no past versions. Publish this analysis with
+<code>wflow_publish()</code> to start tracking its development.
+</p>
+<hr>
+</div>
+</div>
+</div>
+<div id="background" class="section level2">
+<h2>Background</h2>
+<p>Since 2018, the US Fish and Wildlife Service Endangered Species
+Recovery Program, out of the Northern Alaska Fish and Wildlife Field
+Office, has collected blood samples from Spectacled Eiders in Alaska to
+test for exposure to lead. Expsoure to spent lead shotgun pellets was
+demonstrated to have important negative local effects on spectacled
+eider survival in the 1990s (Flint et al. 2016 and references therein).
+We collected samples to estimate lead exposure rates 30 years after the
+use of lead pellets was prohibited in the Yukon-Kuskokwim Delta
+Region.</p>
+</div>
+<div id="methods" class="section level2">
+<h2>Methods</h2>
+<p>We collected blood samples opportunistically during projects that
+required capturing and handling spectacled eiders for other objectives.
+These projects included captures to deploy satellite transmitters at
+Kigigak Island (2018, 2023), the Tutakoke River (2018, 2022), the
+Kashunuk River (2022), Utqiagvik (2022), and Teshekpuk Lake (2022). We
+also collected samples from spectacled eiders captured for banding at
+Kigigak Island (2019, 2021-2025). All captures for satellite transmitter
+deployments occurred when eiders were arriving to the breeding areas,
+prior to mean nest initiation, except at the Kashunuk River and Kigigak
+Island in 2022 and 2023, respectively, when we captured eiders during
+the brood rearing period. We also collected blood samples from eiders
+captured during nest incubation for banding in 2019, 2021-2025.</p>
+<p>We captured eiders at arrival using vertical mist nets setup in lakes
+with decoys. During incubation, we captured females on nests using bow
+nets, and during brood rearing, we captured ducklings and associated
+females by herding broods into mist nets setup vertically in lakes.</p>
+<p>We collected blood samples from captured eiders using venipuncture of
+either the jugular or tibiotarsal veins. Jugular blood samples were 1-4
+mL and collected using 21-22 gauge needles and 6 mL syringes; samples
+were transferred into 4 mL heparinized Vaccutainers. Tibiotarsal blood
+samples were &lt; 0.5 mL and collected by pricking the vein with a 25 g
+needle and collecting blood in 1-3 capillary tubes which were
+transferred into a 1 mL heparinized MicroTainer.</p>
+<p>All samples were stored frozen in the field and laboratory until
+analysis. Samples with volumes &gt; 0.5 mL were analyzed using mass
+spectrometry. Samples with volumes &lt; 0.5 mL were analyzed using
+voltammetry.</p>
+<p>Samples collected in 2018, all &gt; 0.5 mL, were analyzed at the
+Texas A &amp; M Agrilife Research Veterinary Integrative Biosciences
+Laboratory (n = 66). Samples were freeze dried and homogenized and then
+digested and analyzed as dry samples. Results were converted to
+concentrations on the scale of wet mass using the mean moisture content
+for whole blood of 78.6% (CV = 2.51%). Lead concentration was determined
+using inductively coupled plasma-mass spectroscopy. Quality
+assurance-quality control procedures included procedural blanks (n = 4,
+mean blank equivalent concentration &lt; 0.00825), duplicate samples (n
+= 3, mean relative difference 3.46%, range 0.38 to 7.48%), and standard
+reference material percent spike recoveries (mean 103.99%, range 99.16%
+to 107.56%). Analytical methods, results, and QAQC procedures were
+described in the summary report provided by TAMN
+(report_eider_2018_lead_7030169_results.pdf). The lower detection limit
+for methodology used in 2018 was &lt; 0.00369 ppm and no upper
+limit.</p>
+<p>Blood samples &gt; 0.5 mL collected 2021-2025 were analyzed in two
+batches (samples collected 2021-2022 analyzed in 2022, n = X, 2023-2025
+analyzed in 2025, n = X) at the Washington Animal Disease Diagnostic
+Laboratory using inductively coupled plasma mass spectrometry and nitric
+acid digestion. QAQC tests, including duplicates, blanks, and reference
+samples, were run on 10% of samples. QAQC results were all acceptable
+and were provided by WADDL in the file
+eider_lead_2022_quality_control_case_VSEP22-045E.xlsx. The lower
+detection limit for methodology used in 2022 and 2025 was &lt; 0.02 ppm
+and no upper limit.</p>
+<p>Blood samples &lt; 0.5 mL collected 2023-2025 (n = X) were analyzed
+using a LeadCare II blood point-of-care blood lead testing system
+(Meridian Bioscience), which uses anodic stripping voltammetry to
+quantify lead concentration in whole blood. Technicians in the USFWS
+Fairbanks Fish and Wildlife Field Office Laboratory tested samples with
+LeadCare II following instructional materials and the LeadCare II User’s
+Guide. We also used the LeadCare II system to test a subset of samples
+analyzed using mass spectrometry to assess the agreement of results from
+the two methods using mass specrometry results as the standard for
+comparison. Detection limits for LeadCare II are &gt; 0.033 ppm and &lt;
+0.65 ppm. Samples outside of this range are reported as either below or
+above the detection limits of the instrument.</p>
+<div id="voltammetry-validation" class="section level3">
+<h3>Voltammetry Validation</h3>
+<p>To validate LeadCare II test results that were run on previously
+frozen samples treated with heparin, we reassigned mass spectrometry
+results at values below the LeadCare II detection limit to that limit,
+0.033 ppm, and values above the LeadCare II test limit that test limit
+of 0.65 ppm. For LeadCare II results between the lower and upper
+detection limits, we calculated differences between mass spectometry
+results and LeadCare II results. We then fit a linear model to
+log-transformed lead concentration values treating the mass spectrometry
+results as the response variable and log-transformed LeadCare II results
+as the explanatory variable. We used model parameters to examine
+agreement between the results with good agreement indicated by a
+y-intercept estimate of zero and a slope estimate of 1.</p>
+</div>
+<div id="lead-exposure-threshold" class="section level3">
+<h3>Lead Exposure Threshold</h3>
+<p>We categorized lead exposure based on accepted thresholds: &gt; 0.20
+ppm associated with local, point-source exposure to lead; &gt; 0.60 ppm
+associated with lead toxicosis.</p>
+</div>
+</div>
+<div id="results" class="section level2">
+<h2>Results</h2>
+<pre class="r"><code># load mass spec lead data (from Texas A&amp;M Univ, and Washington State)
+ms &lt;- read.csv(&quot;data/eider_lead_fws_2018-2025_20251203.csv&quot;)
+
+# format data
+ms$dt_sampled &lt;- as.Date(ms$dt_sampled, format = &quot;%Y-%m-%d&quot;)
+
+# check data
+#sum_ms &lt;- summary(ms)
+#sum_ms 
+
+# load Lead Care II results
+#lc &lt;- read.csv(&quot;data/spei_blood_lead_validation_results_20240306.csv&quot;)
+#lc &lt;- read.csv(&quot;data/samples_leadCare2_results/data_leadCare2_results_20251125.csv&quot;)
+lc &lt;- read.csv(&quot;data/samples_leadCare2_results/data_leadCare2_results_20251203.csv&quot;) #20241203 version includes covariates
+lc$pb_blood_ppm &lt;- lc$val_blood_lead_ug.dL*0.01 # convert lead from units of ug/dL to ppm
+
+# remove replicates - samples measured more than once in the LeadCare II instrument, here is_replicate = 1 for the second sample result for a given sample. Removing replicate = 1 makes all LeadCare II results after this filter unique. Replicates can be used for validation of LeadCare II.
+lc &lt;- subset(lc, is_replicate != 1)
+
+# format date
+lc$dt_sampled &lt;- as.Date(lc$dt_sampled, format = &quot;%Y-%m-%d&quot;)
+# specify relevant columns
+keep &lt;- c(&quot;id_metalBand&quot;, &quot;pb_blood_ppm&quot;, &quot;cat_analysis&quot;, &quot;cat_detectLimit&quot;, &quot;id_species&quot;, &quot;dt_sampled&quot;, &quot;cat_periodCapt&quot;,                    &quot;id_studySite&quot;, &quot;val_lat&quot;, &quot;val_lon&quot;, &quot;is_recap&quot;, &quot;cat_sex&quot;, &quot;cat_age&quot;, &quot;val_bodyMass_g&quot;)
+# subset to relevant columns to match ms data frame
+lc &lt;- lc[ , keep]
+# check data
+#sum_lc &lt;-summary(lc)
+#sum_lc
+
+# merge ms into lc, keep only complete lc records
+pb &lt;- rbind.data.frame(ms, lc)
+# check data
+sum_pb &lt;- summary(pb)
+#table(pb$id_species) # all spei except 1 COEI and 2 KIEI
+pb &lt;- subset(pb, id_species == &quot;SPEI&quot;)
+
+# create year variable
+pb$year &lt;- format(pb$dt_sampled, &quot;%Y&quot;)
+
+# sort
+pb &lt;- pb[order(pb$id_metalBand, pb$dt_sampled), ]
+
+# total number of blood samples
+n_samples_all &lt;- nrow(pb) 
+
+# total number of unique blood samples given band ID and date samples
+n_samples_uniq &lt;- nrow(unique(pb[c(&quot;id_metalBand&quot;, &quot;dt_sampled&quot;)]))
+dups &lt;- duplicated(pb[, c(&quot;id_metalBand&quot;, &quot;dt_sampled&quot;)])
+reps &lt;- pb[dups, ]
+
+n_samples_reps &lt;- nrow(reps)
+
+n_mass_spec &lt;- nrow(subset(pb, cat_analysis == &quot;mass_spec&quot;))
+n_volt &lt;- nrow(subset(pb, cat_analysis == &quot;voltammetry&quot;))
+
+# change all ASY (males only) to AHY to simplify age categories to AHY and Local
+pb$cat_age[pb$cat_age == &quot;ASY&quot;] &lt;- &quot;AHY&quot;
+
+#write.csv(pb, &quot;data/spei_pb_all_2018-2025.csv&quot;)</code></pre>
+<p>We analyzed 298 whole blood samples for lead concentration. We
+obtained results using mass spectrometry from 275 samples, and using
+voltammetry from 117 samples. Of those, 94 samples were analyzed using
+both methods.</p>
+<p>Samples collected during arrival period were from both males and
+females. Incubation samples were from all females and samples from the
+brood rearing period were all female adults and both male and female
+ducklings. Sample sizes by study site, sampling period, and age class
+ranged from 2 blood samples from after hatch year females at Teshekpuk
+Lake to 162 samples from incubating females at Kigigak Island.</p>
+<pre class="r"><code>tbl_pb &lt;- as.data.frame(table(pb$id_studySite, pb$cat_periodCapt, pb$cat_age))
+colnames(tbl_pb) &lt;- c(&quot;Site&quot;, &quot;Period&quot;, &quot;Age Class&quot;, &quot;n&quot;)
+# remove zeros
+tbl_pb &lt;- tbl_pb[tbl_pb$n != 0, ]
+
+kable(tbl_pb, 
+      caption = &quot;Table 1. Sample sizes for whole samples collected from Spectacled Eiders 2018-2025 by capture site, sampling period, and age class.&quot;,
+      align = c(&quot;l&quot;, &quot;l&quot;, &quot;l&quot;),
+      digits = 0,
+      row.names = FALSE)</code></pre>
+<table>
+<caption>Table 1. Sample sizes for whole samples collected from
+Spectacled Eiders 2018-2025 by capture site, sampling period, and age
+class.</caption>
+<thead>
+<tr class="header">
+<th align="left">Site</th>
+<th align="left">Period</th>
+<th align="left">Age Class</th>
+<th align="left">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Kigigak</td>
+<td align="left">arrival</td>
+<td align="left">AHY</td>
+<td align="left">42</td>
+</tr>
+<tr class="even">
+<td align="left">Teshekpuk</td>
+<td align="left">arrival</td>
+<td align="left">AHY</td>
+<td align="left">2</td>
+</tr>
+<tr class="odd">
+<td align="left">Tutakoke</td>
+<td align="left">arrival</td>
+<td align="left">AHY</td>
+<td align="left">47</td>
+</tr>
+<tr class="even">
+<td align="left">Utqiagvik</td>
+<td align="left">arrival</td>
+<td align="left">AHY</td>
+<td align="left">10</td>
+</tr>
+<tr class="odd">
+<td align="left">Kashunuk</td>
+<td align="left">brood</td>
+<td align="left">AHY</td>
+<td align="left">14</td>
+</tr>
+<tr class="even">
+<td align="left">Kigigak</td>
+<td align="left">brood</td>
+<td align="left">AHY</td>
+<td align="left">36</td>
+</tr>
+<tr class="odd">
+<td align="left">Kigigak</td>
+<td align="left">incubation</td>
+<td align="left">AHY</td>
+<td align="left">162</td>
+</tr>
+<tr class="even">
+<td align="left">Utqiagvik</td>
+<td align="left">incubation</td>
+<td align="left">AHY</td>
+<td align="left">3</td>
+</tr>
+<tr class="odd">
+<td align="left">Kashunuk</td>
+<td align="left">brood</td>
+<td align="left">local</td>
+<td align="left">15</td>
+</tr>
+<tr class="even">
+<td align="left">Kigigak</td>
+<td align="left">brood</td>
+<td align="left">local</td>
+<td align="left">61</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="voltammetry-result-validation" class="section level2">
+<h2>Voltammetry Result Validation</h2>
+<p>LeacCare II has a narrower detection range than mass spectometery
+with lower and upper detection limits of 0.033 ppm and 0.65 ppm,
+respectively. Mass spectrometry has a lower detection limit of 0.02 ppm
+(or less for samples analyzed in 2018) and no upper limit. LeadCare II
+results both below and adove the detection limit of the instrument
+showed high correspondence with mass specrometry results.</p>
+<pre class="r"><code># create data frame with only records with duplicate combinations of metalBand and dt_sampled
+valid_long &lt;- pb[duplicated(pb[, c(&quot;id_metalBand&quot;, &quot;dt_sampled&quot;)]) | duplicated(pb[, c(&quot;id_metalBand&quot;, &quot;dt_sampled&quot;)], fromLast = TRUE), ]
+
+# modify data frame from long to wide format with a column for mass spec pb values and a column for voltammetry pb values
+pb_valid_wide &lt;- reshape(valid_long, 
+                    direction = &quot;wide&quot;,
+                    idvar = c(&quot;id_metalBand&quot;, &quot;dt_sampled&quot;),
+                    timevar = &quot;cat_analysis&quot;,
+                    v.names = &quot;pb_blood_ppm&quot;
+                    )
+
+# mass spec has lower detection limit than voltammetry.
+
+# are all results from voltammetry that were &lt; 0.033 have values from mass spec &lt; 0.033?
+ldl &lt;- subset(pb_valid_wide, pb_blood_ppm.voltammetry == 0.033)
+
+# number of volt results less than volt lower detection limit
+n_volt_ldl &lt;- nrow(ldl)
+n_ms_match_volt_ldl &lt;- nrow(subset(ldl, pb_blood_ppm.mass_spec &lt; 0.034))
+pct_match_ldl &lt;- (n_ms_match_volt_ldl/n_volt_ldl)*100
+pct_match_ldl &lt;- sprintf(&quot;%.1f&quot;, pct_match_ldl)
+# LeadCare II results above the upper detection limit of 0.65
+
+udl &lt;- subset(pb_valid_wide, pb_blood_ppm.voltammetry == 0.65)
+n_volt_udl &lt;- nrow(udl)
+n_ms_match_volt_udl &lt;- nrow(subset(udl, pb_blood_ppm.mass_spec &gt; 0.65))
+pct_match_udl &lt;- (n_ms_match_volt_udl/n_volt_udl)*100
+pct_match_udl &lt;- sprintf(&quot;%.1f&quot;, pct_match_udl)</code></pre>
+<p>Of the voltammetry results below the lower detection limit of the
+method (0.033 ppm), 83.6 % (46 of 55 samples) had mass spectrometry
+results &lt; 0.033 ppm. The 9 samples with mass spectrometry
+measurements &gt; the voltammetry lower detection limit ranged from
+0.034 to 0.064 ppm (mean 0.045 ppm, 0.012 ppm mean deviation from the
+voltammetry lower detection limit). [ another way to say this would be:
+of the 55 samples that tested below the lower detection limit for
+LeadCare II, all but 9 had mass spectrometry values &lt; 0.033
+ppm).]</p>
+<p>Of the voltammetry results above the upper detection limit of the
+method (0.65 ppm), 100.0 % (5 of 5 samples) had mass spectrometry
+results &lt; 0.65 ppm. All 5 samples above the LeadCare II detection
+limit had mass spectrometry values also &lt; 0.65 ppm.</p>
+<pre class="r"><code># fit linear model mass spec pb ~ voltammetry pb using only LeadCare II results within detection limits
+data_lm &lt;- subset(pb_valid_wide, pb_blood_ppm.voltammetry &lt; 0.65 &amp; pb_blood_ppm.voltammetry &gt; 0.033)
+n_data_lm &lt;- nrow(data_lm)
+
+m1 &lt;- lm(data = data_lm, log(pb_blood_ppm.voltammetry) ~ log(pb_blood_ppm.mass_spec))
+sum_m1 &lt;- summary(m1)
+sum_m1</code></pre>
+<pre><code>
+Call:
+lm(formula = log(pb_blood_ppm.voltammetry) ~ log(pb_blood_ppm.mass_spec), 
+    data = data_lm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.48691 -0.12872  0.01901  0.11202  0.68867 
+
+Coefficients:
+                            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)                 -0.78201    0.12134  -6.445 3.48e-07 ***
+log(pb_blood_ppm.mass_spec)  0.68693    0.04912  13.984 6.22e-15 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 0.2711 on 31 degrees of freedom
+Multiple R-squared:  0.8632,    Adjusted R-squared:  0.8588 
+F-statistic: 195.6 on 1 and 31 DF,  p-value: 6.218e-15</code></pre>
+<pre class="r"><code>confint_m1 &lt;- confint(m1)
+confint(m1)</code></pre>
+<pre><code>                                 2.5 %     97.5 %
+(Intercept)                 -1.0294872 -0.5345325
+log(pb_blood_ppm.mass_spec)  0.5867432  0.7871158</code></pre>
+<pre class="r"><code>plot(data_lm$pb_blood_ppm.voltammetry, data_lm$pb_blood_ppm.mass_spec)</code></pre>
+<p><img src="figure/spei_pb_data_summary_20251202.Rmd/lm-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Log-log linear model results indicate LeadCare II results were biased
+low compared to mass spectrometry results. Given a 1% increase in mass
+spectrometry lead concentration, Leadcare II lead concentration
+increased by 0.69% (95% confidence interval 0.59%, 0.79%)</p>
+<p>The log-log linear model met linear model assumptions.</p>
+<pre class="r"><code>plot(m1)</code></pre>
+<p><img src="figure/spei_pb_data_summary_20251202.Rmd/assumptions-1.png" width="672" style="display: block; margin: auto;" /><img src="figure/spei_pb_data_summary_20251202.Rmd/assumptions-2.png" width="672" style="display: block; margin: auto;" /><img src="figure/spei_pb_data_summary_20251202.Rmd/assumptions-3.png" width="672" style="display: block; margin: auto;" /><img src="figure/spei_pb_data_summary_20251202.Rmd/assumptions-4.png" width="672" style="display: block; margin: auto;" /></p>
+<br>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+Session information
+</button>
+</p>
+<div id="workflowr-sessioninfo" class="collapse">
+<pre class="r"><code>sessionInfo()</code></pre>
+<pre><code>R version 4.5.1 (2025-06-13 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 22631)
+
+Matrix products: default
+  LAPACK version 3.12.1
+
+locale:
+[1] LC_COLLATE=English_United States.utf8 
+[2] LC_CTYPE=English_United States.utf8   
+[3] LC_MONETARY=English_United States.utf8
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.utf8    
+
+time zone: America/Anchorage
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] knitr_1.50    plotly_4.11.0 ggplot2_3.5.2
+
+loaded via a namespace (and not attached):
+ [1] gtable_0.3.6       jsonlite_2.0.0     dplyr_1.1.4        compiler_4.5.1    
+ [5] promises_1.3.3     tidyselect_1.2.1   Rcpp_1.1.0         stringr_1.5.1     
+ [9] git2r_0.36.2       tidyr_1.3.1        later_1.4.2        jquerylib_0.1.4   
+[13] scales_1.4.0       yaml_2.3.10        fastmap_1.2.0      R6_2.6.1          
+[17] generics_0.1.4     workflowr_1.7.1    htmlwidgets_1.6.4  tibble_3.3.0      
+[21] rprojroot_2.1.0    bslib_0.9.0        pillar_1.11.0      RColorBrewer_1.1-3
+[25] rlang_1.1.6        cachem_1.1.0       stringi_1.8.7      httpuv_1.6.16     
+[29] xfun_0.52          fs_1.6.6           sass_0.4.10        lazyeval_0.2.2    
+[33] viridisLite_0.4.2  cli_3.6.5          withr_3.0.2        magrittr_2.0.3    
+[37] digest_0.6.37      grid_4.5.1         rstudioapi_0.17.1  lifecycle_1.0.4   
+[41] vctrs_0.6.5        data.table_1.17.8  evaluate_1.0.4     glue_1.8.0        
+[45] farver_2.1.2       purrr_1.1.0        httr_1.4.7         rmarkdown_2.29    
+[49] tools_4.5.1        pkgconfig_2.0.3    htmltools_0.5.8.1 </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- Adjust MathJax settings so that all math formulae are shown using
+TeX fonts only; see
+https://docs.mathjax.org/en/latest/web/configuration.html. This will make
+the presentation more consistent at the cost of the webpage sometimes
+taking slightly longer to load. Note that this only works because the
+footer is added to webpages before the MathJax javascript. -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
